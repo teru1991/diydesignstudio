@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Toolbar from './Toolbar';
+import GridArea from './GridArea';
+import PropertyEditor from './PropertyEditor';
+import FileMenu from './FileMenu';
+import EditMenu from './EditMenu';
+import ViewMenu from './ViewMenu';
 
-function App() {
+const App = () => {
+  const [currentPage, setCurrentPage] = useState('home');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div>
+        <Toolbar />
+        <GridArea />
+        <PropertyEditor />
+        <FileMenu />
+        <EditMenu />
+        <ViewMenu />
+      </div>
   );
-}
+};
 
 export default App;
