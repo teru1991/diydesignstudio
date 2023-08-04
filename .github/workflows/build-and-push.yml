@@ -1,0 +1,23 @@
+name: Build and Push Docker Image
+on:
+  push:
+    branches:
+      - main  # メインブランチのコミット時に実行される
+  # 他のトリガーも設定できます。例えば: pull_request
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build and push Docker image
+        env:
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        run: |
+          docker build -t your_dockerhub_username/your_dockerhub_repo:latest .
+          echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
+          docker push your_dockerhub_username/your_dockerhub_repo:latest
