@@ -2,21 +2,17 @@ import React, { useState } from 'react';
 import Toolbar from './Toolbar';
 import GridArea from './GridArea';
 import PropertyEditor from './PropertyEditor';
-import FileMenu from './FileMenu';
-import EditMenu from './EditMenu';
-import ViewMenu from './ViewMenu';
+import MenuBar from "./MenuBar";
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState('home');
 
   return (
       <div>
+        <MenuBar />
         <Toolbar />
         <GridArea />
         <PropertyEditor />
-        <FileMenu />
-        <EditMenu />
-        <ViewMenu />
       </div>
   );
 };

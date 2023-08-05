@@ -1,5 +1,5 @@
 import React from 'react';
-import Dialog from './Dialog'; // Assuming you have a Dialog component
+// import Dialog from './Dialog';
 
 const FileMenu = () => {
     const [isDialogOpen, setIsDialogOpen] = React.useState(false);
@@ -25,7 +25,7 @@ const FileMenu = () => {
             <button onClick={handleOpen}>New Project</button>
             <button onClick={handleSave}>Save Project</button>
             <button onClick={handleLoad}>Load Project</button>
-            {isDialogOpen && <Dialog onClose={handleClose} />}
+            {/*{isDialogOpen && <Dialog onClose={handleClose} />}*/}
         </div>
     );
 };
