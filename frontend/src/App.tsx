@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import MenuBar from "./MenuBar";
-import Toolbar from './Toolbar';
-import GridArea from './GridArea';
-import PropertyEditor from './PropertyEditor';
+import MenuBar from "./components/menubar/MenuBar";
+import Toolbar from './components/toolbar/Toolbar';
+import GridArea from './components/gridarea/GridArea';
+import PropertyEditor from './components/propertyeditor/PropertyEditor';
 
 
 const App = () => {

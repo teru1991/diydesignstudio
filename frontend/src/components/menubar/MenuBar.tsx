@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import QuickAccessToolbar from './QuickAccessToolbar';
-import Ribbon from './Ribbon';
-import Tub from './Tub';
-import FileMenu from './FileMenu';
-import EditMenu from './EditMenu';
-import ViewMenu from './ViewMenu';
+import QuickAccessToolbar from '../quickaccesstoolbar/QuickAccessToolbar';
+import Ribbon from '../ribbon/Ribbon';
+import Tub from '../tub/Tub';
+import FileMenu from '../filemenu/FileMenu';
+import EditMenu from '../editmenu/EditMenu';
+import ViewMenu from '../viewmenu/ViewMenu';
 import './MenuBar.scss';
 const MenuBar: React.FC = () => {
     // QuickAccessToolbarのコマンドの定義

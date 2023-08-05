@@ -1,6 +1,6 @@
 // Toolbar.tsx
 import React, { useState } from 'react';
-import ToolIcon from './ToolIcon';
+import ToolIcon from '../toolicon/ToolIcon';
 
 const Toolbar = () => {
     const [selectedTool, setSelectedTool] = useState<string>('select');
