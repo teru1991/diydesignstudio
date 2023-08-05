@@ -1,4 +1,5 @@
 import React from 'react';
+import './QuickAccessToolbar.scss';
 
 // コマンドボタンの型定義
 interface CommandButtonProps {

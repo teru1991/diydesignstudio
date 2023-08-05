@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import MenuBar from "./MenuBar";
 import Toolbar from './Toolbar';
 import GridArea from './GridArea';
 import PropertyEditor from './PropertyEditor';
-import MenuBar from "./MenuBar";
+
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState('home');

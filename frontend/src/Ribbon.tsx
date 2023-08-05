@@ -1,4 +1,5 @@
 import React from 'react';
+import './Ribbon.scss';
 
 // コマンドボタンの型定義
 interface CommandButtonProps {
@@ -13,16 +14,14 @@ const CommandButton: React.FC<CommandButtonProps> = ({ name, action }) => (
 
 // リボンの型定義
 interface RibbonProps {
-    commands: CommandButtonProps[];
+    MenuComponent: React.FC;
 }
 
+
 // リボンのコンポーネント
-const Ribbon: React.FC<RibbonProps> = ({ commands }) => (
+const Ribbon: React.FC<RibbonProps> = ({ MenuComponent }) => (
     <div>
-        {commands.map((command, i) => (
-            <CommandButton key={i} {...command} />
-        ))}
+        <MenuComponent />
     </div>
 );
-
 export default Ribbon;

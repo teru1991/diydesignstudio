@@ -1,0 +1,22 @@
+
+/* Tub.scss */
+.tub {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+  border: none;
+  background-color: #ffffff;
+  cursor: pointer;
+
+  &.active {
+    border-bottom: 3px solid #0078d4;
+  }
+
+  &:hover {
+    background-color: #e1e1e1;
+  }
+
+  &:active {
+    background-color: #c1c1c1;
+  }
+}
