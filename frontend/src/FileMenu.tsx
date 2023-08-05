@@ -1,10 +1,31 @@
-// FileMenu.tsx
 import React from 'react';
+import Dialog from './Dialog'; // Assuming you have a Dialog component
 
 const FileMenu = () => {
+    const [isDialogOpen, setIsDialogOpen] = React.useState(false);
+
+    const handleOpen = () => {
+        setIsDialogOpen(true);
+    };
+
+    const handleClose = () => {
+        setIsDialogOpen(false);
+    };
+
+    const handleSave = () => {
+        // Save project data here
+    };
+
+    const handleLoad = () => {
+        // Load project data here
+    };
+
     return (
         <div>
-            {/* FileMenu component code here */}
+            <button onClick={handleOpen}>New Project</button>
+            <button onClick={handleSave}>Save Project</button>
+            <button onClick={handleLoad}>Load Project</button>
+            {isDialogOpen && <Dialog onClose={handleClose} />}
         </div>
     );
 };
