@@ -19,7 +19,7 @@ interface QuickAccessToolbarProps {
 
 // クイックアクセスツールバーのコンポーネント
 const QuickAccessToolbar: React.FC<QuickAccessToolbarProps> = ({ commands }) => (
-    <div>
+    <div　className={"quick-access-toolbar"}>
         {commands.map((command, i) => (
             <CommandButton key={i} {...command} />
         ))}

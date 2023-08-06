@@ -1,5 +1,5 @@
 import React from 'react';
-// import Dialog from './Dialog';
+import '../assets/RibbonMenu.scss';
 
 const FileMenu = () => {
     const [isDialogOpen, setIsDialogOpen] = React.useState(false);
@@ -42,7 +42,7 @@ const FileMenu = () => {
         console.log('Exit');
     };
     return (
-        <div>
+        <div className="ribbon-Menu">
             <button onClick={handleOpen}>New Project</button>
             <button onClick={handleSave}>Save Project</button>
             <button onClick={handleLoad}>Load Project</button>

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../assets/RibbonMenu.scss';
 const EditMenu = () => {
     const handleCopy = () => {
         // Copy selected shape here
@@ -35,7 +35,7 @@ const EditMenu = () => {
         console.log('Go To');
     };
     return (
-        <div>
+        <div className="ribbon-menu">
             <button onClick={handleCopy}>Copy</button>
             <button onClick={handleCut}>Cut</button>
             <button onClick={handlePaste}>Paste</button>

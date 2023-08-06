@@ -9,7 +9,7 @@ interface TabProps {
 
 // タブのコンポーネント
 const Tab: React.FC<TabProps> = ({ name, active, action }) => (
-    <button className={active ? 'active' : ''} onClick={action}>
+    <button className={`tub ${active ? 'active' : ''}`} onClick={action}>
         {name}
     </button>
 );

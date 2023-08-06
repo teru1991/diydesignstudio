@@ -20,7 +20,7 @@ interface RibbonProps {
 
 // リボンのコンポーネント
 const Ribbon: React.FC<RibbonProps> = ({ MenuComponent }) => (
-    <div>
+    <div className={"ribbon"}>
         <MenuComponent />
     </div>
 );
