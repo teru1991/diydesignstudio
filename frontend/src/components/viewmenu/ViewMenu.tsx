@@ -1,4 +1,5 @@
 import React from 'react';
+import '../assets/RibbonMenu.scss';
 
 const ViewMenu = () => {
     const [zoomLevel, setZoomLevel] = React.useState(1);
@@ -34,7 +35,7 @@ const ViewMenu = () => {
     };
 
     return (
-        <div>
+        <div className="ribbon-menu">
             <button onClick={handleZoomIn}>Zoom In</button>
             <button onClick={handleZoomOut}>Zoom Out</button>
             <button onClick={handleToggleGrid}>{isGridVisible ? 'Hide Grid' : 'Show Grid'}</button>

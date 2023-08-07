@@ -42,7 +42,7 @@ const FileMenu = () => {
         console.log('Exit');
     };
     return (
-        <div className="ribbon-Menu">
+        <div className="ribbon-menu">
             <button onClick={handleOpen}>New Project</button>
             <button onClick={handleSave}>Save Project</button>
             <button onClick={handleLoad}>Load Project</button>
