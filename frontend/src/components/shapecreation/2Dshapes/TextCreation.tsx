@@ -1,7 +1,11 @@
 // TextCreation.tsx
 import React, { useState } from 'react';
 
-const TextCreation = ({ onCreateText }) => {
+interface TextCreationProps {
+    onCreateText: (text: string, position: string) => void;
+}
+
+const TextCreation: React.FC<TextCreationProps> = ({ onCreateText }) => {
     const [text, setText] = useState('');
     const [position, setPosition] = useState('');
 
@@ -10,7 +14,7 @@ const TextCreation = ({ onCreateText }) => {
         // ...
 
         // Call the onCreateText function with the text parameters
-        onCreateText({ text, position });
+        onCreateText(text, position);
     };
 
     return (

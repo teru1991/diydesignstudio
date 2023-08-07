@@ -1,7 +1,10 @@
-// ParabolaCreation.tsx
 import React, { useState } from 'react';
 
-const ParabolaCreation = ({ onCreateParabola }) => {
+interface ParabolaCreationProps {
+    onCreateParabola: (focus: string, vertex: string) => void;
+}
+
+const ParabolaCreation: React.FC<ParabolaCreationProps> = ({ onCreateParabola }) => {
     const [focus, setFocus] = useState('');
     const [vertex, setVertex] = useState('');
 
@@ -10,7 +13,7 @@ const ParabolaCreation = ({ onCreateParabola }) => {
         // ...
 
         // Call the onCreateParabola function with the parabola parameters
-        onCreateParabola({ focus, vertex });
+        onCreateParabola(focus, vertex);
     };
 
     return (
@@ -18,13 +21,13 @@ const ParabolaCreation = ({ onCreateParabola }) => {
             {/* Input form for parabola */}
             <input
                 type="text"
-                placeholder="Focus Point (x,y)"
+                placeholder="Focus Point (x1,y1)"
                 value={focus}
                 onChange={(e) => setFocus(e.target.value)}
             />
             <input
                 type="text"
-                placeholder="Vertex Point (x,y)"
+                placeholder="Vertex Point (x2,y2)"
                 value={vertex}
                 onChange={(e) => setVertex(e.target.value)}
             />

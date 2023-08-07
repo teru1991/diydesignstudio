@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 
 interface FreeformSurfaceCreationProps {
-    onCreate: (controlPoints: number[][][]) => void;
+    onCreate: (controlPoints: number[][]) => void;
 }
 
 const FreeformSurfaceCreation: React.FC<FreeformSurfaceCreationProps> = ({ onCreate }) => {
-    const [controlPoints, setControlPoints] = useState<number[][][]>([]);
+    const [controlPoints, setControlPoints] = useState<number[][]>([]);
+    const [x, setX] = useState<number>(0);
+    const [y, setY] = useState<number>(0);
+    const [z, setZ] = useState<number>(0);
 
     const handleCreate = () => {
         onCreate(controlPoints);

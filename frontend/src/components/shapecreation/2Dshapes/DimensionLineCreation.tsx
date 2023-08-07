@@ -1,41 +1,27 @@
-// DimensionLineCreation.tsx
 import React, { useState } from 'react';
 
-const DimensionLineCreation = ({ onCreateDimensionLine }) => {
-    const [startPoint, setStartPoint] = useState('');
-    const [endPoint, setEndPoint] = useState('');
-    const [dimensionValue, setDimensionValue] = useState('');
+interface DimensionLineCreationProps {
+    onCreateDimensionLine: (startPoint: string, endPoint: string, dimensionValue: string) => void;
+}
 
-    const handleCreateDimensionLine = () => {
-        // Validation and creation logic here
-        // ...
+const DimensionLineCreation: React.FC<DimensionLineCreationProps> = ({ onCreateDimensionLine }) => {
+    const [startPoint, setStartPoint] = useState<string>('');
+    const [endPoint, setEndPoint] = useState<string>('');
+    const [dimensionValue, setDimensionValue] = useState<string>('');
 
-        // Call the onCreateDimensionLine function with the dimension line parameters
-        onCreateDimensionLine({ startPoint, endPoint, dimensionValue });
+    const handleCreate = () => {
+        onCreateDimensionLine(startPoint, endPoint, dimensionValue);
     };
 
     return (
         <div>
-            {/* Input form for dimension line */}
-            <input
-                type="text"
-                placeholder="Start Point (x,y)"
-                value={startPoint}
-                onChange={(e) => setStartPoint(e.target.value)}
-            />
-            <input
-                type="text"
-                placeholder="End Point (x,y)"
-                value={endPoint}
-                onChange={(e) => setEndPoint(e.target.value)}
-            />
-            <input
-                type="text"
-                placeholder="Dimension Value"
-                value={dimensionValue}
-                onChange={(e) => setDimensionValue(e.target.value)}
-            />
-            <button onClick={handleCreateDimensionLine}>Create Dimension Line</button>
+            <h3>寸法線</h3>
+            {/* Input fields for dimension line properties */}
+            <input type="text" value={startPoint} onChange={(e) => setStartPoint(e.target.value)} />
+            <input type="text" value={endPoint} onChange={(e) => setEndPoint(e.target.value)} />
+            <input type="text" value={dimensionValue} onChange={(e) => setDimensionValue(e.target.value)} />
+            {/* Add more options as needed */}
+            <button onClick={handleCreate}>作成</button>
         </div>
     );
 };

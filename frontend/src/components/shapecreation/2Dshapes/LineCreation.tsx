@@ -1,7 +1,10 @@
-// LineCreation.tsx
 import React, { useState } from 'react';
 
-const LineCreation = ({ onCreateLine }) => {
+interface LineCreationProps {
+    onCreateLine: (startPoint: string, endPoint: string) => void;
+}
+
+const LineCreation: React.FC<LineCreationProps> = ({ onCreateLine }) => {
     const [startPoint, setStartPoint] = useState('');
     const [endPoint, setEndPoint] = useState('');
 
@@ -10,7 +13,7 @@ const LineCreation = ({ onCreateLine }) => {
         // ...
 
         // Call the onCreateLine function with the line parameters
-        onCreateLine({ startPoint, endPoint });
+        onCreateLine(startPoint, endPoint);
     };
 
     return (
@@ -18,13 +21,13 @@ const LineCreation = ({ onCreateLine }) => {
             {/* Input form for line */}
             <input
                 type="text"
-                placeholder="Start Point (x,y)"
+                placeholder="Start Point (x1,y1)"
                 value={startPoint}
                 onChange={(e) => setStartPoint(e.target.value)}
             />
             <input
                 type="text"
-                placeholder="End Point (x,y)"
+                placeholder="End Point (x2,y2)"
                 value={endPoint}
                 onChange={(e) => setEndPoint(e.target.value)}
             />

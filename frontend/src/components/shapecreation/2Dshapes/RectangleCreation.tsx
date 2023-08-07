@@ -1,7 +1,10 @@
-// RectangleCreation.tsx
 import React, { useState } from 'react';
 
-const RectangleCreation = ({ onCreateRectangle }) => {
+interface RectangleCreationProps {
+    onCreateRectangle: (topLeft: string, bottomRight: string) => void;
+}
+
+const RectangleCreation: React.FC<RectangleCreationProps> = ({ onCreateRectangle }) => {
     const [topLeft, setTopLeft] = useState('');
     const [bottomRight, setBottomRight] = useState('');
 
@@ -10,7 +13,7 @@ const RectangleCreation = ({ onCreateRectangle }) => {
         // ...
 
         // Call the onCreateRectangle function with the rectangle parameters
-        onCreateRectangle({ topLeft, bottomRight });
+        onCreateRectangle(topLeft, bottomRight);
     };
 
     return (
@@ -18,13 +21,13 @@ const RectangleCreation = ({ onCreateRectangle }) => {
             {/* Input form for rectangle */}
             <input
                 type="text"
-                placeholder="Top Left Point (x,y)"
+                placeholder="Top Left Point (x1,y1)"
                 value={topLeft}
                 onChange={(e) => setTopLeft(e.target.value)}
             />
             <input
                 type="text"
-                placeholder="Bottom Right Point (x,y)"
+                placeholder="Bottom Right Point (x2,y2)"
                 value={bottomRight}
                 onChange={(e) => setBottomRight(e.target.value)}
             />

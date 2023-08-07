@@ -1,7 +1,10 @@
-// NURBSCurveCreation.tsx
 import React, { useState } from 'react';
 
-const NURBSCurveCreation = ({ onCreateNURBSCurve }) => {
+interface NURBSCurveCreationProps {
+    onCreateNURBSCurve: (controlPoints: string, knotVector: string) => void;
+}
+
+const NURBSCurveCreation: React.FC<NURBSCurveCreationProps> = ({ onCreateNURBSCurve }) => {
     const [controlPoints, setControlPoints] = useState('');
     const [knotVector, setKnotVector] = useState('');
 
@@ -10,7 +13,7 @@ const NURBSCurveCreation = ({ onCreateNURBSCurve }) => {
         // ...
 
         // Call the onCreateNURBSCurve function with the NURBS curve parameters
-        onCreateNURBSCurve({ controlPoints, knotVector });
+        onCreateNURBSCurve(controlPoints, knotVector);
     };
 
     return (
@@ -18,13 +21,13 @@ const NURBSCurveCreation = ({ onCreateNURBSCurve }) => {
             {/* Input form for NURBS curve */}
             <input
                 type="text"
-                placeholder="Control Points (comma-separated, e.g., x1,y1,x2,y2,x3,y3)"
+                placeholder="Control Points (comma-separated, e.g., x1,y1,z1,w1,x2,y2,z2,w2,...)"
                 value={controlPoints}
                 onChange={(e) => setControlPoints(e.target.value)}
             />
             <input
                 type="text"
-                placeholder="Knot Vector (comma-separated, e.g., 0,0,0,1,2,3,3,3)"
+                placeholder="Knot Vector (comma-separated, e.g., u1,u2,u3,u4,...)"
                 value={knotVector}
                 onChange={(e) => setKnotVector(e.target.value)}
             />

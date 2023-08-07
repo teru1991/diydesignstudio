@@ -1,34 +1,25 @@
-// CircleCreation.tsx
 import React, { useState } from 'react';
 
-const CircleCreation = ({ onCreateCircle }) => {
-    const [center, setCenter] = useState('');
-    const [radius, setRadius] = useState('');
+interface CircleCreationProps {
+    onCreateCircle: (center: string, radius: string) => void;
+}
 
-    const handleCreateCircle = () => {
-        // Validation and creation logic here
-        // ...
+const CircleCreation: React.FC<CircleCreationProps> = ({ onCreateCircle }) => {
+    const [center, setCenter] = useState<string>('');
+    const [radius, setRadius] = useState<string>('');
 
-        // Call the onCreateCircle function with the circle parameters
-        onCreateCircle({ center, radius });
+    const handleCreate = () => {
+        onCreateCircle(center, radius);
     };
 
     return (
         <div>
-            {/* Input form for circle */}
-            <input
-                type="text"
-                placeholder="Center Point (x,y)"
-                value={center}
-                onChange={(e) => setCenter(e.target.value)}
-            />
-            <input
-                type="text"
-                placeholder="Radius"
-                value={radius}
-                onChange={(e) => setRadius(e.target.value)}
-            />
-            <button onClick={handleCreateCircle}>Create Circle</button>
+            <h3>円</h3>
+            {/* Input fields for circle properties */}
+            <input type="text" value={center} onChange={(e) => setCenter(e.target.value)} />
+            <input type="text" value={radius} onChange={(e) => setRadius(e.target.value)} />
+            {/* Add more options as needed */}
+            <button onClick={handleCreate}>作成</button>
         </div>
     );
 };

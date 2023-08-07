@@ -1,7 +1,10 @@
-// RegularPolygonCreation.tsx
 import React, { useState } from 'react';
 
-const RegularPolygonCreation = ({ onCreateRegularPolygon }) => {
+interface RegularPolygonCreationProps {
+    onCreateRegularPolygon: (polygonData: { center: string; radius: string; edges: string; angleOffset: string }) => void;
+}
+
+const RegularPolygonCreation: React.FC<RegularPolygonCreationProps> = ({ onCreateRegularPolygon }) => {
     const [center, setCenter] = useState('');
     const [radius, setRadius] = useState('');
     const [edges, setEdges] = useState('');

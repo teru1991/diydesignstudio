@@ -1,19 +1,18 @@
 import React from 'react';
 
 interface SolidModelInputProps {
-    shapes: React.ReactNode[];
+    shapes: JSX.Element[];
 }
 
 const SolidModelInput: React.FC<SolidModelInputProps> = ({ shapes }) => {
     return (
         <div>
-            <h3>ソリッドモデル</h3>
-            {/* Display each shape in the solid model */}
             {shapes.map((shape, index) => (
-                <div key={index}>Shape {index + 1}:</div>
-            {shape}
-                <hr />
-                ))}
+                <React.Fragment key={index}>
+                    {shape}
+                    <hr />
+                </React.Fragment>
+            ))}
         </div>
     );
 };

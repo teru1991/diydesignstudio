@@ -1,7 +1,10 @@
-// PolylineCreation.tsx
 import React, { useState } from 'react';
 
-const PolylineCreation = ({ onCreatePolyline }) => {
+interface PolylineCreationProps {
+    onCreatePolyline: (vertices: number[][]) => void;
+}
+
+const PolylineCreation: React.FC<PolylineCreationProps> = ({ onCreatePolyline }) => {
     const [vertices, setVertices] = useState('');
 
     const handleCreatePolyline = () => {
@@ -12,7 +15,7 @@ const PolylineCreation = ({ onCreatePolyline }) => {
         const vertexArray = vertices.split(';').map((vertex) => vertex.split(',').map(Number));
 
         // Call the onCreatePolyline function with the polyline parameters
-        onCreatePolyline({ vertices: vertexArray });
+        onCreatePolyline(vertexArray);
     };
 
     return (

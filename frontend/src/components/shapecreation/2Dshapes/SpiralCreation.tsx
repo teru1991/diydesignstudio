@@ -1,7 +1,10 @@
-// SpiralCreation.tsx
 import React, { useState } from 'react';
 
-const SpiralCreation = ({ onCreateSpiral }) => {
+interface SpiralCreationProps {
+    onCreateSpiral: (center: string, startRadius: string, endRadius: string, numTurns: string, startAngle: string, endAngle: string) => void;
+}
+
+const SpiralCreation: React.FC<SpiralCreationProps> = ({ onCreateSpiral }) => {
     const [center, setCenter] = useState('');
     const [startRadius, setStartRadius] = useState('');
     const [endRadius, setEndRadius] = useState('');
@@ -14,7 +17,7 @@ const SpiralCreation = ({ onCreateSpiral }) => {
         // ...
 
         // Call the onCreateSpiral function with the spiral parameters
-        onCreateSpiral({ center, startRadius, endRadius, numTurns, startAngle, endAngle });
+        onCreateSpiral(center, startRadius, endRadius, numTurns, startAngle, endAngle);
     };
 
     return (
@@ -56,7 +59,7 @@ const SpiralCreation = ({ onCreateSpiral }) => {
                 value={endAngle}
                 onChange={(e) => setEndAngle(e.target.value)}
             />
-            <button onClick={handleCreateSpiral}>Create Spiral</button>
+            <button onClick={handleCreateSpiral}>作成</button>
         </div>
     );
 };

@@ -1,41 +1,27 @@
-// EllipseCreation.tsx
 import React, { useState } from 'react';
 
-const EllipseCreation = ({ onCreateEllipse }) => {
-    const [center, setCenter] = useState('');
-    const [majorAxis, setMajorAxis] = useState('');
-    const [minorAxis, setMinorAxis] = useState('');
+interface EllipseCreationProps {
+    onCreateEllipse: (center: string, majorAxis: string, minorAxis: string) => void;
+}
 
-    const handleCreateEllipse = () => {
-        // Validation and creation logic here
-        // ...
+const EllipseCreation: React.FC<EllipseCreationProps> = ({ onCreateEllipse }) => {
+    const [center, setCenter] = useState<string>('');
+    const [majorAxis, setMajorAxis] = useState<string>('');
+    const [minorAxis, setMinorAxis] = useState<string>('');
 
-        // Call the onCreateEllipse function with the ellipse parameters
-        onCreateEllipse({ center, majorAxis, minorAxis });
+    const handleCreate = () => {
+        onCreateEllipse(center, majorAxis, minorAxis);
     };
 
     return (
         <div>
-            {/* Input form for ellipse */}
-            <input
-                type="text"
-                placeholder="Center Point (x,y)"
-                value={center}
-                onChange={(e) => setCenter(e.target.value)}
-            />
-            <input
-                type="text"
-                placeholder="Major Axis"
-                value={majorAxis}
-                onChange={(e) => setMajorAxis(e.target.value)}
-            />
-            <input
-                type="text"
-                placeholder="Minor Axis"
-                value={minorAxis}
-                onChange={(e) => setMinorAxis(e.target.value)}
-            />
-            <button onClick={handleCreateEllipse}>Create Ellipse</button>
+            <h3>楕円</h3>
+            {/* Input fields for ellipse properties */}
+            <input type="text" value={center} onChange={(e) => setCenter(e.target.value)} />
+            <input type="text" value={majorAxis} onChange={(e) => setMajorAxis(e.target.value)} />
+            <input type="text" value={minorAxis} onChange={(e) => setMinorAxis(e.target.value)} />
+            {/* Add more options as needed */}
+            <button onClick={handleCreate}>作成</button>
         </div>
     );
 };
