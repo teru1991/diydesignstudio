@@ -13,12 +13,7 @@ import SettingsMenu from "../setting/SettingsMenu";
 import CustomToolbar from "../customtoolbar/CustomToolBar";
 import './MenuBar.scss';
 
-interface MenuBarProps {
-    onShapeCreation: (tab: '3D' | '2D') => void;
-}
-
-
-const MenuBar: React.FC<MenuBarProps> = ({ onShapeCreation })=> {
+const MenuBar: React.FC = () => {
     // QuickAccessToolbarのコマンドの定義
     const quickCommands = [
         { name: 'Undo', action: () => console.log('Undo executed') },
@@ -41,7 +36,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ onShapeCreation })=> {
             MenuComponent = ViewMenu;
             break;
         case 'Modeling':
-            MenuComponent = () => <ModelingMenu onShapeCreation={onShapeCreation} />;
+            MenuComponent = ModelingMenu;
             break;
         case 'Parametric':
             MenuComponent = ParametricMenu;
@@ -79,9 +74,8 @@ const MenuBar: React.FC<MenuBarProps> = ({ onShapeCreation })=> {
                     <Tub key={i} {...tab} />
                 ))}
             </div>
-            <Ribbon MenuComponent={MenuComponent} onShapeCreation={onShapeCreation} />
+            <Ribbon MenuComponent={MenuComponent} /> {/* onShapeCreationを削除 */}
             <CustomToolbar />
-
         </div>
     );
 };

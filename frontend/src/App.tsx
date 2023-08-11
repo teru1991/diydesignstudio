@@ -9,19 +9,14 @@ const App = () => {
     const [showShapeCreation, setShowShapeCreation] = useState(false);
     const [initialTab, setInitialTab] = useState<'3D' | '2D'>('3D'); // 初期値を '3D' としています。
 
-
     return (
         <div>
-            <MenuBar
-                onShapeCreation={(tab) => { setShowShapeCreation(true); setInitialTab(tab); }}
-            />
+            <MenuBar /> {/* onShapeCreationを削除 */}
             <Toolbar />
             <GridArea showShapeCreation={showShapeCreation} initialTab={initialTab} />
             <PropertyEditor />
         </div>
     );
 };
-
-
 
 export default App;

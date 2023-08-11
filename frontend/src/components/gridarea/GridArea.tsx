@@ -1,6 +1,5 @@
 // GridArea.tsx
 import React from 'react';
-import ShapeCreation from "../shapecreation/ShapeCreation";
 
 interface GridAreaProps {
     showShapeCreation: boolean;
@@ -13,7 +12,6 @@ const GridArea: React.FC<GridAreaProps> = ({ showShapeCreation, initialTab }) =>
         <div>
             {showShapeCreation && (
                 <div style={{ position: 'absolute', left: 0, top: 'メニューバーの高さ' }}>
-                    <ShapeCreation initialTab={initialTab} />
                 </div>
             )}
         </div>

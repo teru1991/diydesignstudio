@@ -15,14 +15,13 @@ const CommandButton: React.FC<CommandButtonProps> = ({ name, action }) => (
 // リボンの型定義
 interface RibbonProps {
     MenuComponent: React.ComponentType<any>;
-    onShapeCreation: (tab: '3D' | '2D') => void;
 }
 
-
 // リボンのコンポーネント
-const Ribbon: React.FC<RibbonProps> = ({ MenuComponent, onShapeCreation }) => (
+const Ribbon: React.FC<RibbonProps> = ({ MenuComponent }) => (
     <div className={"ribbon"}>
-        <MenuComponent onShapeCreation={onShapeCreation} />
+        <MenuComponent />
     </div>
 );
+
 export default Ribbon;
