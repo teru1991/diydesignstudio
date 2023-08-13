@@ -5,16 +5,20 @@ import Tub from '../tub/Tub';
 import FileMenu from '../filemenu/FileMenu';
 import EditMenu from '../editmenu/EditMenu';
 import ViewMenu from '../viewmenu/ViewMenu';
-import ModelingMenu from "../modeling/ModelingMenu";
-import ParametricMenu from "../parametric/ParametricMenu";
-import UserMenu from "../user/UserMenu";
-import HelpMenu from "../helpmenu/HelpMenu";
-import SettingsMenu from "../setting/SettingsMenu";
-import CustomToolbar from "../customtoolbar/CustomToolBar";
+import ModelingMenu from '../modeling/ModelingMenu';
+import ParametricMenu from '../parametric/ParametricMenu';
+import UserMenu from '../user/UserMenu';
+import HelpMenu from '../helpmenu/HelpMenu';
+import SettingsMenu from '../setting/SettingsMenu';
+import CustomToolbar from '../customtoolbar/CustomToolBar';
 import './MenuBar.scss';
 
-const MenuBar: React.FC = () => {
-    // QuickAccessToolbarのコマンドの定義
+interface MenuBarProps {
+    setActiveModelingTab: React.Dispatch<React.SetStateAction<'2D' | '3D'>>;
+}
+
+
+const MenuBar: React.FC<MenuBarProps> = ({ setActiveModelingTab }) => {
     const quickCommands = [
         { name: 'Undo', action: () => console.log('Undo executed') },
         { name: 'Redo', action: () => console.log('Redo executed') },
@@ -26,35 +30,17 @@ const MenuBar: React.FC = () => {
 
     let MenuComponent;
     switch (currentTab) {
-        case 'File':
-            MenuComponent = FileMenu;
-            break;
-        case 'Edit':
-            MenuComponent = EditMenu;
-            break;
-        case 'View':
-            MenuComponent = ViewMenu;
-            break;
-        case 'Modeling':
-            MenuComponent = ModelingMenu;
-            break;
-        case 'Parametric':
-            MenuComponent = ParametricMenu;
-            break;
-        case 'User':
-            MenuComponent = UserMenu;
-            break;
-        case 'Help':
-            MenuComponent = HelpMenu;
-            break;
-        case 'Setting':
-            MenuComponent = SettingsMenu;
-            break;
-        default:
-            MenuComponent = () => null;
-            break;
+        case 'File': MenuComponent = FileMenu; break;
+        case 'Edit': MenuComponent = EditMenu; break;
+        case 'View': MenuComponent = ViewMenu; break;
+        case 'Modeling': MenuComponent = ModelingMenu; break;
+        case 'Parametric': MenuComponent = ParametricMenu; break;
+        case 'User': MenuComponent = UserMenu; break;
+        case 'Help': MenuComponent = HelpMenu; break;
+        case 'Setting': MenuComponent = SettingsMenu; break;
+        default: MenuComponent = () => null; break;
     }
-    // タブの定義
+
     const tabs = [
         { name: 'File', active: currentTab === 'File', action: () => setCurrentTab('File') },
         { name: 'Edit', active: currentTab === 'Edit', action: () => setCurrentTab('Edit') },
@@ -74,7 +60,7 @@ const MenuBar: React.FC = () => {
                     <Tub key={i} {...tab} />
                 ))}
             </div>
-            <Ribbon MenuComponent={MenuComponent} /> {/* onShapeCreationを削除 */}
+            <Ribbon MenuComponent={MenuComponent} />
             <CustomToolbar />
         </div>
     );

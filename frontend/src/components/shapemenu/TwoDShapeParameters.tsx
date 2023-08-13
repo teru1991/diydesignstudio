@@ -11,6 +11,11 @@ import DiamondComponent from './shapes/2D/Diamond';
 import ParallelogramComponent from './shapes/2D/Parallelogram';
 import TrapezoidComponent from './shapes/2D/Trapezoid';
 import RegularPolygonComponent from './shapes/2D/RegularPolygon';
+import BSplineCurveComponent from './shapes/2D/BSplineCurve';
+import FractalComponent from './shapes/2D/Fractal';
+import OffsetCurveComponent from './shapes/2D/OffsetCurve';
+import ParametricCurveComponent from './shapes/2D/ParametricCurve';
+import VoronoiDiagramComponent from './shapes/2D/VoronoiDiagram';
 // 他の2D図形コンポーネントのインポート
 
 const TwoDShapeParameters: React.FC<{ shapeType: string }> = ({ shapeType }) => {
@@ -40,6 +45,16 @@ const TwoDShapeParameters: React.FC<{ shapeType: string }> = ({ shapeType }) => 
       return <TrapezoidComponent />;
     case '正多角形':
       return <RegularPolygonComponent />;
+    case 'Bスプライン曲線':
+      return <BSplineCurveComponent />;
+    case 'フラクタル':
+      return <FractalComponent />;
+    case 'オフセット曲線':
+      return <OffsetCurveComponent />;
+    case 'パラメトリック曲線':
+      return <ParametricCurveComponent />;
+    case 'ボロノイ図':
+      return <VoronoiDiagramComponent />;
     // 他の2D図形のケース
     default:
       return null;

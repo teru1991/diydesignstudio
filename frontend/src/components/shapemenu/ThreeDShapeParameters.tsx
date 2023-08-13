@@ -1,14 +1,26 @@
 import React from 'react';
-import SphereComponent from './SphereComponent';
-import CylinderComponent from './CylinderComponent';
-import ConeComponent from './ConeComponent';
-import CubeComponent from './CubeComponent';
-import RectangularPrismComponent from './RectangularPrismComponent';
-import TetrahedronComponent from './TetrahedronComponent';
-import PentahedronComponent from './PentahedronComponent';
-import HexahedronComponent from './HexahedronComponent';
-import TorusComponent from './TorusComponent';
-// 他の3D図形コンポーネントのインポート
+import SphereComponent from '../shapemenu/shapes/3D/Sphere';
+import CylinderComponent from '../shapemenu/shapes/3D/Cylinder';
+import ConeComponent from '../shapemenu/shapes/3D/Cone';
+import CubeComponent from '../shapemenu/shapes/3D/Cube';
+import RectangularPrismComponent from '../shapemenu/shapes/3D/RectangularPrism';
+import TetrahedronComponent from '../shapemenu/shapes/3D/Tetrahedron';
+import PentahedronComponent from '../shapemenu/shapes/3D/Pentahedron';
+import HexahedronComponent from '../shapemenu/shapes/3D/Hexahedron';
+import TorusComponent from '../shapemenu/shapes/3D/Torus';
+import BezierCurveComponent from '../shapemenu/shapes/3D/BezierCurve';
+import CompositeSurfaceComponent from '../shapemenu/shapes/3D/CompositeSurface';
+import ContourModelingComponent from '../shapemenu/shapes/3D/ContourModeling';
+import DelaunayTriangulationComponent from '../shapemenu/shapes/3D/DelaunayTriangulation';
+import FractalTerrainComponent from '../shapemenu/shapes/3D/FractalTerrain';
+import MetaballComponent from '../shapemenu/shapes/3D/Metaball';
+import NURBSSurfaceComponent from '../shapemenu/shapes/3D/NURBSSurface';
+import ParametricSurfaceComponent from '../shapemenu/shapes/3D/ParametricSurface';
+import PointCloudComponent from '../shapemenu/shapes/3D/PointCloud';
+import ProceduralModelingComponent from '../shapemenu/shapes/3D/ProceduralModeling';
+import SculptingComponent from '../shapemenu/shapes/3D/Sculpting';
+import SubdivisionSurfaceComponent from '../shapemenu/shapes/3D/SubdivisionSurface';
+import VolumeModelingComponent from '../shapemenu/shapes/3D/VolumeModeling';
 
 const ThreeDShapeParameters: React.FC<{ shapeType: string }> = ({ shapeType }) => {
   switch (shapeType) {
@@ -30,7 +42,32 @@ const ThreeDShapeParameters: React.FC<{ shapeType: string }> = ({ shapeType }) =
       return <HexahedronComponent />;
     case 'トーラス':
       return <TorusComponent />;
-    // 他の3D図形のケース
+    case 'ベジェ曲線':
+      return <BezierCurveComponent />;
+    case 'コンポジットサーフェス':
+      return <CompositeSurfaceComponent />;
+    case 'コンターモデリング':
+      return <ContourModelingComponent />;
+    case 'デローニ三角形分割':
+      return <DelaunayTriangulationComponent />;
+    case 'フラクタル地形':
+      return <FractalTerrainComponent />;
+    case 'メタボール':
+      return <MetaballComponent />;
+    case 'NURBSサーフェス':
+      return <NURBSSurfaceComponent />;
+    case 'パラメトリックサーフェス':
+      return <ParametricSurfaceComponent />;
+    case '点群':
+      return <PointCloudComponent />;
+    case 'プロシージャルモデリング':
+      return <ProceduralModelingComponent />;
+    case 'スカルプティング':
+      return <SculptingComponent />;
+    case 'サブディビジョンサーフェス':
+      return <SubdivisionSurfaceComponent />;
+    case 'ボリュームモデリング':
+      return <VolumeModelingComponent />;
     default:
       return null;
   }
