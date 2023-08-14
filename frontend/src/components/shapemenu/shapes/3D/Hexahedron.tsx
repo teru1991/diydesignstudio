@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import ParameterInput from '../../../common/ParameterInput';
+import ColorPicker from "../../../common/ColorPicker";
+import LineWidthSelector from "../../../common/LineWidthSelector";
+import useShapeAPIHandler from "../../../hooks/useShapeAPIHandler";
 
 const HexahedronComponent: React.FC = () => {
+    const [color, setColor] = useState("#000000");  // Default black color
+    const [lineWidth, setLineWidth] = useState(1);  // Default line width
     return (
         <div>
             <h3>Hexahedron Parameters</h3>
@@ -13,6 +18,8 @@ const HexahedronComponent: React.FC = () => {
             <ParameterInput label="Vertex 6 (x,y,z)" value="" onChange={() => {}}/>
             <ParameterInput label="Vertex 7 (x,y,z)" value="" onChange={() => {}}/>
             <ParameterInput label="Vertex 8 (x,y,z)" value="" onChange={() => {}}/>
+            <ColorPicker value={color} onChange={setColor} />
+            <LineWidthSelector value={lineWidth} onChange={setLineWidth} />
         </div>
     );
 };

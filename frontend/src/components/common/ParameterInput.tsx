@@ -3,7 +3,7 @@ import React from 'react';
 interface ParameterInputProps {
     label: string;
     value: string;
-    onChange: (value: string) => void; // ここでvalueの型がstringであることを確認
+    onChange: (value: string) => void;
 }
 
 const ParameterInput: React.FC<ParameterInputProps> = ({ label, value, onChange }) => {

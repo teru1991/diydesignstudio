@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import ParameterInput from '../../../common/ParameterInput';
+import ColorPicker from "../../../common/ColorPicker";
+import LineWidthSelector from "../../../common/LineWidthSelector";
+import useShapeAPIHandler from "../../../hooks/useShapeAPIHandler";
 
 const RegularPolygonComponent: React.FC = () => {
   const [sides, setSides] = useState(3); // 初期値は三角形
-
+    const [color, setColor] = useState("#000000");  // Default black color
+    const [lineWidth, setLineWidth] = useState(1);  // Default line width
   const handleSidesChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSides(Number(event.target.value));
   };
@@ -22,6 +26,8 @@ const RegularPolygonComponent: React.FC = () => {
       </label>
       <ParameterInput label="頂点" value="" onChange={() => {}} />
       <ParameterInput label="辺の長さ" value="" onChange={() => {}} />
+        <ColorPicker value={color} onChange={setColor} />
+        <LineWidthSelector value={lineWidth} onChange={setLineWidth} />
     </div>
   );
 };

@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import ParameterInput from '../../../common/ParameterInput';
+import ColorPicker from "../../../common/ColorPicker";
+import LineWidthSelector from "../../../common/LineWidthSelector";
+import useShapeAPIHandler from "../../../hooks/useShapeAPIHandler";
 
 const SplineComponent: React.FC = () => {
   const [controlPoints, setControlPoints] = useState<string[]>(['']);
-
+  const [color, setColor] = useState("#000000");  // Default black color
+  const [lineWidth, setLineWidth] = useState(1);  // Default line width
   const handleAddControlPoint = () => {
     setControlPoints([...controlPoints, '']);
   };
@@ -25,6 +29,8 @@ const SplineComponent: React.FC = () => {
         />
       ))}
       <button onClick={handleAddControlPoint}>+</button>
+      <ColorPicker value={color} onChange={setColor} />
+      <LineWidthSelector value={lineWidth} onChange={setLineWidth} />
     </div>
   );
 };
