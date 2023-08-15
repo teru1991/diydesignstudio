@@ -5,26 +5,21 @@ import LineWidthSelector from "../../../common/LineWidthSelector";
 import useShapeAPIHandler from "../../../hooks/useShapeAPIHandler";
 
 const HexahedronComponent: React.FC = () => {
-    const [color, setColor] = useState("#000000");  // Default black color
-    const [lineWidth, setLineWidth] = useState(1);  // Default line width
-    
+    const [color, setColor] = useState("#000000");
+    const [lineWidth, setLineWidth] = useState(1);
 
-    // Additional state for Hexahedron parameters
-    const [param1, setParam1] = useState("");
-    const [param2, setParam2] = useState("");
+    // State for Hexahedron vertices
+    const vertices = Array.from({ length: 8 }, (_, i) => useState(""));
 
-    // 1. Add useState definitions
-    const [isSent, setIsSent] = useState(false);
-    const [responseData, setResponseData] = useState(null);
+    const [apiIsSent, setApiIsSent] = useState(false);
+    const [apiResponseData, setApiResponseData] = useState(null);
 
-    // 2. Add the validation function for Hexahedron parameters
-    const validateHexahedronParams = (params: { param1: string; param2: string }) => {
-        return params.param1 !== "" && params.param2 !== "";
+    const validateHexahedronParams = (vertices: string[]) => {
+        return vertices.every(vertex => vertex !== "");
     };
 
-    // 3. Use the custom hook
     const { sendData, loading, error } = useShapeAPIHandler(
-        { param1, param2 },
+        { vertices },
         color,
         lineWidth,
         validateHexahedronParams
@@ -33,24 +28,23 @@ const HexahedronComponent: React.FC = () => {
     return (
         <div>
             <h3>Hexahedron Parameters</h3>
-            <ParameterInput label="Vertex 1 (x,y,z)" value="" onChange={() => {}}/>
-            <ParameterInput label="Vertex 2 (x,y,z)" value="" onChange={() => {}}/>
-            <ParameterInput label="Vertex 3 (x,y,z)" value="" onChange={() => {}}/>
-            <ParameterInput label="Vertex 4 (x,y,z)" value="" onChange={() => {}}/>
-            <ParameterInput label="Vertex 5 (x,y,z)" value="" onChange={() => {}}/>
-            <ParameterInput label="Vertex 6 (x,y,z)" value="" onChange={() => {}}/>
-            <ParameterInput label="Vertex 7 (x,y,z)" value="" onChange={() => {}}/>
-            <ParameterInput label="Vertex 8 (x,y,z)" value="" onChange={() => {}}/>
+            {vertices.map(([vertex, setVertex], index) => (
+                <ParameterInput
+                    key={index}
+                    label={`Vertex ${index + 1} (x,y,z)`}
+                    value={vertex}
+                    onChange={(value: string) => setVertex(value)}
+                />
+            ))}
             <ColorPicker value={color} onChange={setColor} />
             <LineWidthSelector value={lineWidth} onChange={setLineWidth} />
-        
-                <button onClick={sendData}>図形を作成</button>
-                {loading && <p>データ送信中...</p>}
-                {error && <p>エラー: {error}</p>}
-                {responseData && <p>バックエンドからの応答: {JSON.stringify(responseData)}</p>}
-    </div>
+
+            <button onClick={sendData}>図形を作成</button>
+            {loading && <p>データ送信中...</p>}
+            {error && <p>エラー: {error}</p>}
+            {apiResponseData && <p>バックエンドからの応答: {JSON.stringify(apiResponseData)}</p>}
+        </div>
     );
 };
-
 
 export default HexahedronComponent;

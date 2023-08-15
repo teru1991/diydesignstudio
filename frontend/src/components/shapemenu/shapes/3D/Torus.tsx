@@ -5,26 +5,21 @@ import LineWidthSelector from "../../../common/LineWidthSelector";
 import useShapeAPIHandler from "../../../hooks/useShapeAPIHandler";
 
 const TorusComponent: React.FC = () => {
-    const [color, setColor] = useState("#000000");  // Default black color
-    const [lineWidth, setLineWidth] = useState(1);  // Default line width
-    
+    const [color, setColor] = useState("#000000");
+    const [lineWidth, setLineWidth] = useState(1);
 
-    // Additional state for Torus parameters
-    const [param1, setParam1] = useState("");
-    const [param2, setParam2] = useState("");
+    // Torus parameters state
+    const [majorRadius, setMajorRadius] = useState("");
+    const [minorRadius, setMinorRadius] = useState("");
+    const [sectionsCount, setSectionsCount] = useState("");
+    const [rotationAngle, setRotationAngle] = useState("");
 
-    // 1. Add useState definitions
-    const [isSent, setIsSent] = useState(false);
-    const [responseData, setResponseData] = useState(null);
-
-    // 2. Add the validation function for Torus parameters
-    const validateTorusParams = (params: { param1: string; param2: string }) => {
-        return params.param1 !== "" && params.param2 !== "";
+    const validateTorusParams = (params: { majorRadius: string; minorRadius: string; sectionsCount: string; rotationAngle: string }) => {
+        return params.majorRadius !== "" && params.minorRadius !== "" && params.sectionsCount !== "" && params.rotationAngle !== "";
     };
 
-    // 3. Use the custom hook
-    const { sendData, loading, error } = useShapeAPIHandler(
-        { param1, param2 },
+    const { sendData, loading, error, responseData } = useShapeAPIHandler(
+        { majorRadius, minorRadius, sectionsCount, rotationAngle },
         color,
         lineWidth,
         validateTorusParams
@@ -32,21 +27,19 @@ const TorusComponent: React.FC = () => {
 
     return (
         <div>
-            <h3>Torus Parameters</h3>
-            <ParameterInput label="メジャーラジウス" value="" onChange={() => {}}/>
-            <ParameterInput label="マイナーラジウス" value="" onChange={() => {}}/>
-            <ParameterInput label="セクションの数" value="" onChange={() => {}}/>
-            <ParameterInput label="回転角度 (degree)" value="" onChange={() => {}}/>
+            <ParameterInput label="メジャーラジウス" value={majorRadius} onChange={setMajorRadius} />
+            <ParameterInput label="マイナーラジウス" value={minorRadius} onChange={setMinorRadius} />
+            <ParameterInput label="セクションの数" value={sectionsCount} onChange={setSectionsCount} />
+            <ParameterInput label="回転角度 (degree)" value={rotationAngle} onChange={setRotationAngle} />
             <ColorPicker value={color} onChange={setColor} />
             <LineWidthSelector value={lineWidth} onChange={setLineWidth} />
-        
-                <button onClick={sendData}>図形を作成</button>
-                {loading && <p>データ送信中...</p>}
-                {error && <p>エラー: {error}</p>}
-                {responseData && <p>バックエンドからの応答: {JSON.stringify(responseData)}</p>}
-    </div>
+
+            <button onClick={sendData}>図形を作成</button>
+            {loading && <p>データ送信中...</p>}
+            {error && <p>エラー: {error}</p>}
+            {responseData && <p>バックエンドからの応答: {JSON.stringify(responseData)}</p>}
+        </div>
     );
 };
-
 
 export default TorusComponent;

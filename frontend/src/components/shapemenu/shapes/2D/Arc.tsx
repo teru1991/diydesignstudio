@@ -3,47 +3,45 @@ import ParameterInput from '../../../common/ParameterInput';
 import ColorPicker from "../../../common/ColorPicker";
 import LineWidthSelector from "../../../common/LineWidthSelector";
 import useShapeAPIHandler from "../../../hooks/useShapeAPIHandler";
+
 const ArcComponent: React.FC = () => {
-    const [color, setColor] = useState("#000000");  // Default black color
-    const [lineWidth, setLineWidth] = useState(1);  // Default line width
-  
+    const [arcColor, setArcColor] = useState("#000000");
+    const [arcLineWidth, setArcLineWidth] = useState(1);
 
-    // Additional state for Arc parameters
-    const [param1, setParam1] = useState("");
-    const [param2, setParam2] = useState("");
+    const [centerPoint, setCenterPoint] = useState("");
+    const [radius, setRadius] = useState("");
+    const [startAngle, setStartAngle] = useState("");
+    const [endAngle, setEndAngle] = useState("");
 
-    // 1. Add useState definitions
-    const [isSent, setIsSent] = useState(false);
-    const [responseData, setResponseData] = useState(null);
+    const [apiIsSent, setApiIsSent] = useState(false);
+    const [apiResponseData, setApiResponseData] = useState(null);
 
-    // 2. Add the validation function for Arc parameters
-    const validateArcParams = (params: { param1: string; param2: string }) => {
-        return params.param1 !== "" && params.param2 !== "";
+    const validateArcParams = (params: { centerPoint: string; radius: string; startAngle: string; endAngle: string }) => {
+        return params.centerPoint !== "" && params.radius !== "" && params.startAngle !== "" && params.endAngle !== "";
     };
 
-    // 3. Use the custom hook
     const { sendData, loading, error } = useShapeAPIHandler(
-        { param1, param2 },
-        color,
-        lineWidth,
+        { centerPoint, radius, startAngle, endAngle },
+        arcColor,
+        arcLineWidth,
         validateArcParams
     );
 
     return (
-    <div>
-      <ParameterInput label="中心点" value="" onChange={() => {}} />
-      <ParameterInput label="半径" value="" onChange={() => {}} />
-      <ParameterInput label="始点角度" value="" onChange={() => {}} />
-      <ParameterInput label="終点角度" value="" onChange={() => {}} />
-      <ColorPicker value={color} onChange={setColor} />
-      <LineWidthSelector value={lineWidth} onChange={setLineWidth} />
-    
-                <button onClick={sendData}>図形を作成</button>
-                {loading && <p>データ送信中...</p>}
-                {error && <p>エラー: {error}</p>}
-                {responseData && <p>バックエンドからの応答: {JSON.stringify(responseData)}</p>}
-    </div>
-  );
+        <div>
+            <ParameterInput label="中心点" value={centerPoint} onChange={setCenterPoint} />
+            <ParameterInput label="半径" value={radius} onChange={setRadius} />
+            <ParameterInput label="始点角度" value={startAngle} onChange={setStartAngle} />
+            <ParameterInput label="終点角度" value={endAngle} onChange={setEndAngle} />
+            <ColorPicker value={arcColor} onChange={setArcColor} />
+            <LineWidthSelector value={arcLineWidth} onChange={setArcLineWidth} />
+
+            <button onClick={sendData}>図形を作成</button>
+            {loading && <p>データ送信中...</p>}
+            {error && <p>エラー: {error}</p>}
+            {apiResponseData && <p>バックエンドからの応答: {JSON.stringify(apiResponseData)}</p>}
+        </div>
+    );
 };
 
 export default ArcComponent;

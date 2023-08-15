@@ -1,50 +1,51 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import ParameterInput from '../../../common/ParameterInput';
 import ColorPicker from "../../../common/ColorPicker";
 import LineWidthSelector from "../../../common/LineWidthSelector";
 import useShapeAPIHandler from "../../../hooks/useShapeAPIHandler";
 
-
 const CubeComponent: React.FC = () => {
-    const [color, setColor] = useState("#000000");  // Default black color
-    const [lineWidth, setLineWidth] = useState(1);  // Default line width
-    
+    const [cubeColor, setCubeColor] = useState("#000000");
+    const [cubeLineWidth, setCubeLineWidth] = useState(1);
 
     // Additional state for Cube parameters
-    const [param1, setParam1] = useState("");
-    const [param2, setParam2] = useState("");
+    const [vertex, setVertex] = useState("");
+    const [edgeLength, setEdgeLength] = useState("");
 
-    // 1. Add useState definitions
-    const [isSent, setIsSent] = useState(false);
-    const [responseData, setResponseData] = useState(null);
+    const [apiIsSent, setApiIsSent] = useState(false);
+    const [apiResponseData, setApiResponseData] = useState(null);
 
-    // 2. Add the validation function for Cube parameters
-    const validateCubeParams = (params: { param1: string; param2: string }) => {
-        return params.param1 !== "" && params.param2 !== "";
+    const validateCubeParams = (params: { vertex: string; edgeLength: string }) => {
+        return params.vertex !== "" && params.edgeLength !== "";
     };
 
-    // 3. Use the custom hook
     const { sendData, loading, error } = useShapeAPIHandler(
-        { param1, param2 },
-        color,
-        lineWidth,
+        { vertex, edgeLength },
+        cubeColor,
+        cubeLineWidth,
         validateCubeParams
     );
 
     return (
         <div>
-            <ParameterInput label="頂点" value="" onChange={() => {
-            }}/>
-            <ParameterInput label="辺の長さ" value="" onChange={() => {
-            }}/>
-            <ColorPicker value={color} onChange={setColor} />
-            <LineWidthSelector value={lineWidth} onChange={setLineWidth} />
-        
-                <button onClick={sendData}>図形を作成</button>
-                {loading && <p>データ送信中...</p>}
-                {error && <p>エラー: {error}</p>}
-                {responseData && <p>バックエンドからの応答: {JSON.stringify(responseData)}</p>}
-    </div>
+            <ParameterInput
+                label="頂点"
+                value={vertex}
+                onChange={(value: string) => setVertex(value)}
+            />
+            <ParameterInput
+                label="辺の長さ"
+                value={edgeLength}
+                onChange={(value: string) => setEdgeLength(value)}
+            />
+            <ColorPicker value={cubeColor} onChange={setCubeColor} />
+            <LineWidthSelector value={cubeLineWidth} onChange={setCubeLineWidth} />
+
+            <button onClick={sendData}>図形を作成</button>
+            {loading && <p>データ送信中...</p>}
+            {error && <p>エラー: {error}</p>}
+            {apiResponseData && <p>バックエンドからの応答: {JSON.stringify(apiResponseData)}</p>}
+        </div>
     );
 };
 

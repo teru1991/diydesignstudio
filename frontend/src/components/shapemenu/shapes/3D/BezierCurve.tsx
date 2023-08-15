@@ -1,3 +1,4 @@
+// BezierCurveComponent.tsx
 import React, { useState, useEffect } from 'react';
 import ParameterInput from '../../../common/ParameterInput';
 import ColorPicker from "../../../common/ColorPicker";
@@ -5,57 +6,55 @@ import LineWidthSelector from "../../../common/LineWidthSelector";
 import useShapeAPIHandler from "../../../hooks/useShapeAPIHandler";
 
 const BezierCurveComponent: React.FC = () => {
-    const [color, setColor] = useState("#000000");  // Default black color
-    const [lineWidth, setLineWidth] = useState(1);  // Default line width
-    const [degree, setDegree] = useState(3); // 次数のデフォルト値
-    
+    const [curveColor, setCurveColor] = useState("#000000");
+    const [curveWidth, setCurveWidth] = useState(1);
+    const [curveDegree, setCurveDegree] = useState(3);
 
-    // 1. Add useState definitions
-    const [isSent, setIsSent] = useState(false);
-    const [responseData, setResponseData] = useState(null);
+    const [apiIsSent, setApiIsSent] = useState(false);
+    const [apiResponseData, setApiResponseData] = useState(null);
 
+    const [controlPointValues, setControlPointValues] = useState<Array<string>>(Array(curveDegree + 1).fill(""));
 
-    const controlPoints = Array.from({length: degree + 1}, (_, i) => (
-        <input key={i} type="text" placeholder={`制御点${i}`}/>
+    const controlInputs = controlPointValues.map((value, i) => (
+        <ParameterInput
+            key={i}
+            label={`制御点${i}`}
+            value={value}
+            onChange={(newVal) => {
+                const updatedControlPoints = [...controlPointValues];
+                updatedControlPoints[i] = newVal;
+                setControlPointValues(updatedControlPoints);
+            }}
+        />
     ));
 
-    
-
-    // Additional state for BezierCurve parameters
-    const [param1, setParam1] = useState("");
-    const [param2, setParam2] = useState("");
-
-    // 2. Add the validation function for BezierCurve parameters
-    const validateBezierCurveParams = (params: { param1: string; param2: string }) => {
-        return params.param1 !== "" && params.param2 !== "";
+    const validateControlPoints = (params: { controlPoints: Array<string> }) => {
+        return params.controlPoints.every(point => point !== "");
     };
 
-    // 3. Use the custom hook
     const { sendData, loading, error } = useShapeAPIHandler(
-        { param1, param2 },
-        color,
-        lineWidth,
-        validateBezierCurveParams
+        { controlPoints: controlPointValues },
+        curveColor,
+        curveWidth,
+        validateControlPoints
     );
 
     return (
         <div>
-            <label>次数:</label>
-            <input type="number" value={degree} onChange={(e) => setDegree(Number(e.target.value))}/>
-            {controlPoints}
-            <ColorPicker value={color} onChange={setColor} />
-            <LineWidthSelector value={lineWidth} onChange={setLineWidth} />
-        
+            <ParameterInput
+                label="次数"
+                value={curveDegree.toString()}
+                onChange={(val) => setCurveDegree(Number(val))}
+            />
+            {controlInputs}
+            <ColorPicker value={curveColor} onChange={setCurveColor} />
+            <LineWidthSelector value={curveWidth} onChange={setCurveWidth} />
+
             <button onClick={sendData}>図形を作成</button>
             {loading && <p>データ送信中...</p>}
             {error && <p>エラー: {error}</p>}
-            {responseData && <p>バックエンドからの応答: {JSON.stringify(responseData)}</p>}
-
-                <button onClick={sendData}>図形を作成</button>
-                {loading && <p>データ送信中...</p>}
-                {error && <p>エラー: {error}</p>}
-                {responseData && <p>バックエンドからの応答: {JSON.stringify(responseData)}</p>}
-    </div>
+            {apiResponseData && <p>バックエンドからの応答: {JSON.stringify(apiResponseData)}</p>}
+        </div>
     );
 };
 

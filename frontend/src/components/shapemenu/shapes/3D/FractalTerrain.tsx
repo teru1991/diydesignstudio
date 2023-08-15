@@ -1,30 +1,27 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import ParameterInput from '../../../common/ParameterInput';
 import ColorPicker from "../../../common/ColorPicker";
 import LineWidthSelector from "../../../common/LineWidthSelector";
 import useShapeAPIHandler from "../../../hooks/useShapeAPIHandler";
 
 const FractalTerrainComponent: React.FC = () => {
-    const [color, setColor] = useState("#000000");  // Default black color
-    const [lineWidth, setLineWidth] = useState(1);  // Default line width
-    
+    const [color, setColor] = useState("#000000");
+    const [lineWidth, setLineWidth] = useState(1);
 
-    // Additional state for FractalTerrain parameters
-    const [param1, setParam1] = useState("");
-    const [param2, setParam2] = useState("");
+    // State for FractalTerrain parameters
+    const [iterations, setIterations] = useState(0);
+    const [scale, setScale] = useState(1);
+    const [roughness, setRoughness] = useState(1);
 
-    // 1. Add useState definitions
-    const [isSent, setIsSent] = useState(false);
-    const [responseData, setResponseData] = useState(null);
+    const [apiIsSent, setApiIsSent] = useState(false);
+    const [apiResponseData, setApiResponseData] = useState(null);
 
-    // 2. Add the validation function for FractalTerrain parameters
-    const validateFractalTerrainParams = (params: { param1: string; param2: string }) => {
-        return params.param1 !== "" && params.param2 !== "";
+    const validateFractalTerrainParams = (params: { iterations: number; scale: number; roughness: number }) => {
+        return params.iterations > 0 && params.scale > 0 && params.roughness > 0;
     };
 
-    // 3. Use the custom hook
     const { sendData, loading, error } = useShapeAPIHandler(
-        { param1, param2 },
+        { iterations, scale, roughness },
         color,
         lineWidth,
         validateFractalTerrainParams
@@ -32,20 +29,29 @@ const FractalTerrainComponent: React.FC = () => {
 
     return (
         <div>
-            <label>イテレーション数:</label>
-            <input type="number"/>
-            <label>スケール:</label>
-            <input type="number"/>
-            <label>細かさ:</label>
-            <input type="number"/>
+            <ParameterInput
+                label="イテレーション数"
+                value={iterations.toString()}
+                onChange={(value: string) => setIterations(Number(value))}
+            />
+            <ParameterInput
+                label="スケール"
+                value={scale.toString()}
+                onChange={(value: string) => setScale(Number(value))}
+            />
+            <ParameterInput
+                label="細かさ"
+                value={roughness.toString()}
+                onChange={(value: string) => setRoughness(Number(value))}
+            />
             <ColorPicker value={color} onChange={setColor} />
             <LineWidthSelector value={lineWidth} onChange={setLineWidth} />
-        
-                <button onClick={sendData}>図形を作成</button>
-                {loading && <p>データ送信中...</p>}
-                {error && <p>エラー: {error}</p>}
-                {responseData && <p>バックエンドからの応答: {JSON.stringify(responseData)}</p>}
-    </div>
+
+            <button onClick={sendData}>図形を作成</button>
+            {loading && <p>データ送信中...</p>}
+            {error && <p>エラー: {error}</p>}
+            {apiResponseData && <p>バックエンドからの応答: {JSON.stringify(apiResponseData)}</p>}
+        </div>
     );
 };
 

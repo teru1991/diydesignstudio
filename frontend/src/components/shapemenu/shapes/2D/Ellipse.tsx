@@ -5,45 +5,35 @@ import LineWidthSelector from "../../../common/LineWidthSelector";
 import useShapeAPIHandler from "../../../hooks/useShapeAPIHandler";
 
 const EllipseComponent: React.FC = () => {
-    const [color, setColor] = useState("#000000");  // Default black color
-    const [lineWidth, setLineWidth] = useState(1);  // Default line width
-  
+    const [color, setColor] = useState("#000000");
+    const [lineWidth, setLineWidth] = useState(1);
 
-    // Additional state for Ellipse parameters
-    const [param1, setParam1] = useState("");
-    const [param2, setParam2] = useState("");
+    const [majorAxis, setMajorAxis] = useState("");
+    const [minorAxis, setMinorAxis] = useState("");
+    const [center, setCenter] = useState("");
 
-    // 1. Add useState definitions
-    const [isSent, setIsSent] = useState(false);
-    const [responseData, setResponseData] = useState(null);
+    const isValid = () => majorAxis !== "" && minorAxis !== "" && center !== "";
 
-    // 2. Add the validation function for Ellipse parameters
-    const validateEllipseParams = (params: { param1: string; param2: string }) => {
-        return params.param1 !== "" && params.param2 !== "";
-    };
-
-    // 3. Use the custom hook
     const { sendData, loading, error } = useShapeAPIHandler(
-        { param1, param2 },
+        { majorAxis, minorAxis, center },
         color,
         lineWidth,
-        validateEllipseParams
+        isValid
     );
 
     return (
-    <div>
-      <ParameterInput label="長軸" value="" onChange={() => {}} />
-      <ParameterInput label="短軸" value="" onChange={() => {}} />
-      <ParameterInput label="中心点" value="" onChange={() => {}} />
-        <ColorPicker value={color} onChange={setColor} />
-        <LineWidthSelector value={lineWidth} onChange={setLineWidth} />
-    
-                <button onClick={sendData}>図形を作成</button>
-                {loading && <p>データ送信中...</p>}
-                {error && <p>エラー: {error}</p>}
-                {responseData && <p>バックエンドからの応答: {JSON.stringify(responseData)}</p>}
-    </div>
-  );
+        <div>
+            <ParameterInput label="長軸" value={majorAxis} onChange={setMajorAxis} />
+            <ParameterInput label="短軸" value={minorAxis} onChange={setMinorAxis} />
+            <ParameterInput label="中心点" value={center} onChange={setCenter} />
+            <ColorPicker value={color} onChange={setColor} />
+            <LineWidthSelector value={lineWidth} onChange={setLineWidth} />
+
+            <button onClick={sendData}>図形を作成</button>
+            {loading && <p>データ送信中...</p>}
+            {error && <p>エラー: {error}</p>}
+        </div>
+    );
 };
 
 export default EllipseComponent;

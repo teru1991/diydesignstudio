@@ -1,30 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import ParameterInput from '../../../common/ParameterInput';
 import ColorPicker from "../../../common/ColorPicker";
 import LineWidthSelector from "../../../common/LineWidthSelector";
 import useShapeAPIHandler from "../../../hooks/useShapeAPIHandler";
 
 const PointCloudComponent: React.FC = () => {
-    const [color, setColor] = useState("#000000");  // Default black color
-    const [lineWidth, setLineWidth] = useState(1);  // Default line width
-    
+    const [color, setColor] = useState("#000000"); // Default black color for component
+    const [lineWidth, setLineWidth] = useState(1); // Default line width
 
-    // Additional state for PointCloud parameters
-    const [param1, setParam1] = useState("");
-    const [param2, setParam2] = useState("");
+    // PointCloud parameters state
+    const [pointCoordinates, setPointCoordinates] = useState<string[]>([""]);
+    const [pointColor, setPointColor] = useState("#FFFFFF"); // Default white color for points
+    const [density, setDensity] = useState(0);
 
-    // 1. Add useState definitions
-    const [isSent, setIsSent] = useState(false);
-    const [responseData, setResponseData] = useState(null);
-
-    // 2. Add the validation function for PointCloud parameters
-    const validatePointCloudParams = (params: { param1: string; param2: string }) => {
-        return params.param1 !== "" && params.param2 !== "";
+    const validatePointCloudParams = (params: { pointCoordinates: string[]; pointColor: string; density: number }) => {
+        return params.pointCoordinates.every(coord => coord !== "") && params.pointColor !== "" && params.density >= 0;
     };
 
-    // 3. Use the custom hook
-    const { sendData, loading, error } = useShapeAPIHandler(
-        { param1, param2 },
+    const { sendData, loading, error, responseData } = useShapeAPIHandler(
+        { pointCoordinates, pointColor, density },
         color,
         lineWidth,
         validatePointCloudParams
@@ -32,20 +26,30 @@ const PointCloudComponent: React.FC = () => {
 
     return (
         <div>
-            <label>点の座標:</label>
-            {/* 座標の入力 */}
+            {pointCoordinates.map((coord, index) => (
+                <ParameterInput
+                    key={index}
+                    label={`点の座標 ${index + 1}`}
+                    value={coord}
+                    onChange={(value) => {
+                        const newCoords = [...pointCoordinates];
+                        newCoords[index] = value;
+                        setPointCoordinates(newCoords);
+                    }}
+                />
+            ))}
+            <button onClick={() => setPointCoordinates([...pointCoordinates, ""])}>+</button>
             <label>色:</label>
-            <input type="color"/>
-            <label>密度:</label>
-            <input type="number"/>
+            <input type="color" value={pointColor} onChange={(e) => setPointColor(e.target.value)} />
+            <ParameterInput label="密度" value={density.toString()} onChange={(value) => setDensity(Number(value))} />
             <ColorPicker value={color} onChange={setColor} />
             <LineWidthSelector value={lineWidth} onChange={setLineWidth} />
-        
-                <button onClick={sendData}>図形を作成</button>
-                {loading && <p>データ送信中...</p>}
-                {error && <p>エラー: {error}</p>}
-                {responseData && <p>バックエンドからの応答: {JSON.stringify(responseData)}</p>}
-    </div>
+
+            <button onClick={sendData}>図形を作成</button>
+            {loading && <p>データ送信中...</p>}
+            {error && <p>エラー: {error}</p>}
+            {responseData && <p>バックエンドからの応答: {JSON.stringify(responseData)}</p>}
+        </div>
     );
 };
 

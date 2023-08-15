@@ -1,50 +1,53 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import ParameterInput from '../../../common/ParameterInput';
 import ColorPicker from "../../../common/ColorPicker";
 import LineWidthSelector from "../../../common/LineWidthSelector";
 import useShapeAPIHandler from "../../../hooks/useShapeAPIHandler";
 
-const ProceduralModelingComponent: React.FC = () => {
+const SphereComponent: React.FC = () => {
     const [color, setColor] = useState("#000000");  // Default black color
     const [lineWidth, setLineWidth] = useState(1);  // Default line width
-    
 
-    // Additional state for ProceduralModeling parameters
-    const [param1, setParam1] = useState("");
-    const [param2, setParam2] = useState("");
+    // Additional state for Sphere parameters
+    const [center, setCenter] = useState("");
+    const [radius, setRadius] = useState("");
 
-    // 1. Add useState definitions
-    const [isSent, setIsSent] = useState(false);
-    const [responseData, setResponseData] = useState(null);
+    const [parameters, setParameters] = useState([{ label: "中心点", value: center }, { label: "半径", value: radius }]);
 
-    // 2. Add the validation function for ProceduralModeling parameters
-    const validateProceduralModelingParams = (params: { param1: string; param2: string }) => {
-        return params.param1 !== "" && params.param2 !== "";
+    const addParameter = () => {
+        setParameters([...parameters, { label: "", value: "" }]);
     };
 
-    // 3. Use the custom hook
-    const { sendData, loading, error } = useShapeAPIHandler(
-        { param1, param2 },
+    const validateSphereParams = (params: { center: string; radius: string }) => {
+        return params.center !== "" && params.radius !== "";
+    };
+
+    const { sendData, loading, error, responseData } = useShapeAPIHandler(
+        { center, radius },
         color,
         lineWidth,
-        validateProceduralModelingParams
+        validateSphereParams
     );
 
     return (
         <div>
-            <label>ルールセット:</label>
-            <input type="text"/>
-            <label>パラメータ:</label>
-            <input type="text"/>
+            {parameters.map((param, index) => (
+                <ParameterInput key={index} label={param.label} value={param.value} onChange={value => {
+                    const newParameters = [...parameters];
+                    newParameters[index].value = value;
+                    setParameters(newParameters);
+                }} />
+            ))}
+            <button onClick={addParameter}>+</button>
             <ColorPicker value={color} onChange={setColor} />
             <LineWidthSelector value={lineWidth} onChange={setLineWidth} />
-        
-                <button onClick={sendData}>図形を作成</button>
-                {loading && <p>データ送信中...</p>}
-                {error && <p>エラー: {error}</p>}
-                {responseData && <p>バックエンドからの応答: {JSON.stringify(responseData)}</p>}
-    </div>
+
+            <button onClick={sendData}>図形を作成</button>
+            {loading && <p>データ送信中...</p>}
+            {error && <p>エラー: {error}</p>}
+            {responseData && <p>バックエンドからの応答: {JSON.stringify(responseData)}</p>}
+        </div>
     );
 };
 
-export default ProceduralModelingComponent;
+export default SphereComponent;

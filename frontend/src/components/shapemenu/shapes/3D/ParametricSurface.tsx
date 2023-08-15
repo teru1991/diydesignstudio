@@ -1,30 +1,28 @@
-import React, { useState, useEffect } from 'react';
-import ParameterInput from '../../../common/ParameterInput';
+import React, { useState } from 'react';
 import ColorPicker from "../../../common/ColorPicker";
 import LineWidthSelector from "../../../common/LineWidthSelector";
 import useShapeAPIHandler from "../../../hooks/useShapeAPIHandler";
 
 const ParametricSurfaceComponent: React.FC = () => {
-    const [color, setColor] = useState("#000000");  // Default black color
-    const [lineWidth, setLineWidth] = useState(1);  // Default line width
-    
+    const [color, setColor] = useState("#000000");
+    const [lineWidth, setLineWidth] = useState(1);
 
-    // Additional state for ParametricSurface parameters
-    const [param1, setParam1] = useState("");
-    const [param2, setParam2] = useState("");
+    // State for ParametricSurface parameters
+    const [equationX, setEquationX] = useState("");
+    const [equationY, setEquationY] = useState("");
+    const [equationZ, setEquationZ] = useState("");
+    const [uRange, setURange] = useState("");
+    const [vRange, setVRange] = useState("");
 
-    // 1. Add useState definitions
-    const [isSent, setIsSent] = useState(false);
-    const [responseData, setResponseData] = useState(null);
+    const [apiIsSent, setApiIsSent] = useState(false);
+    const [apiResponseData, setApiResponseData] = useState(null);
 
-    // 2. Add the validation function for ParametricSurface parameters
-    const validateParametricSurfaceParams = (params: { param1: string; param2: string }) => {
-        return params.param1 !== "" && params.param2 !== "";
+    const validateParametricSurfaceParams = () => {
+        return equationX !== "" && equationY !== "" && equationZ !== "" && uRange !== "" && vRange !== "";
     };
 
-    // 3. Use the custom hook
     const { sendData, loading, error } = useShapeAPIHandler(
-        { param1, param2 },
+        { equationX, equationY, equationZ, uRange, vRange },
         color,
         lineWidth,
         validateParametricSurfaceParams
@@ -33,20 +31,20 @@ const ParametricSurfaceComponent: React.FC = () => {
     return (
         <div>
             <label>方程式:</label>
-            <input type="text" placeholder="x(u,v)"/>
-            <input type="text" placeholder="y(u,v)"/>
-            <input type="text" placeholder="z(u,v)"/>
+            <input type="text" value={equationX} onChange={e => setEquationX(e.target.value)} placeholder="x(u,v)" />
+            <input type="text" value={equationY} onChange={e => setEquationY(e.target.value)} placeholder="y(u,v)" />
+            <input type="text" value={equationZ} onChange={e => setEquationZ(e.target.value)} placeholder="z(u,v)" />
             <label>パラメータ範囲:</label>
-            <input type="text" placeholder="uの範囲"/>
-            <input type="text" placeholder="vの範囲"/>
+            <input type="text" value={uRange} onChange={e => setURange(e.target.value)} placeholder="uの範囲" />
+            <input type="text" value={vRange} onChange={e => setVRange(e.target.value)} placeholder="vの範囲" />
             <ColorPicker value={color} onChange={setColor} />
             <LineWidthSelector value={lineWidth} onChange={setLineWidth} />
-        
-                <button onClick={sendData}>図形を作成</button>
-                {loading && <p>データ送信中...</p>}
-                {error && <p>エラー: {error}</p>}
-                {responseData && <p>バックエンドからの応答: {JSON.stringify(responseData)}</p>}
-    </div>
+
+            <button onClick={sendData}>図形を作成</button>
+            {loading && <p>データ送信中...</p>}
+            {error && <p>エラー: {error}</p>}
+            {apiResponseData && <p>バックエンドからの応答: {JSON.stringify(apiResponseData)}</p>}
+        </div>
     );
 };
 

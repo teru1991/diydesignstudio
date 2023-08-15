@@ -1,50 +1,51 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import ParameterInput from '../../../common/ParameterInput';
 import ColorPicker from "../../../common/ColorPicker";
 import LineWidthSelector from "../../../common/LineWidthSelector";
 import useShapeAPIHandler from "../../../hooks/useShapeAPIHandler";
 
-
 const ContourModelingComponent: React.FC = () => {
-    const [color, setColor] = useState("#000000");  // Default black color
-    const [lineWidth, setLineWidth] = useState(1);  // Default line width
-    
+    const [contourColor, setContourColor] = useState("#000000");
+    const [contourLineWidth, setContourLineWidth] = useState(1);
 
     // Additional state for ContourModeling parameters
-    const [param1, setParam1] = useState("");
-    const [param2, setParam2] = useState("");
+    const [scalarField, setScalarField] = useState("");
+    const [threshold, setThreshold] = useState(0);
 
-    // 1. Add useState definitions
-    const [isSent, setIsSent] = useState(false);
-    const [responseData, setResponseData] = useState(null);
+    const [apiIsSent, setApiIsSent] = useState(false);
+    const [apiResponseData, setApiResponseData] = useState(null);
 
-    // 2. Add the validation function for ContourModeling parameters
-    const validateContourModelingParams = (params: { param1: string; param2: string }) => {
-        return params.param1 !== "" && params.param2 !== "";
+    const validateContourModelingParams = (params: { scalarField: string; threshold: number }) => {
+        return params.scalarField !== "" && params.threshold > 0;
     };
 
-    // 3. Use the custom hook
     const { sendData, loading, error } = useShapeAPIHandler(
-        { param1, param2 },
-        color,
-        lineWidth,
+        { scalarField, threshold },
+        contourColor,
+        contourLineWidth,
         validateContourModelingParams
     );
 
     return (
         <div>
-            <label>スカラー場:</label>
-            <input type="text"/>
-            <label>閾値:</label>
-            <input type="number"/>
-            <ColorPicker value={color} onChange={setColor} />
-            <LineWidthSelector value={lineWidth} onChange={setLineWidth} />
-        
-                <button onClick={sendData}>図形を作成</button>
-                {loading && <p>データ送信中...</p>}
-                {error && <p>エラー: {error}</p>}
-                {responseData && <p>バックエンドからの応答: {JSON.stringify(responseData)}</p>}
-    </div>
+            <ParameterInput
+                label="スカラー場"
+                value={scalarField}
+                onChange={(value: string) => setScalarField(value)}
+            />
+            <ParameterInput
+                label="閾値"
+                value={threshold.toString()}
+                onChange={(value: string) => setThreshold(Number(value))}
+            />
+            <ColorPicker value={contourColor} onChange={setContourColor} />
+            <LineWidthSelector value={contourLineWidth} onChange={setContourLineWidth} />
+
+            <button onClick={sendData}>図形を作成</button>
+            {loading && <p>データ送信中...</p>}
+            {error && <p>エラー: {error}</p>}
+            {apiResponseData && <p>バックエンドからの応答: {JSON.stringify(apiResponseData)}</p>}
+        </div>
     );
 };
 
