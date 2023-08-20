@@ -1,7 +1,7 @@
 import React from 'react';
-import '../assets/RibbonMenu.scss';
+import '../../assets/RibbonMenu.scss';
 
-const ViewMenu = () => {
+const DisplayMenu = () => {
     const [zoomLevel, setZoomLevel] = React.useState(1);
     const [isGridVisible, setIsGridVisible] = React.useState(true);
 
@@ -47,4 +47,4 @@ const ViewMenu = () => {
     );
 };
 
-export default ViewMenu;
+export default DisplayMenu;

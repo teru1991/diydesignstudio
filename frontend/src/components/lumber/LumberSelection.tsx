@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface Lumber {
+export interface Lumber {
     name: string;
     length: number;
     width: number;
@@ -9,7 +9,8 @@ interface Lumber {
 
 interface LumberSelectionProps {
     lumbers: Lumber[];
-    onSelect: (lumber: Lumber) => void;
+    onSelect: React.Dispatch<React.SetStateAction<Lumber | null>>;
+
 }
 
 const LumberSelection: React.FC<LumberSelectionProps> = ({lumbers, onSelect}) => {

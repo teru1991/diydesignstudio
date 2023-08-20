@@ -1,18 +1,19 @@
+// ParametricMenu.tsx
 import React from 'react';
-import '../assets/RibbonMenu.scss';
+import '../../assets/RibbonMenu.scss';
 
-interface ParametricMenuProps {
-    // Props type definitions go here
-}
-
-const ParametricMenu: React.FC<ParametricMenuProps> = (props) => {
-    // Component logic goes here
-
+const ParametricMenu = () => {
     return (
         <div className="ribbon-menu">
-            <button onClick={() => console.log("Parameter Control")}>Parameter Control</button>
-            <button onClick={() => console.log("Part Creation")}>Part Creation</button>
-            <button onClick={() => console.log("Part Management")}>Part Management</button>
+            <button onClick={() => { /* ToDo: Implement Constraint functionality here */ }}>
+                制約
+            </button>
+            <button onClick={() => { /* ToDo: Implement Action functionality here */ }}>
+                アクション
+            </button>
+            <button onClick={() => { /* ToDo: Implement Parameter functionality here */ }}>
+                パラメータ
+            </button>
         </div>
     );
 };

@@ -1,26 +1,68 @@
-/* QuickAccessToolbar.scss */
 .quick-access-toolbar {
   display: flex;
-  justify-content: flex-start;
+  align-items: center; // 各要素の中央揃え
   padding: 0.5rem;
 
-  button {
-    margin-right: 0.5rem;
-    padding: 0.5rem;
-    border: none;
-    background-color: #ffffff;
+  .dropdown {
+    position: relative;
+    margin-left: auto; /* これを追加してdropdownを右端に配置 */
+  }
+
+  button, .dropdown {
+    height: 40px; // 固定の高さ
+    width: 40px; // 固定の幅
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0; // 余白をなくす
+    border: 1px solid #777;
+    background-color: #555;
     cursor: pointer;
 
     &:hover {
-      background-color: #e1e1e1;
+      background-color: #444;
     }
 
     &:active {
-      background-color: #c1c1c1;
+      background-color: #333;
+    }
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    width: auto;
+    min-width: 200px; // 最小幅を設定
+    max-width: 300px; // 最大幅を設定
+
+    label {
+      display: block;
+      padding: 0.5rem;
+      background-color: #555;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #444;
+      }
+    }
+  }
+
+  .dropdown-content.show {
+    display: block; // 表示
+  }
+
+  @media (max-width: 600px) {
+    .dropdown-content label {
+      font-size: 14px;
+    }
+  }
+
+  @media (min-width: 601px) {
+    .dropdown-content label {
+      font-size: 16px;
     }
   }
 }
-
-
-
-

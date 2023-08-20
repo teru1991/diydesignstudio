@@ -1,5 +1,5 @@
 import React from 'react';
-import '../assets/RibbonMenu.scss';
+import '../../assets/RibbonMenu.scss';
 interface UserMenuProps {
     // Props type definitions go here
 }

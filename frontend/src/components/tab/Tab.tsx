@@ -1,5 +1,5 @@
 import React from 'react';
-import './Tub.scss';
+import './Tab.scss';
 // タブの型定義
 interface TabProps {
     name: string;

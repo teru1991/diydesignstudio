@@ -1,29 +1,27 @@
 .ribbon {
-  background-color: rgba(208, 208, 208, 0);
-  height: 30px; // 高さを30pxに変更
-  padding: 5px; // パディングを5pxに変更
+  background-color: #444; // Darker ribbon background
+  height: 30px;
+  padding: 5px;
   color: #fff;
   display: flex;
   flex-direction: row;
 
   button {
-    color: #000; // 文字色を黒に変更
-    background-color: #f1f1f1; // ボタンの背景色を明るく
-    border: 1px solid #000; // 境界線を追加
+    color: #fff;
+    background-color: #555;
+    border: 1px solid #777;
     margin-right: 10px;
-    padding: 5px 10px; // パディングを追加
-    transition: all 0.3s ease; // トランジションを追加
+    padding: 5px 10px;
+    transition: all 0.3s ease;
 
-    // ホバー時のスタイル
     &:hover {
-      background-color: #e1e1e1;
+      background-color: #444;
       border-color: #0078d4;
-      color: #000000;
+      color: #ffffff;
     }
 
-    // アクティブ時のスタイル
     &:active {
-      background-color: #c1c1c1;
+      background-color: #333;
       border-color: #0078d4;
     }
   }

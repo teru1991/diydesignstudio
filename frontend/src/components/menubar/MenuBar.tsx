@@ -1,56 +1,65 @@
 import React, { useState } from 'react';
-import QuickAccessToolbar from '../quickaccesstoolbar/QuickAccessToolbar';
+import QuickAccessToolbar, { QATCommand } from '../quickaccesstoolbar/QuickAccessToolbar';
 import Ribbon from '../ribbon/Ribbon';
-import Tub from '../tub/Tub';
-import FileMenu from '../filemenu/FileMenu';
-import EditMenu from '../editmenu/EditMenu';
-import ViewMenu from '../viewmenu/ViewMenu';
+import Tub from '../tab/Tab';
+import HomeMenu from '../homemenu/HomeMenu';
+import InsertMenu from '../insertmenu/InsertMenu';
+import AnnotationMenu from "../annotationmenu/AnnotationMenu";
+import DisplayMenu from '../displaymenu/DisplayMenu';
+import OutputMenu from "../outputmenu/OutputMenu";
 import ModelingMenu from '../modeling/ModelingMenu';
 import ParametricMenu from '../parametric/ParametricMenu';
+import ThreeDToolsMenu from "../threedtoolmenu/ThreeDToolMenu";
+import RenderingMenu from "../renderingmenu/RenderingMenu";
+import CustomizeMenu from "../customizemenu/CustomizeMenu";
+import MacroMenu from "../macromenu/MacroMenu";
+import SpecificToolsMenu from "../specifictoolsmenu/SpecificToolsMenu";
 import UserMenu from '../user/UserMenu';
 import HelpMenu from '../helpmenu/HelpMenu';
 import SettingsMenu from '../setting/SettingsMenu';
 import CustomToolbar from '../customtoolbar/CustomToolBar';
+import {ribbonTabs,Command} from "../../data/RibbonTab";
 import './MenuBar.scss';
 
 interface MenuBarProps {
     setActiveModelingTab: React.Dispatch<React.SetStateAction<'2D' | '3D'>>;
 }
 
-
 const MenuBar: React.FC<MenuBarProps> = ({ setActiveModelingTab }) => {
-    const quickCommands = [
-        { name: 'Undo', action: () => console.log('Undo executed') },
-        { name: 'Redo', action: () => console.log('Redo executed') },
-        { name: 'Save', action: () => console.log('Save executed') },
-        { name: 'Setting', action: () => console.log('Setting executed') },
+    const quickCommands: QATCommand[] = [
+        { name: 'Undo', action: "Undo" },
+        { name: 'Redo', action: "Redo" },
+        { name: 'Save', action: "SaveFile" },
+        { name: 'Setting', action: "OtherCommands" }, // ここは適切なQATButtonActionに変更する必要があるかもしれません
     ];
 
     const [currentTab, setCurrentTab] = useState('File');
 
     let MenuComponent;
     switch (currentTab) {
-        case 'File': MenuComponent = FileMenu; break;
-        case 'Edit': MenuComponent = EditMenu; break;
-        case 'View': MenuComponent = ViewMenu; break;
+        case 'ホーム': MenuComponent = HomeMenu; break;
+        case '挿入': MenuComponent = InsertMenu; break;
+        case '注釈': MenuComponent = AnnotationMenu; break;
+        case '表示': MenuComponent = DisplayMenu; break;
+        case '出力': MenuComponent = OutputMenu; break;
         case 'Modeling': MenuComponent = ModelingMenu; break;
-        case 'Parametric': MenuComponent = ParametricMenu; break;
+        case 'パラメトリック': MenuComponent = ParametricMenu; break;
+        case '3Dツール': MenuComponent = ThreeDToolsMenu; break;
+        case 'レンダリング': MenuComponent = RenderingMenu; break;
+        case 'カスタマイズ': MenuComponent = CustomizeMenu; break;
+        case 'マクロ': MenuComponent = MacroMenu; break;
+        case 'その他': MenuComponent = SpecificToolsMenu; break;
         case 'User': MenuComponent = UserMenu; break;
         case 'Help': MenuComponent = HelpMenu; break;
         case 'Setting': MenuComponent = SettingsMenu; break;
-        default: MenuComponent = () => null; break;
+        default: MenuComponent = () => <div>未知のタブです</div>; break;
     }
 
-    const tabs = [
-        { name: 'File', active: currentTab === 'File', action: () => setCurrentTab('File') },
-        { name: 'Edit', active: currentTab === 'Edit', action: () => setCurrentTab('Edit') },
-        { name: 'View', active: currentTab === 'View', action: () => setCurrentTab('View') },
-        { name: 'Modeling', active: currentTab === 'Modeling', action: () => setCurrentTab('Modeling') },
-        { name: 'Parametric', active: currentTab === 'Parametric', action: () => setCurrentTab('Parametric') },
-        { name: 'User', active: currentTab === 'User', action: () => setCurrentTab('User') },
-        { name: 'Help', active: currentTab === 'Help', action: () => setCurrentTab('Help') },
-        { name: 'Setting', active: currentTab === 'Setting', action: () => setCurrentTab('Setting') },
-    ];
+    const tabs = ribbonTabs.map((tab: { name: string; }, i: number) => ({
+        name: tab.name,
+        active: currentTab === tab.name,
+        action: () => setCurrentTab(tab.name)
+    }));
 
     return (
         <div className="menu-bar">

@@ -1,65 +1,54 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ParameterInput from '../../../common/ParameterInput';
 import ColorPicker from "../../../common/ColorPicker";
 import LineWidthSelector from "../../../common/LineWidthSelector";
-import useShapeAPIHandler from "../../../hooks/useShapeAPIHandler";
+import LumberSelection from '../../../lumber/LumberSelection';
+import {Lumber} from '../../../lumber/LumberSelection';
+import DepthInput from "../../DepthInput";
 
 
-const RectangleComponent: React.FC<{ onChange?: (parameters: { width: string, height: string }) => void }> = ({ onChange }) => {
-    const [width, setWidth] = useState<string>('');
-    const [height, setHeight] = useState<string>('');
-    const [color, setColor] = useState("#000000");  // Default black color
-    const [lineWidth, setLineWidth] = useState(1);  // Default line width
-    const handleInputChange = (value: string, setter: React.Dispatch<React.SetStateAction<string>>) => {
-        setter(value);
-        if (onChange) {
-            onChange({ width, height });
+// RectangleComponent
+const RectangleComponent: React.FC = () => {
+    const [rectColor, setRectColor] = useState("#000000");
+    const [rectLineWidth, setRectLineWidth] = useState(1);
+
+    const [length, setLength] = useState("");
+    const [width, setWidth] = useState("");
+    const [depth, setDepth] = useState<number>(0);
+    const [selectedLumber, setSelectedLumber] = useState<Lumber | null>(null);
+    const [previewData, setPreviewData] = useState(null);
+
+    const lumbers = [ // このデータはAPIやデータベースから取得することも考えられます。
+        { name: "Standard Lumber", length: 1820, width: 910, height: 20 }
+    ];
+
+    useEffect(() => {
+        if (length && width) {
+            // 材料が選択されている場合、その材料の深さを使用
+            if (selectedLumber) {
+                setDepth(selectedLumber.height);
+            }
+            // ここでAPIを呼び出して図形のデータを取得します。
+            // 例: const data = fetchAPI(length, width, depth);
+            // setPreviewData(data);
         }
-    };
-
-    
-
-    // Additional state for Rectangle parameters
-    const [param1, setParam1] = useState("");
-    const [param2, setParam2] = useState("");
-
-    // 1. Add useState definitions
-    const [isSent, setIsSent] = useState(false);
-    const [responseData, setResponseData] = useState(null);
-
-    // 2. Add the validation function for Rectangle parameters
-    const validateRectangleParams = (params: { param1: string; param2: string }) => {
-        return params.param1 !== "" && params.param2 !== "";
-    };
-
-    // 3. Use the custom hook
-    const { sendData, loading, error } = useShapeAPIHandler(
-        { param1, param2 },
-        color,
-        lineWidth,
-        validateRectangleParams
-    );
+    }, [length, width, selectedLumber]);
 
     return (
         <div>
-            <ParameterInput
-                label="幅"
-                value={width}
-                onChange={(value) => handleInputChange(value, setWidth)}
-            />
-            <ParameterInput
-                label="高さ"
-                value={height}
-                onChange={(value) => handleInputChange(value, setHeight)}
-            />
-            <ColorPicker value={color} onChange={setColor} />
-            <LineWidthSelector value={lineWidth} onChange={setLineWidth} />
-        
-                <button onClick={sendData}>図形を作成</button>
-                {loading && <p>データ送信中...</p>}
-                {error && <p>エラー: {error}</p>}
-                {responseData && <p>バックエンドからの応答: {JSON.stringify(responseData)}</p>}
-    </div>
+            <ParameterInput label="長さ" value={length} onChange={setLength} />
+            <ParameterInput label="幅" value={width} onChange={setWidth} />
+            {!selectedLumber && <DepthInput onDepthChange={setDepth} />}
+            <LumberSelection lumbers={lumbers} onSelect={setSelectedLumber} />
+            <ColorPicker value={rectColor} onChange={setRectColor} />
+            <LineWidthSelector value={rectLineWidth} onChange={setRectLineWidth} />
+            {previewData && (
+                <div>
+                    {/* ここでプレビュー図形を表示します。 */}
+                    <button onClick={() => {/* ToDo: Implement Rectangle Drawing on Canvas functionality here */}}>図形を描画</button>
+                </div>
+            )}
+        </div>
     );
 };
 
