@@ -19,9 +19,7 @@ interface RibbonProps {
 
 // リボンのコンポーネント
 const Ribbon: React.FC<RibbonProps> = ({ MenuComponent }) => {
-    // デバッグのためのログを追加
     console.log("Rendering Ribbon with MenuComponent:", MenuComponent);
-
     return (
         <div className={"ribbon"}>
             <MenuComponent/>

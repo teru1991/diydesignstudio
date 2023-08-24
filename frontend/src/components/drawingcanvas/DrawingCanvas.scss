@@ -1,0 +1,45 @@
+// DrawingCanvas.scss
+
+.drawing-canvas-container {
+  background-color: #FFFFFF; // 白
+  // その他のスタイルをここに追加します。
+}
+.canvas-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f5f5f5; // 背景色。必要に応じて変更してください。
+
+  canvas {
+    border: 1px solid #ccc; // キャンバスの境界線。必要に応じて変更してください。
+    background-color: #fff; // キャンバスの背景色。必要に応じて変更してください。
+  }
+  .canvas-container canvas {
+    width: 100vw;
+    height: 100vh;
+    // 他のスタイル...
+  }
+
+  .canvas-buttons {
+    display: flex;
+    gap: 10px; // ボタン間のスペース
+    margin-top: 20px; // キャンバスからの上部のマージン
+
+    button {
+      padding: 5px 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007BFF; // ボタンの背景色
+      color: #fff; // ボタンのテキストの色
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #0056b3; // ホバー時の背景色
+      }
+    }
+  }
+}

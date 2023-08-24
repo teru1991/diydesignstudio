@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faDrawPolygon, faCircle, faSquare,
@@ -8,6 +8,7 @@ import {
     faPaintBrush, faVectorSquare, faShapes, faRulerCombined
     // 必要に応じて他のアイコンもインポート
 } from '@fortawesome/free-solid-svg-icons';
+import RectangleComponent from "../shapemenu/shapes/2D/Rectangle";
 
 interface DrawingToolButtonProps {
     iconName: any;
@@ -26,13 +27,19 @@ const DrawingToolButton: React.FC<DrawingToolButtonProps> = ({ iconName, label, 
 };
 
 const DrawingTools2D: React.FC = () => {
+    const [showRectangleModal, setShowRectangleModal] = useState(false);
+
     return (
         <div>
             <DrawingToolButton iconName={faDrawPolygon} label="Line Tool" onClick={() => { /* ToDo: Implement Line Tool functionality here */ }} />
             <DrawingToolButton iconName={faDrawPolygon} label="Polyline Tool" onClick={() => { /* ToDo: Implement Polyline Tool functionality here */ }} />
             <DrawingToolButton iconName={faCircle} label="Circle Tool" onClick={() => { /* ToDo: Implement Circle Tool functionality here */ }} />
             <DrawingToolButton iconName={faShapes} label="Arc Tool" onClick={() => { /* ToDo: Implement Arc Tool functionality here */ }} />
-            <DrawingToolButton iconName={faSquare} label="Rectangle Tool" onClick={() => { /* ToDo: Implement Rectangle Tool functionality here */ }} />
+            <DrawingToolButton
+                iconName={faSquare}
+                label="Rectangle Tool"
+                onClick={() => setShowRectangleModal(true)}
+            />
             <DrawingToolButton iconName={faCircle} label="Ellipse Tool" onClick={() => { /* ToDo: Implement Ellipse Tool functionality here */ }} />
             <DrawingToolButton iconName={faPaintBrush} label="Hatch Tool" onClick={() => { /* ToDo: Implement Hatch Tool functionality here */ }} />
             <DrawingToolButton iconName={faFont} label="Text Tool" onClick={() => { /* ToDo: Implement Text Tool functionality here */ }} />
@@ -42,6 +49,7 @@ const DrawingTools2D: React.FC = () => {
             <DrawingToolButton iconName={faCut} label="Trim & Extend Tools" onClick={() => { /* ToDo: Implement Trim & Extend Tools functionality here */ }} />
             <DrawingToolButton iconName={faArrowsAlt} label="Offset Tool" onClick={() => { /* ToDo: Implement Offset Tool functionality here */ }} />
             <DrawingToolButton iconName={faVectorSquare} label="Move, Copy, Rotate, Scale Tools" onClick={() => { /* ToDo: Implement Move, Copy, Rotate, Scale Tools functionality here */ }} />
+            {showRectangleModal && <RectangleComponent />}
         </div>
     );
 };

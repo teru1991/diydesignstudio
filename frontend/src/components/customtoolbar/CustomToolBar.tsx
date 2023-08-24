@@ -119,7 +119,7 @@ const CustomToolbar = () => {
                     </div>
                 </div>
             )}
-            <div className="toolbar">
+            <div className="custom-toolbar-container">
                 {currentButtons.map((button, index) => (
                     <div
                         key={button}

@@ -6,5 +6,9 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-actix-web = "4"
-serde = { version = "1.0.180", features = ["derive"] }
+actix-web = "4.3.1"
+serde = { version = "1.0.181", features = ["derive"] }
+mongodb = "2.6.0"
+tokio-postgres = "0.7.8"
+tokio = { version = "1.29.1", features = ["full"] }
+serde_json = "1.0.104"

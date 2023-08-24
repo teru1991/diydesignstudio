@@ -37,6 +37,7 @@ const HomeMenu = () => {
                     </div>
                 </div>
             )}
+
             <button onClick={() => handleButtonClick('editTools')}>
                 編集ツール
             </button>

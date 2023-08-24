@@ -13,5 +13,4 @@ const Tab: React.FC<TabProps> = ({ name, active, action }) => (
         {name}
     </button>
 );
-
 export default Tab;
