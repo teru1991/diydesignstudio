@@ -1,0 +1,82 @@
+必要木材算出用バックエンド側１
+
+
+### 1. Actix-webのセットアップ
+
+まず、Cargo.tomlに必要な依存関係を追加します。
+
+```toml
+[dependencies]
+actix-web = "3"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+```
+
+### 2. APIエンドポイントの設定
+
+```rust
+use actix_web::{web, App, HttpResponse, HttpServer};
+use serde::{Deserialize, Serialize};
+
+#[derive(Deserialize)]
+struct CutRequest {
+    shapes: Vec<Shape>,
+    blade_thickness: f32,
+    // 他の必要なフィールド
+}
+
+#[derive(Deserialize)]
+struct Shape {
+    length: f32,
+    width: f32,
+    // 他の必要なフィールド
+}
+
+#[derive(Serialize)]
+struct CutResponse {
+    required_materials: Vec<Material>,
+    // 他の必要なフィールド
+}
+
+#[derive(Serialize)]
+struct Material {
+    name: String,
+    count: u32,
+    // 他の必要なフィールド
+}
+
+async fn calculate_cut(data: web::Json<CutRequest>) -> HttpResponse {
+    // カットの計算ロジック
+    // ...
+
+    HttpResponse::Ok().json(CutResponse {
+        required_materials: vec![],
+        // ...
+    })
+}
+
+#[actix_web::main]
+async fn main() -> std::io::Result<()> {
+    HttpServer::new(|| {
+        App::new()
+            .route("/calculate-cut", web::post().to(calculate_cut))
+    })
+    .bind("127.0.0.1:8080")?
+    .run()
+    .await
+}
+```
+
+### 3. カットの最適化アルゴリズムの実装
+
+`calculate_cut`関数内で、カットの最適化アルゴリズムを実装します。このアルゴリズムは、与えられた材料と図形のパラメータを考慮して、最も効率的なカット方法を計算します。
+
+### 4. 刃物の厚みの考慮
+
+刃物の厚みを考慮して、実際のカットサイズを計算します。これは、`CutRequest`の`blade_thickness`フィールドを使用して行います。
+
+### 5. 応答の生成
+
+計算結果を基に`CutResponse`を生成し、JSON形式でフロントエンドに返します。
+
+このアプローチを使用することで、Actix-webを使用したRustのバックエンドで、ユーザーからの入力に基づいて最適なカット方法を計算し、その結果をフロントエンドに返すことができます。

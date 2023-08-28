@@ -1,0 +1,62 @@
+// ShapeComponent.scss
+
+.ShapeComponent {
+  background-color: #f0f0f0; // グレー基調
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    color: black;
+    margin-bottom: 20px;
+  }
+
+  // 入力部分
+  input, select, .ColorPicker, .LineWidthSelector {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  // 図形のプレビュー画面
+  .ShapeRenderer {
+    background-color: black;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+
+    canvas {
+      border: 1px solid white; // グリッドは白
+    }
+  }
+
+  // ボタン
+  button {
+    background-color: #007BFF; // ボタンの背景色
+    color: white; // テキストの色
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // 立体感を出すための影
+    margin-top: 10px;
+
+    &:hover {
+      background-color: #0056b3; // ホバー時の背景色
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1); // ホバー時の影
+    }
+
+    &:active {
+      transform: translateY(2px); // クリック時の動き
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // クリック時の影
+    }
+  }
+
+  p {
+    color: red; // エラーメッセージの色
+  }
+}

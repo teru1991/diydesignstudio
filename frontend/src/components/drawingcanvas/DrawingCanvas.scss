@@ -1,32 +1,23 @@
 // DrawingCanvas.scss
 
 .drawing-canvas-container {
-  background-color: #FFFFFF; // 白
-  // その他のスタイルをここに追加します。
-}
-.canvas-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  background-color: #2a2a2a; // ダークモードの背景色
   width: 100vw;
   height: 100vh;
-  background-color: #f5f5f5; // 背景色。必要に応じて変更してください。
+  overflow: hidden;
 
   canvas {
-    border: 1px solid #ccc; // キャンバスの境界線。必要に応じて変更してください。
-    background-color: #fff; // キャンバスの背景色。必要に応じて変更してください。
-  }
-  .canvas-container canvas {
-    width: 100vw;
-    height: 100vh;
-    // 他のスタイル...
+    border: none;
+    background-color: transparent; // キャンバスの背景色
   }
 
   .canvas-buttons {
     display: flex;
-    gap: 10px; // ボタン間のスペース
-    margin-top: 20px; // キャンバスからの上部のマージン
+    gap: 10px;
+    margin-top: 20px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
 
     button {
       padding: 5px 15px;
@@ -36,10 +27,28 @@
       color: #fff; // ボタンのテキストの色
       cursor: pointer;
       transition: background-color 0.3s;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // 立体感を出すための影
 
       &:hover {
         background-color: #0056b3; // ホバー時の背景色
       }
+
+      &:active {
+        transform: translateY(2px); // クリック時の動き
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // クリック時の影
+      }
     }
+  }
+
+  // グリッドのスタイル
+  .grid {
+    stroke: #444; // グリッドの色
+    stroke-width: 0.5; // グリッドの太さ
+  }
+  > div:first-child {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10; // キャンバスの上に表示するためのz-index
   }
 }

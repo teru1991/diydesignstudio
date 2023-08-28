@@ -8,13 +8,13 @@ import LumberSelection from '../../../lumber/LumberSelection';
 import {Lumber} from '../../../lumber/LumberSelection';
 import DepthInput from "../../DepthInput";
 import LumberRegistration from "../../../lumber/LumberRegistration";
-import ShapeRenderer from "../../../shaperenderer/ShapeRenderer";
+import Shape2DRenderer from "../../../shaperenderer/Shape2DRenderer/Shape2DRenderer";
+import "../2D/ShapeComponent.scss"
 
 // RectangleComponent
 const RectangleComponent: React.FC = () => {
     const [rectColor, setRectColor] = useState("#000000");
     const [rectLineWidth, setRectLineWidth] = useState(1);
-
     const [length, setLength] = useState<number>(0); // 適切な初期値に変更
     const [width, setWidth] = useState<number>(0); // 適切な初期値に変更
     const [depth, setDepth] = useState<number>(0);
@@ -93,7 +93,7 @@ const RectangleComponent: React.FC = () => {
     }, [length, width]);
 
     return (
-        <div>
+        <div className="ShapeComponent">
             <h2>四角形のパラメータ</h2>
 
             {/* 図形のパラメータ入力 */}
@@ -113,7 +113,7 @@ const RectangleComponent: React.FC = () => {
                 <div>
                     {previewData && (
                         <div>
-                            <ShapeRenderer
+                            <Shape2DRenderer
                                 type="rectangle"
                                 data={{ length, width }} // previewData.length と previewData.width ではなく、直接 length と width を使用
                                 color={rectColor}

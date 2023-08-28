@@ -13,6 +13,8 @@
     "sass": "^1.64.2"
   },
   "devDependencies": {
-    "@types/axios": "^0.14.0"
+    "@types/axios": "^0.14.0",
+    "@types/three": "^0.155.1",
+    "three": "^0.155.0"
   }
 }

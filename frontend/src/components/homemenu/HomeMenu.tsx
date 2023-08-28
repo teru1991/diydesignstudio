@@ -1,28 +1,41 @@
-import React, { useState } from 'react';
+import React, {RefObject} from 'react';
 import '../../assets/RibbonMenu.scss';
 import { DrawingTools2D, DrawingTools3D, DrawingToolsOther } from '../drawingtoolbutton/DrawingToolButton';
 import { EditTools2D, EditTools3D, EditToolsCommon } from '../edittoolbutton/EditToolButton';
 import { AnnotationTools2D, AnnotationTools3D, AnnotationToolsCommon } from '../annotationtoolbutton/AnnotationToolButton';
-import { LayerTools2D, LayerTools3D, LayerToolsCommon } from '../layertoolbutton/LayerToolButton'; // LayerToolsのパスを適切に修正してください
+import { LayerTools2D, LayerTools3D, LayerToolsCommon } from '../layer/layertoolbutton/LayerToolButton'; // LayerToolsのパスを適切に修正してください
+import useDropdown from "../../helpers/useDropdown";
 
+interface ToolData {
+    isActive: boolean;
+    setIsActive: React.Dispatch<React.SetStateAction<boolean>>;
+    buttonRef: RefObject<HTMLButtonElement>;
+    dropdownRef: RefObject<HTMLDivElement>;
+}
 const HomeMenu = () => {
-    const [activeDropdown, setActiveDropdown] = useState('');
+    const drawingTools = useDropdown();
+    const editTools = useDropdown();
+    const annotationTools = useDropdown();
+    const layerTools = useDropdown();
 
-    const handleButtonClick = (dropdownName: 'drawingTools' | 'editTools' | 'annotationTools' | 'layerTools') => {
-        if (activeDropdown === dropdownName) {
-            setActiveDropdown('');
-        } else {
-            setActiveDropdown(dropdownName);
+    const handleButtonClick = (tools:ToolData) => {
+        tools.setIsActive(!tools.isActive);
+        if (tools.buttonRef.current) {
+            const rect = tools.buttonRef.current.getBoundingClientRect();
+            if (tools.dropdownRef.current) {
+                tools.dropdownRef.current.style.top = `${rect.bottom}px`;
+                tools.dropdownRef.current.style.left = `${rect.left}px`;
+            }
         }
     };
 
     return (
         <div className="ribbon-menu">
-            <button onClick={() => handleButtonClick('drawingTools')}>
+            <button ref={drawingTools.buttonRef} onClick={() => handleButtonClick(drawingTools)}>
                 ドローイングツール
             </button>
-            {activeDropdown === 'drawingTools' && (
-                <div className="dropdown-menu">
+            {drawingTools.isActive && (
+                <div className="dropdown-menu" ref={drawingTools.dropdownRef}>
                     <div className="tools-section">
                         <h4>2D Tools</h4>
                         <DrawingTools2D />
@@ -38,10 +51,10 @@ const HomeMenu = () => {
                 </div>
             )}
 
-            <button onClick={() => handleButtonClick('editTools')}>
+            <button ref={editTools.buttonRef} onClick={() => handleButtonClick(editTools)}>
                 編集ツール
             </button>
-            {activeDropdown === 'editTools' && (
+            {editTools.isActive && (
                 <div className="dropdown-menu">
                     <div className="tools-section">
                         <h4>2D Edit Tools</h4>
@@ -57,10 +70,10 @@ const HomeMenu = () => {
                     </div>
                 </div>
             )}
-            <button onClick={() => handleButtonClick('annotationTools')}>
+            <button ref={annotationTools.buttonRef} onClick={() => handleButtonClick(annotationTools)}>
                 注釈ツール
             </button>
-            {activeDropdown === 'annotationTools' && (
+            {annotationTools.isActive && (
                 <div className="dropdown-menu">
                     <div className="tools-section">
                         <h4>2D Annotation Tools</h4>
@@ -76,10 +89,11 @@ const HomeMenu = () => {
                     </div>
                 </div>
             )}
-            <button onClick={() => handleButtonClick('layerTools')}>
+
+            <button ref={layerTools.buttonRef} onClick={() => handleButtonClick(layerTools)}>
                 レイヤー管理
             </button>
-            {activeDropdown === 'layerTools' && (
+            {layerTools.isActive && (
                 <div className="dropdown-menu">
                     <div className="tools-section">
                         <h4>2D Layer Tools</h4>

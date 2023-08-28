@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faDrawPolygon, faCircle, faSquare,
@@ -6,50 +6,17 @@ import {
     faArrowsAlt, faObjectUngroup, faObjectGroup,
     faExternalLinkAlt, faClone, faTh, faEyeDropper,
     faPaintBrush, faVectorSquare, faShapes, faRulerCombined
-    // 必要に応じて他のアイコンもインポート
 } from '@fortawesome/free-solid-svg-icons';
-import RectangleComponent from "../shapemenu/shapes/2D/Rectangle";
-
-interface DrawingToolButtonProps {
-    iconName: any;
-    label: string;
-    onClick: () => void;
-    displayMode?: 'icon' | 'label' | 'both';
-}
-
-const DrawingToolButton: React.FC<DrawingToolButtonProps> = ({ iconName, label, onClick, displayMode = 'both' }) => {
-    return (
-        <button onClick={onClick} title={label}>
-            {displayMode === 'icon' || displayMode === 'both' ? <FontAwesomeIcon icon={iconName} /> : null}
-            {displayMode === 'label' || displayMode === 'both' ? <span>{label}</span> : null}
-        </button>
-    );
-};
+import RectangleComponent from '../shapemenu/shapes/2D/Rectangle';
 
 const DrawingTools2D: React.FC = () => {
-    const [showRectangleModal, setShowRectangleModal] = useState(false);
+    const [activeComponentType, setActiveComponentType] = useState<string | null>(null);
 
     return (
         <div>
-            <DrawingToolButton iconName={faDrawPolygon} label="Line Tool" onClick={() => { /* ToDo: Implement Line Tool functionality here */ }} />
-            <DrawingToolButton iconName={faDrawPolygon} label="Polyline Tool" onClick={() => { /* ToDo: Implement Polyline Tool functionality here */ }} />
-            <DrawingToolButton iconName={faCircle} label="Circle Tool" onClick={() => { /* ToDo: Implement Circle Tool functionality here */ }} />
-            <DrawingToolButton iconName={faShapes} label="Arc Tool" onClick={() => { /* ToDo: Implement Arc Tool functionality here */ }} />
-            <DrawingToolButton
-                iconName={faSquare}
-                label="Rectangle Tool"
-                onClick={() => setShowRectangleModal(true)}
-            />
-            <DrawingToolButton iconName={faCircle} label="Ellipse Tool" onClick={() => { /* ToDo: Implement Ellipse Tool functionality here */ }} />
-            <DrawingToolButton iconName={faPaintBrush} label="Hatch Tool" onClick={() => { /* ToDo: Implement Hatch Tool functionality here */ }} />
-            <DrawingToolButton iconName={faFont} label="Text Tool" onClick={() => { /* ToDo: Implement Text Tool functionality here */ }} />
-            <DrawingToolButton iconName={faRulerCombined} label="Dimensioning Tools" onClick={() => { /* ToDo: Implement Dimensioning Tools functionality here */ }} />
-            <DrawingToolButton iconName={faLayerGroup} label="Layers" onClick={() => { /* ToDo: Implement Layers functionality here */ }} />
-            <DrawingToolButton iconName={faObjectGroup} label="Blocks" onClick={() => { /* ToDo: Implement Blocks functionality here */ }} />
-            <DrawingToolButton iconName={faCut} label="Trim & Extend Tools" onClick={() => { /* ToDo: Implement Trim & Extend Tools functionality here */ }} />
-            <DrawingToolButton iconName={faArrowsAlt} label="Offset Tool" onClick={() => { /* ToDo: Implement Offset Tool functionality here */ }} />
-            <DrawingToolButton iconName={faVectorSquare} label="Move, Copy, Rotate, Scale Tools" onClick={() => { /* ToDo: Implement Move, Copy, Rotate, Scale Tools functionality here */ }} />
-            {showRectangleModal && <RectangleComponent />}
+            {/* 以下は例としてのボタン群です。実際の機能や図形に合わせて調整する必要があります */}
+            <button onClick={() => setActiveComponentType('rectangle')}><FontAwesomeIcon icon={faSquare} /> Rectangle</button>
+            {/* 他の2D図形用のボタンもここに追加します */}
         </div>
     );
 };
@@ -57,13 +24,9 @@ const DrawingTools2D: React.FC = () => {
 const DrawingTools3D: React.FC = () => {
     return (
         <div>
-            <DrawingToolButton iconName={faCube} label="Solid Modeling" onClick={() => { /* ToDo: Implement Solid Modeling functionality here */ }} />
-            <DrawingToolButton iconName={faGlobe} label="Surface Modeling" onClick={() => { /* ToDo: Implement Surface Modeling functionality here */ }} />
-            <DrawingToolButton iconName={faTh} label="Mesh Modeling" onClick={() => { /* ToDo: Implement Mesh Modeling functionality here */ }} />
-            <DrawingToolButton iconName={faEyeDropper} label="Visual Style" onClick={() => { /* ToDo: Implement Visual Style functionality here */ }} />
-            <DrawingToolButton iconName={faGlobe} label="Rendering" onClick={() => { /* ToDo: Implement Rendering functionality here */ }} />
-            <DrawingToolButton iconName={faGlobe} label="3D Navigation" onClick={() => { /* ToDo: Implement 3D Navigation functionality here */ }} />
-            <DrawingToolButton iconName={faGlobe} label="Section Plane" onClick={() => { /* ToDo: Implement Section Plane functionality here */ }} />
+            {/* 以下は例としてのボタン群です。実際の機能や図形に合わせて調整する必要があります */}
+            <button><FontAwesomeIcon icon={faCube} /> Cube</button>
+            {/* 他の3D図形用のボタンもここに追加します */}
         </div>
     );
 };
@@ -71,9 +34,9 @@ const DrawingTools3D: React.FC = () => {
 const DrawingToolsOther: React.FC = () => {
     return (
         <div>
-            <DrawingToolButton iconName={faExternalLinkAlt} label="External Reference" onClick={() => { /* ToDo: Implement External Reference functionality here */ }} />
-            <DrawingToolButton iconName={faClone} label="Dynamic Block" onClick={() => { /* ToDo: Implement Dynamic Block functionality here */ }} />
-            <DrawingToolButton iconName={faObjectUngroup} label="Array" onClick={() => { /* ToDo: Implement Array functionality here */ }} />
+            {/* 以下は例としてのボタン群です。実際の機能や図形に合わせて調整する必要があります */}
+            <button><FontAwesomeIcon icon={faExternalLinkAlt} /> External Link</button>
+            {/* 他の図形やツール用のボタンもここに追加します */}
         </div>
     );
 };

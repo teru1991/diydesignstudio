@@ -23,12 +23,12 @@ const LayerToolButton: React.FC<LayerToolButtonProps> = ({ iconName, label, onCl
 const LayerTools2D: React.FC = () => {
     return (
         <div>
-            <LayerToolButton iconName={faLayerGroup} label="レイヤー作成" onClick={() => { /* Implement Create Layer functionality */ }} />
-            <LayerToolButton iconName={faEraser} label="レイヤー削除" onClick={() => { /* Implement Delete Layer functionality */ }} />
-            <LayerToolButton iconName={faLock} label="ロック/アンロック" onClick={() => { /* Implement Lock/Unlock Layer functionality */ }} />
-            <LayerToolButton iconName={faEye} label="表示" onClick={() => { /* Implement Show Layer functionality */ }} />
-            <LayerToolButton iconName={faEyeSlash} label="非表示" onClick={() => { /* Implement Hide Layer functionality */ }} />
-            <LayerToolButton iconName={faPalette} label="色変更" onClick={() => { /* Implement Change Layer Color functionality */ }} />
+            <LayerToolButton iconName={faLayerGroup} label="レイヤー作成" onClick={() => { /* Implement Create layer functionality */ }} />
+            <LayerToolButton iconName={faEraser} label="レイヤー削除" onClick={() => { /* Implement Delete layer functionality */ }} />
+            <LayerToolButton iconName={faLock} label="ロック/アンロック" onClick={() => { /* Implement Lock/Unlock layer functionality */ }} />
+            <LayerToolButton iconName={faEye} label="表示" onClick={() => { /* Implement Show layer functionality */ }} />
+            <LayerToolButton iconName={faEyeSlash} label="非表示" onClick={() => { /* Implement Hide layer functionality */ }} />
+            <LayerToolButton iconName={faPalette} label="色変更" onClick={() => { /* Implement Change layer Color functionality */ }} />
         </div>
     );
 };
@@ -36,8 +36,8 @@ const LayerTools2D: React.FC = () => {
 const LayerTools3D: React.FC = () => {
     return (
         <div>
-            <LayerToolButton iconName={faTint} label="透明度変更" onClick={() => { /* Implement Change Layer Opacity functionality */ }} />
-            <LayerToolButton iconName={faLayerGroup} label="材質割り当て" onClick={() => { /* Implement Assign Material to Layer functionality */ }} />
+            <LayerToolButton iconName={faTint} label="透明度変更" onClick={() => { /* Implement Change layer Opacity functionality */ }} />
+            <LayerToolButton iconName={faLayerGroup} label="材質割り当て" onClick={() => { /* Implement Assign Material to layer functionality */ }} />
         </div>
     );
 };
@@ -47,7 +47,7 @@ const LayerToolsCommon: React.FC = () => {
         <div>
             <LayerToolButton iconName={faSortAlphaDown} label="レイヤー名でソート" onClick={() => { /* Implement Sort Layers by Name functionality */ }} />
             <LayerToolButton iconName={faSortAlphaUp} label="レイヤー属性でソート" onClick={() => { /* Implement Sort Layers by Attribute functionality */ }} />
-            <LayerToolButton iconName={faSave} label="レイヤー状態保存" onClick={() => { /* Implement Save Layer State functionality */ }} />
+            <LayerToolButton iconName={faSave} label="レイヤー状態保存" onClick={() => { /* Implement Save layer State functionality */ }} />
         </div>
     );
 };

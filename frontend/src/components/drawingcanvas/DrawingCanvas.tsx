@@ -136,10 +136,11 @@ const DrawingCanvas: React.FC<DrawingCanvasProps> = (props) => {
         }
     }, [showGrid]);
 
-
+    const [activeComponent, setActiveComponent] = useState<React.ReactNode | null>(null);
 
     return (
         <div className="drawing-canvas-container">
+            {activeComponent}
             <div style={{ transform: `translate(${pan.x}px, ${pan.y}px)` }}>
                 <canvas ref={canvasRef} />
             </div>

@@ -31,7 +31,6 @@
   position: relative;
 
   .dropdown-menu {
-    display: none;
     position: absolute;
     top: 100%;
     left: 0;
@@ -39,11 +38,6 @@
     border: 1px solid #ccc;
     z-index: 1000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex-direction: column; // 追加: メニューアイテムを縦に並べる
-  }
-
-  button:hover + .dropdown-menu,
-  button:focus + .dropdown-menu {
-    display: block;
+    flex-direction: column;
   }
 }
