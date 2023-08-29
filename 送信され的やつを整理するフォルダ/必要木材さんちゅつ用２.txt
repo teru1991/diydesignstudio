@@ -1,71 +1,199 @@
-必要木材さんちゅつ用２
+const [activeShape, setActiveShape] = useState<ShapeDataType | null>(null);
+const [isDragging, setIsDragging] = useState<boolean>(false);
+const [isResizing, setIsResizing] = useState<boolean>(false);
 
-### 1. データモデルの定義
+const handleMouseDown = (e: React.MouseEvent) => {
+    const clickedShape = // ... get the clicked shape ...
+    if (clickedShape) {
+        setActiveShape(clickedShape);
+        setIsDragging(true);
+    }
+};
 
-まず、図形や材料のデータモデルを定義します。
+const handleMouseUp = () => {
+    setIsDragging(false);
+    setIsResizing(false);
+};
 
-```rust
-#[derive(Deserialize, Serialize)]
-struct Shape {
-    id: u32,
-    length: f32,
-    width: f32,
-    depth: Option<f32>,
-    // 他の必要なフィールド
+const handleMouseMove = (e: React.MouseEvent) => {
+    if (isDragging) {
+        // ... move the active shape based on mouse movement ...
+    } else if (isResizing) {
+        // ... resize the active shape based on mouse movement ...
+    }
+};
+
+
+<div className="left-panel">
+    {activeShape && (
+        <>
+            <h3>Shape Parameters</h3>
+            {/* Display and edit shape parameters */}
+            <ParameterInput label="Width" value={activeShape.width} onChange={updateWidth} />
+            <ParameterInput label="Height" value={activeShape.height} onChange={updateHeight} />
+            {/* ... other parameters ... */}
+        </>
+    )}
+</div>
+
+.left-panel {
+    position: sticky;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    height: 100%;
+    /* ... other styles ... */
 }
 
-#[derive(Deserialize, Serialize)]
-struct Material {
-    id: u32,
-    name: String,
-    length: f32,
-    width: f32,
-    height: f32,
-    // 他の必要なフィールド
-}
-```
+const [selectedShapeData, setSelectedShapeData] = useState<ShapeDataType | null>(null);
+const handleShapeClick = (shape: ShapeDataType) => {
+    setSelectedShapeData(shape);
+};
 
-### 2. APIエンドポイントの追加
+<div className="left-panel">
+    {selectedShapeData && (
+        <ShapeBuilder initialData={selectedShapeData} />
+    )}
+</div>
 
-図形の作成や材料の登録のためのAPIエンドポイントを追加します。
-
-```rust
-async fn create_shape(data: web::Json<Shape>) -> HttpResponse {
-    // データベースに図形を保存
-    // ...
-
-    HttpResponse::Created().json(data.into_inner())
+interface ShapeBuilderProps {
+    initialData?: ShapeDataType;
 }
 
-async fn register_material(data: web::Json<Material>) -> HttpResponse {
-    // データベースに材料を保存
-    // ...
 
-    HttpResponse::Created().json(data.into_inner())
-}
-```
+// RectangleComponent
 
-### 3. ルーティングの設定
+import React, { useEffect, useState } from 'react';
+import ParameterInput from '../../../common/ParameterInput';
+import ColorPicker from "../../../common/ColorPicker";
+import LineWidthSelector from "../../../common/LineWidthSelector";
+import LumberSelection from '../../../material/LumberSelection';
+import {Lumber} from '../../../material/LumberSelection';
+import DepthInput from "../../DepthInput";
+import LumberRegistration from "../../../material/LumberRegistration";
+import Shape2DRenderer from "../../../shaperenderer/Shape2DRenderer/Shape2DRenderer";
+import "../2D/ShapeComponent.scss"
 
-新しいAPIエンドポイントをルーティングに追加します。
+// RectangleComponent
+const RectangleComponent: React.FC = () => {
+    const [rectColor, setRectColor] = useState("#000000");
+    const [rectLineWidth, setRectLineWidth] = useState(1);
+    const [length, setLength] = useState<number>(0); // 適切な初期値に変更
+    const [width, setWidth] = useState<number>(0); // 適切な初期値に変更
+    const [depth, setDepth] = useState<number>(0);
+    const [selectedLumber, setSelectedLumber] = useState<Lumber | null>(null);
+    const [previewData, setPreviewData] = useState(null);
+    const [showLumberModal, setShowLumberModal] = useState(false);
+    const handleLumberRegister = (lumber: Lumber) => {
+        // ここでAPIを呼び出して新しい材料をデータベースに登録します。
+        // 成功したら、モーダルを閉じて、新しい材料をドロップダウンリストに追加します。
+        setShowLumberModal(false);
+        // lumbers.push(material); // この部分はAPIの応答に応じて調整する必要があります。
+    };
+    const lumbers = [ // このデータはAPIやデータベースから取得することも考えられます。
+        { name: "Standard Lumber", length: 1820, width: 910, height: 20 }
+    ];
 
-```rust
-App::new()
-    .route("/shapes", web::post().to(create_shape))
-    .route("/materials", web::post().to(register_material))
-    // 他のルート
-```
+    useEffect(() => {
+        if (length && width) {
+            // 材料が選択されている場合、その材料の深さを使用
+            if (selectedLumber) {
+                setDepth(selectedLumber.height);
+            }
+            // ここでAPIを呼び出して図形のデータを取得します。
+            // 例: const data = fetchAPI(length, width, depth);
+            // setPreviewData(data);
+        }
+    }, [length, width, selectedLumber]);
 
-### 4. データベースの統合
 
-実際のアプリケーションでは、図形や材料のデータをデータベースに保存する必要があります。RustのORMライブラリ、例えば`diesel`や`sqlx`を使用してデータベースとの統合を行います。
+    const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-### 5. カットの最適化アルゴリズムの統合
+    useEffect(() => {
+        if (selectedLumber) {
+            const inputLength = Number(length);
+            const inputWidth = Number(width);
 
-前述のカットの最適化アルゴリズムを統合し、図形や材料のデータを使用して計算を行います。
+            const fitsNormally = inputLength <= selectedLumber.length && inputWidth <= selectedLumber.width;
+            const fitsReversed = inputLength <= selectedLumber.width && inputWidth <= selectedLumber.length;
 
-### 6. 応答の生成
+            if (!fitsNormally && !fitsReversed) {
+                setErrorMessage('選択された材料からこのパーツは作成できません。');
+            } else {
+                setErrorMessage(null);
+            }
 
-各APIエンドポイントで適切な応答を生成し、フロントエンドに返します。
+        }
+    }, [length, width, selectedLumber]);
+    const fetchShapeData = async () => {
+        try {
+            const response = await fetch('http://localhost:8080/save_shape', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    shape_type: "Rectangle",
+                    length: length,
+                    width: width,
+                    depth: depth,
+                    color: rectColor,
+                    line_width: rectLineWidth
+                })
+            });
 
-このアプローチを使用することで、図形の作成や材料の登録を含むバックエンドの実装を行うことができます。Actix-webとRustを使用して、効率的で高速なバックエンドシステムを構築することができます。
+            const data = await response.json();
+            setPreviewData(data);
+        } catch (error) {
+            console.error("Error fetching shape data:", error);
+        }
+    };
+
+    useEffect(() => {
+        if (length && width) {
+            fetchShapeData();
+        }
+    }, [length, width]);
+
+    return (
+        <div className="ShapeComponent">
+            <h2>四角形のパラメータ</h2>
+
+            {/* 図形のパラメータ入力 */}
+            <ParameterInput label="長さ" value={length.toString()} onChange={(value) => setLength(Number(value))} />
+            <ParameterInput label="幅" value={width.toString()} onChange={(value) => setWidth(Number(value))} />
+
+            {!selectedLumber && <DepthInput onDepthChange={setDepth} />}
+
+            {/* 材料の選択 */}
+            <LumberSelection lumbers={lumbers} onSelect={setSelectedLumber} onRegisterClick={() => setShowLumberModal(true)} />
+            {showLumberModal && <LumberRegistration onRegister={handleLumberRegister} />}
+
+            <ColorPicker value={rectColor} onChange={setRectColor} />
+            <LineWidthSelector value={rectLineWidth} onChange={setRectLineWidth} />
+            {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
+            {previewData && (
+                <div>
+                    {previewData && (
+                        <div>
+                            <Shape2DRenderer
+                                type="rectangle"
+                                data={{ length, width }} // previewData.length と previewData.width ではなく、直接 length と width を使用
+                                color={rectColor}
+                                lineWidth={rectLineWidth}
+                            />
+                            <button onClick={() => {/* ToDo: Implement Rectangle Drawing on Canvas functionality here */}}>図形を描画</button>
+                        </div>
+                    )}
+                </div>
+            )}
+        </div>
+    );
+};
+
+export default RectangleComponent;
+const [shapeData, setShapeData] = useState<ShapeDataType>(props.initialData || defaultData);
+
+
+
+

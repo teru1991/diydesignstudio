@@ -1,16 +1,30 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import ColorPicker from "../common/ColorPicker";
 import LineWidthSelector from "../common/LineWidthSelector";
-import LumberSelection from "../lumber/LumberSelection";
-import { Lumber } from "../lumber/LumberSelection"; // Lumber型をインポート
+import LumberSelection from "../material/MaterualSelection";
+import { Lumber } from "../material/MaterualSelection";
 
 interface ShapeParameterInputProps {
     shapeType: string;
+    onChange: (params: any) => void; // Add onChange prop here
 }
 
-const ShapeParameterInput: React.FC<ShapeParameterInputProps> = ({ shapeType }) => {
+// ShapeParameterInput.tsx
+const ShapeParameterInput: React.FC<ShapeParameterInputProps> = ({ shapeType, onChange }) => {
     const [color, setColor] = useState<string>("#000000");
     const [lineWidth, setLineWidth] = useState<number>(1);
+    const [width, setWidth] = useState<number>(0);
+    const [height, setHeight] = useState<number>(0);
+
+    useEffect(() => {
+        onChange({
+            color,
+            lineWidth,
+            width,
+            height,
+            // 他の図形のパラメータもここに追加
+        });
+    }, [color, lineWidth, width, height]);
 
     return (
         <div>
@@ -22,7 +36,15 @@ const ShapeParameterInput: React.FC<ShapeParameterInputProps> = ({ shapeType }) 
                     <input placeholder="Height" />
                 </>
             )}
-            {/* 他の図形の入力フォームもここに追加します */}
+            {shapeType === 'circle' && (
+                <input placeholder="Radius" />
+            )}
+            {shapeType === 'triangle' && (
+                <>
+                    <input placeholder="Base" />
+                    <input placeholder="Height" />
+                </>
+            )}
         </div>
     );
 };

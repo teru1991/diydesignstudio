@@ -4,14 +4,13 @@ use crate::models::rectangle::Rectangle;
 // models/shape.rs
 #[derive(Deserialize, Serialize, Clone)]
 pub enum ShapeType {
-    Rectangle(Box<Rectangle>), // これを修正しました。
-    Circle,
-    Triangle,
-    // 他の2D図形もここに追加
-    Cube,
+    Rectangle(Box<Rectangle>),
+    Circle(Box<Circle>),
+    Triangle(Box<Triangle>),
+    Cube(Box<Cube>),
     Sphere,
     Cylinder,
-    // 他の3D図形もここに追加
+    // 他の図形もここに追加
 }
 
 
@@ -36,4 +35,21 @@ pub trait Shape {
 
 pub trait ThreeDimensional {
     fn volume(&self) -> f32;
+}
+
+#[derive(Debug, Serialize, Deserialize, Clone)]
+pub struct Circle {
+    pub radius: f32,
+}
+
+#[derive(Debug, Serialize, Deserialize, Clone)]
+pub struct Triangle {
+    pub base: f32,
+    pub height: f32,
+}
+
+// 他の3D図形もここに追加
+#[derive(Debug, Serialize, Deserialize, Clone)]
+pub struct Cube {
+    pub side: f32,
 }

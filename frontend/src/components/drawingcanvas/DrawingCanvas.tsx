@@ -1,9 +1,15 @@
-
+// DrawingCanvas.tsx
 import React, { useRef, useEffect, useState } from 'react';
 import withZoom from "../HOC/withZoom";
 import usePanning from "../../helpers/usePanning";
 import useSnap from "../../helpers/useSnap";
-import axios from 'axios';
+import axios from "axios";
+
+
+interface DrawingCanvasProps {
+    drawingMode: 'normal' | 'drawAnywhere' | 'attachToShape'; // 描画モードをpropsとして追加
+    // 他の必要なプロパティをここに追加します。
+}
 
 interface DrawingCanvasProps {
     // 他の必要なプロパティをここに追加します。
@@ -17,7 +23,7 @@ type ShapeDataType = {
     line_width: number;
 };
 
-const DrawingCanvas: React.FC<DrawingCanvasProps> = (props) => {
+const DrawingCanvas: React.FC = (drawingMode) => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const { pan, handlePan } = usePanning();
     const snapToGrid = useSnap(5);
@@ -28,13 +34,6 @@ const DrawingCanvas: React.FC<DrawingCanvasProps> = (props) => {
         handlePan(dx, dy);
     };
 
-    const handleMouseUp = (e: React.MouseEvent) => {
-        // snapToGridの呼び出しをコメントアウトして、グリッドの強制追従を解除します。
-        // const { x, y } = snapToGrid(e.clientX - pan.x, e.clientY - pan.y);
-        const x = e.clientX - pan.x;
-        const y = e.clientY - pan.y;
-        // x, yはスナップされた座標です。これを使用して図形を配置します。
-    };
 
     const drawGrid = (ctx: CanvasRenderingContext2D, step: number) => {
         for (let x = 0; x < ctx.canvas.width; x += step) {
@@ -138,9 +137,23 @@ const DrawingCanvas: React.FC<DrawingCanvasProps> = (props) => {
 
     const [activeComponent, setActiveComponent] = useState<React.ReactNode | null>(null);
 
+    const handleMouseUp = (e: React.MouseEvent) => {
+        if (drawingMode === 'drawAnywhere') {
+            const x = e.clientX - pan.x;
+            const y = e.clientY - pan.y;
+            // x, yはスナップされた座標です。これを使用して図形を配置します。
+            handleDrawShape(); // 描画モードがアクティブの場合、図形をキャンバスに描画します。
+        }
+        // ... (他の描画モードに基づくロジックを追加します)
+    };
+
     return (
         <div className="drawing-canvas-container">
-            {activeComponent}
+            {/* TODO: 図形のパラメータ編集エリアを実装 */}
+            <div className="shape-parameter-sidebar">
+                <h3>図形のパラメータ</h3>
+                {/* ここに選択した図形のパラメータを編集する入力フィールドを表示 */}
+            </div>
             <div style={{ transform: `translate(${pan.x}px, ${pan.y}px)` }}>
                 <canvas ref={canvasRef} />
             </div>
@@ -151,7 +164,6 @@ const DrawingCanvas: React.FC<DrawingCanvasProps> = (props) => {
             </button>
         </div>
     );
-
 };
 
 export default withZoom(DrawingCanvas);

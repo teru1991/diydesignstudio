@@ -5,7 +5,7 @@ export interface ViewShape {
     name: string;
     // ... other shape properties
 }
-interface ModelShape {
+export interface ModelShape {
     id: string;
     // other properties specific to ModelShape
 }

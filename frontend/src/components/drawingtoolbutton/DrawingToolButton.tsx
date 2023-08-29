@@ -7,7 +7,6 @@ import {
     faExternalLinkAlt, faClone, faTh, faEyeDropper,
     faPaintBrush, faVectorSquare, faShapes, faRulerCombined
 } from '@fortawesome/free-solid-svg-icons';
-import RectangleComponent from '../shapemenu/shapes/2D/Rectangle';
 
 const DrawingTools2D: React.FC = () => {
     const [activeComponentType, setActiveComponentType] = useState<string | null>(null);
