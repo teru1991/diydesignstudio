@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import MenuBar from "./components/menubar/MenuBar";
-import CADWorkspace from "./components/cadworkspace/CADWorkspace";
-import PropertyEditor from './components/propertyeditor/PropertyEditor';
-import ShapeCreationWrapper from "./components/shapecreationwrapper/ShapeCreationWrapper";
+import MenuBar from "./features/MenuBar/components/MenuBar";
+import CADWorkspace from "./features/CADTools/components/CADWorkspace";
+import ShapeBuilder from "./features/CADTools/components/ShapeBuilder";
 
 const App: React.FC = () => {
     const [activeModelingTab, setActiveModelingTab] = useState<'2D' | '3D'>('2D');
@@ -11,10 +10,9 @@ const App: React.FC = () => {
     return (
         <div className="app-container">
             <MenuBar setActiveModelingTab={setActiveModelingTab} />
+            <ShapeBuilder/>
             <div className="canvas-and-sidebars">
-                <ShapeCreationWrapper />
                 <CADWorkspace />
-                <PropertyEditor />
             </div>
         </div>
     );
