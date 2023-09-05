@@ -20,9 +20,10 @@ const MaterialSelection: React.FC<MaterialSelectionProps> = ({ materials, onSele
     const handleMaterialRegistration = async (newMaterial: Material) => {
         setIsRegisterModalOpen(false);
         try {
-            const response = await axios.post('/path_to_your_api_endpoint', newMaterial); // APIエンドポイントにPOSTリクエストを行います
-            const addedMaterial: Material = response.data; // APIから返された新しい材料データ
-            setAllMaterials([...allMaterials, addedMaterial]); // 新しい材料をリストに追加
+            // `/materials/register` エンドポイントにデータを送信します
+            const response = await axios.post('/materials/register', newMaterial);
+            const addedMaterial: Material = response.data;
+            setAllMaterials([...allMaterials, addedMaterial]);
         } catch (error) {
             console.error("Error adding new material:", error);
         }

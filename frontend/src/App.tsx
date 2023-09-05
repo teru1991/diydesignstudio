@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import MenuBar from "./features/MenuBar/components/MenuBar";
 import CADWorkspace from "./features/CADTools/components/CADWorkspace";
 import ShapeBuilder from "./features/CADTools/components/ShapeBuilder";
+import ShapeSelector from "./features/CADTools/components/ShapeCreation/ShapeSelector";
 
 const App: React.FC = () => {
     const [activeModelingTab, setActiveModelingTab] = useState<'2D' | '3D'>('2D');

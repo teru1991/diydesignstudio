@@ -29,24 +29,21 @@ const ShapeCreationWrapper: React.FC<ShapeCreationWrapperProps> = ({ onShapeType
     // カスタムフックを使用してデータ送信のロジックを適用
     useSendDataToBackend(shapeType, shapeParams, selectedMaterial, color, lineWidth, depth);
     const handleShapeCreation = async () => {
-        // バックエンドとの通信前のログ
         console.log('Sending data to backend:', shapeType);
 
-        // ここでバックエンドと通信すると仮定します
-        const response = await fetch('YOUR_BACKEND_ENDPOINT', {
+        // `/create-shape` エンドポイントにデータを送信します
+        const response = await fetch('/create-shape', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ shapeType})
+            body: JSON.stringify({ shapeType, shapeParams, selectedMaterial, color, lineWidth, depth })
         });
 
         const result = await response.json();
 
-        // バックエンドからのレスポンス後のログ
         console.log('Received response from backend:', result);
 
-        // 必要に応じてステートを更新
         onShapeTypeChange(result.shapeType);
         onShapeDataChange(result.shapeData);
     };
