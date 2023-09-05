@@ -78,8 +78,7 @@ const ShapeCreationWrapper: React.FC<ShapeCreationWrapperProps> = ({ onShapeType
             {shapeType && <ShapeParameterInput shapeType={shapeType} onChange={handleShapeParamChange} />}
 
             {/* 材料の選択 */}
-            <MaterialSelection materials={materials} onSelectMaterial={setSelectedMaterial} />
-
+            <MaterialSelection materials={materials} onSelect={setSelectedMaterial} />
 
             {/* ここでshapeParams, color, lineWidth, とselectedMaterialを使用して図形を描画または他の操作を実行 */}
             <input

@@ -1,6 +1,6 @@
-// MaterialSelection.tsx
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import MaterialRegistration from './MaterialRegistration';
+import axios from 'axios'; // axiosを使用してAPIを呼び出します
 
 export interface Material {
     name: string;
@@ -15,17 +15,29 @@ interface MaterialSelectionProps {
 
 const MaterialSelection: React.FC<MaterialSelectionProps> = ({ materials, onSelect }) => {
     const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
+    const [allMaterials, setAllMaterials] = useState<Material[]>(materials); // ローカルステートを追加
 
-    const handleMaterialRegistration = (newMaterial: Material) => {
+    const handleMaterialRegistration = async (newMaterial: Material) => {
         setIsRegisterModalOpen(false);
-        // 新しく登録された材料をmaterialsに追加するなどの処理をここで行うことができます。
-        // 例: setMaterials([...materials, newMaterial]);
+        try {
+            const response = await axios.post('/path_to_your_api_endpoint', newMaterial); // APIエンドポイントにPOSTリクエストを行います
+            const addedMaterial: Material = response.data; // APIから返された新しい材料データ
+            setAllMaterials([...allMaterials, addedMaterial]); // 新しい材料をリストに追加
+        } catch (error) {
+            console.error("Error adding new material:", error);
+        }
     };
+
+    useEffect(() => {
+        // onSelectをトリガーして選択された材料を親に伝えます。
+        // これは、新しい材料が追加された後にリストが自動的に更新されるようにするためのものです。
+        onSelect(allMaterials[allMaterials.length - 1]);
+    }, [allMaterials]);
 
     return (
         <div style={{ position: 'relative' }}>
-            <select onChange={(e) => onSelect(materials[e.target.selectedIndex])}>
-                {materials.map((material, index) => (
+            <select onChange={(e) => onSelect(allMaterials[e.target.selectedIndex])}>
+                {allMaterials.map((material, index) => (
                     <option key={index} value={material.name}>
                         {material.name}
                     </option>
