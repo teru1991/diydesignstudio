@@ -11,7 +11,7 @@ const useSendDataToBackend = (
 ) => {
     // 入力が完了しているか確認するヘルパー関数
     const isInputComplete = () => {
-        return shapeType && Object.keys(shapeParams).length > 0 && (selectedLumber || depth) && color && lineWidth;
+        return shapeType && Object.keys(shapeParams).length > 0 && (selectedLumber || depth !== null) && color && lineWidth;
     };
 
     // バックエンドへデータを送信する関数
@@ -26,7 +26,7 @@ const useSendDataToBackend = (
                 depth
             };
             try {
-                await axios.post('YOUR_BACKEND_ENDPOINT', payload);
+                await axios.post('http://localhost:8080/create-shape', payload);
             } catch (error) {
                 console.error("Error sending data to backend:", error);
             }

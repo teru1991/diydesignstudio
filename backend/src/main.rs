@@ -3,6 +3,7 @@ mod services;
 mod models;
 mod errors;
 
+use actix_cors::Cors;
 use actix_web::{App, HttpServer, web};
 use actix_web::middleware::Logger;
 use env_logger;
@@ -14,28 +15,29 @@ use crate::handlers::material_handlers::{
     remove_material,
 };
 use crate::handlers::design_handlers::{
-    save_shape,
     save_temp_shape,
-    save_final_shape
+    save_final_shape,
+    create_shape
 };
 use crate::handlers::user_handlers::{
     register_user,
     authenticate_user
 };
 
-
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     std::env::set_var("RUST_LOG", "actix_web=debug");
     env_logger::init();
     HttpServer::new(|| {
+        let cors = Cors::permissive();  // CORSの設定を追加
         App::new()
+            .wrap(cors)  // CORSをアプリに適用
             .wrap(Logger::default())
             .route("/materials/register", web::post().to(register_material))
             .route("/materials/edit", web::put().to(edit_material))
             .route("/materials/{id}", web::get().to(retrieve_material))
             .route("/materials/{id}", web::delete().to(remove_material))
-            .route("/create-shape", web::post().to(save_shape))
+            .route("/create-shape", web::post().to(create_shape))
             .route("/save-temp-shape", web::post().to(save_temp_shape))
             .route("/save-final-shape", web::post().to(save_final_shape))
             .route("/users/register", web::post().to(register_user))

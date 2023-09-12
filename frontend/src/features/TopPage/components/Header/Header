@@ -1,0 +1,239 @@
+import React from 'react';
+// import './path-to-your-css.css';
+import HeaderSearch from "./HeaderSearch";
+import HeaderLogo from "./HeaderLogo";
+import HeaderContainer from "./HeaderContainer/HeaderContainer";
+
+// Headerコンポーネント
+const Header: React.FC = () => {
+    return (
+        <header className="Header logo-mag">
+            <HeaderContainer />
+            <HeaderLogo />
+            <HeaderSearch />
+            {/* 他のコンポーネントや内容をここに追加 */}
+        </header>
+    );
+};
+
+export default Header;
+import React from 'react';
+// import './path-to-your-css.css';
+
+// HeaderLogoコンポーネント
+const HeaderLogo: React.FC = () => {
+    return (
+        <div className="Header__logo">
+            <a className="anchor" href="https://www.yadohouse.jp/">
+                <figure className="logo logo--mag">
+                    <img alt="yado magazine" src="https://www.yadohouse.jp/cms/wp-content/themes/yado/assets/images/logo_yadomag.svg" />
+                </figure>
+                <figure className="logo logo--yado">
+                    <img alt="yado" src="https://www.yadohouse.jp/cms/wp-content/themes/yado/assets/images/logo_yado.svg" />
+                </figure>
+            </a>
+        </div>
+    );
+};
+
+export default HeaderLogo;
+
+import React from 'react';
+// import './path-to-your-css.css';
+
+// HeaderSearchコンポーネント
+const HeaderSearch: React.FC = () => {
+    return (
+        <div className="Header__search">
+            <form action="https://www.yadohouse.jp/" className="form" method="get">
+                <input
+                    autoComplete={"off"}
+                    className="input f-neue"
+                    id="search"
+                    name="s"
+                    placeholder="Search for Journey"
+                    required
+                    type="text"
+                />
+                <button className="button" type="submit">
+                    <figure className="ico">
+                        <img alt="Search" src="https://www.yadohouse.jp/cms/wp-content/themes/yado/assets/images/ico_search.svg" />
+                    </figure>
+                </button>
+            </form>
+        </div>
+    );
+};
+
+export default HeaderSearch;
+
+import React from 'react';
+// import './path-to-your-css.css';
+import HeaderMags from "./HeaderMags/HeaderMags";
+import HeaderLinks from "./HeaderLink/HeaderLinks";
+
+// HeaderContainerコンポーネント
+const HeaderContainer: React.FC = () => {
+    return (
+        <div className="Header__container">
+            <HeaderMags />
+            <HeaderLinks />
+            {/* この中のコンテンツを埋める */}
+        </div>
+    );
+};
+
+export default HeaderContainer;
+import React from 'react';
+// import './path-to-your-css.css';
+import NavigationList from "./NavigationList";
+import SearchIcon from "./SearchIcon";
+import NavButton from "./NavigationButton";
+
+// HeaderLinksコンポーネント
+const HeaderLinks: React.FC = () => {
+    return (
+        <div className="Header__links f-neue">
+            <NavigationList />
+            <SearchIcon />
+            <NavButton />
+        </div>
+    );
+};
+
+export default HeaderLinks;
+import React from 'react';
+// import './path-to-your-css.css';
+
+// NavButtonコンポーネント
+const NavButton: React.FC = () => {
+    return (
+        <div className="navButton">
+            <a className="anchor">
+                <div className="Gnav--open"></div>
+                <div className="Gnav--close"></div>
+                <ul className="borders">
+                    <li className="borders__border"></li>
+                    <li className="borders__border"></li>
+                </ul>
+            </a>
+        </div>
+    );
+};
+
+export default NavButton;
+
+import React from 'react';
+// import './path-to-your-css.css';
+
+// NavigationListコンポーネント
+const NavigationList: React.FC = () => {
+    const listItems = [
+        { text: "About", link: "https://www.yadohouse.jp/about/" },
+        { text: "House", link: "https://www.yadohouse.jp/house/" },
+        { text: "Contact", link: "https://www.yadohouse.jp/contact/" },
+        // ... 他のリンクも同様に追加
+    ];
+    return (
+        <ul className="list">
+            {listItems.map(item => (
+                <li className="list__item" key={item.text}>
+                    <a className="anchor mo_crop" href={item.link}>
+                        <p className="text mo_crop__text" data-text={item.text}>
+                            <span className="mo_crop__text__inner">{item.text}</span>
+                        </p>
+                    </a>
+                </li>
+            ))}
+        </ul>
+    );
+};
+
+export default NavigationList;
+
+import React from 'react';
+// import './path-to-your-css.css';
+
+// SearchIconコンポーネント
+const SearchIcon: React.FC = () => {
+    return (
+        <div className="search">
+            <a className="anchor mo_crop">
+                <figure className="ico">
+                    <img alt="Search" src="https://www.yadohouse.jp/cms/wp-content/themes/yado/assets/images/ico_search.svg" />
+                </figure>
+                <p className="text mo_crop__text" data-text="Search">
+                    <span className="mo_crop__text__inner">Search</span>
+                </p>
+            </a>
+        </div>
+    );
+};
+
+export default SearchIcon;
+
+import React from 'react';
+// import './path-to-your-css.css';
+import MagazineTitle from "./MagazineTitle";
+import MagazineList from "./MagazineList";
+
+// HeaderMagsコンポーネント
+const HeaderMags: React.FC = () => {
+    return (
+        <div className="Header__mags f-neue">
+            <MagazineTitle />
+            <MagazineList />
+        </div>
+    );
+};
+
+export default HeaderMags;
+
+import React from 'react';
+// import './path-to-your-css.css';
+
+
+
+// MagazineListコンポーネント
+const MagazineList: React.FC = () => {
+    const listItems = [
+        { text: "All", link: "https://www.yadohouse.jp/magazine/" },
+        { text: "Interview", link: "https://www.yadohouse.jp/magazine/category/interview/" },
+        // ... 他のリンクも同様に追加
+    ];
+    return (
+        <ul className="list">
+            {listItems.map(item => (
+                <li className="list__item" key={item.text}>
+                    <a className="anchor mo_crop" href={item.link}>
+                        <p className="text mo_crop__text" data-text={item.text}>
+                            <span className="mo_crop__text__inner">{item.text}</span>
+                        </p>
+                    </a>
+                </li>
+            ))}
+        </ul>
+    );
+};
+
+export default MagazineList;
+import React from 'react';
+// import './path-to-your-css.css';
+
+// MagazineTitleコンポーネント
+const MagazineTitle: React.FC = () => {
+    return (
+        <div className="title">
+            <a className="anchor mo_crop" href="https://www.yadohouse.jp/magazine/">
+                <p className="text mo_crop__text" data-text="Magazine">
+                    <span className="mo_crop__text__inner">Magazine</span>
+                </p>
+                <span>:</span>
+            </a>
+        </div>
+    );
+};
+
+export default MagazineTitle;
+
+

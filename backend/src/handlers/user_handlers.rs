@@ -2,6 +2,8 @@ use crate::services::user_service;
 use crate::models::user::User;
 use actix_web::{web, HttpResponse, Responder};
 use serde::Deserialize;
+use jsonwebtoken::{encode, EncodingKey, Header, Algorithm, decode, DecodingKey, Validation};
+
 
 #[derive(Deserialize)]
 pub struct UserRequest {

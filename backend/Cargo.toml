@@ -8,6 +8,7 @@ edition = "2021"
 [dependencies]
 actix-web = "4.3.1"
 actix-rt = "2.8.0"
+actix-cors = "0.6.4"
 serde = { version = "1.0.181", features = ["derive"] }
 mongodb = "2.6.0"
 tokio-postgres = "0.7.8"

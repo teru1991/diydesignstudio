@@ -8,10 +8,24 @@ const LoginForm: React.FC = () => {
     const [password, setPassword] = useState('');
     const { login } = useAuth();
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        // 実際のログイン処理をここに書く
-        login();
+        const response = await fetch("/users/authenticate", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ email: username, password: password }),
+        });
+        const data = await response.json();
+        if (data.token) {
+            // トークンをlocalStorageに保存
+            localStorage.setItem("token", data.token);
+            login();
+        } else {
+            // エラーハンドリング
+            console.error(data.error);
+        }
     };
 
     return (

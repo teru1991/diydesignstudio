@@ -1,0 +1,2639 @@
+
+ <!-- Start .Container -->
+ <div className="Container">
+  <!-- Start .Contents -->
+  <div className="Contents" data-barba="container" data-barba-namespace="top" data-body-color="mag">
+   <section className="Main fInview fInview--enter" id="Main">
+    <div className="Main__kv">
+     <ul className="slide">
+      <li className="slide__item" style="z-index: 0;">
+       <figure className="image">
+        <picture>
+         <source media="(max-width:980px)" srcset="https://www.yadohouse.jp/cms/wp-content/uploads/2022/10/8947c16617b2b122fdbb6d90c94e2247-750x1270.jpg"/>
+         <img src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/10/minifi_221005-6_yado5593-1-3840x2562.jpg"/>
+        </picture>
+       </figure>
+      </li>
+      <li className="slide__item" style="z-index: 0;">
+       <figure className="image">
+        <picture>
+         <source media="(max-width:980px)" srcset="https://www.yadohouse.jp/cms/wp-content/uploads/2022/10/da99539808aa7fdeb4ef6b81c2103139-750x1270.jpg"/>
+         <img src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/10/L1100325-scaled.jpg"/>
+        </picture>
+       </figure>
+      </li>
+      <li className="slide__item" style="z-index: 0;">
+       <figure className="image">
+        <video data-sp="https://www.yadohouse.jp/cms/wp-content/uploads/2022/10/movie2.mp4" data-src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/m1.mp4" loop="loop" muted="muted" playsinline="playsinline" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/10/movie2.mp4">
+        </video>
+       </figure>
+      </li>
+      <li className="slide__item" style="z-index: 0;">
+       <figure className="image">
+        <picture>
+         <source media="(max-width:980px)" srcset="https://www.yadohouse.jp/cms/wp-content/uploads/2022/12/KV_sp3.jpg"/>
+         <img src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/12/KV_pc3-scaled.jpg"/>
+        </picture>
+       </figure>
+      </li>
+      <li className="slide__item" style="z-index: 0;">
+       <figure className="image">
+        <picture>
+         <source media="(max-width:980px)" srcset="https://www.yadohouse.jp/cms/wp-content/uploads/2022/12/KV_sp2.jpg"/>
+         <img src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/12/KV_pc2-scaled.jpg"/>
+        </picture>
+       </figure>
+      </li>
+      <li className="slide__item" style="z-index: 0;">
+       <figure className="image">
+        <video data-sp="https://www.yadohouse.jp/cms/wp-content/uploads/2022/10/movie4.mp4" data-src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/10/movie3.mp4" loop="loop" muted="muted" playsinline="playsinline" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/10/movie4.mp4">
+        </video>
+       </figure>
+      </li>
+      <li className="slide__item is-current" style="z-index: 1;">
+       <figure className="image is-scale">
+        <picture>
+         <source media="(max-width:980px)" srcset="https://www.yadohouse.jp/cms/wp-content/uploads/2022/12/IMGP9507.jpg"/>
+         <img src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/12/IMGP9507-1-scaled.jpg"/>
+        </picture>
+       </figure>
+      </li>
+     </ul>
+    </div>
+    <h1 className="Main__logo">
+     <figure>
+      <img alt="yado" src="https://www.yadohouse.jp/cms/wp-content/themes/yado/assets/images/logo_yado-w.svg"/>
+     </figure>
+    </h1>
+    <div className="Main__gNav">
+     <a className="anchor Gnav--open">
+      <ul className="borders">
+       <li className="borders__border">
+       </li>
+       <li className="borders__border">
+       </li>
+      </ul>
+     </a>
+    </div>
+    <div className="Main__concept">
+     <h2 className="catch">
+      <p className="catch__ja f-min">
+       <span className="char">
+        泊
+       </span>
+       <span className="char">
+        ま
+       </span>
+       <span className="char">
+        る
+       </span>
+       <span className="char">
+        よ
+       </span>
+       <span className="char">
+        う
+       </span>
+       <span className="char">
+        に
+       </span>
+       <span className="char">
+        暮
+       </span>
+       <span className="char">
+        ら
+       </span>
+       <span className="char">
+        す
+       </span>
+      </p>
+      <p className="catch__en f-neue">
+       <span className="catch__en__inner">
+        Living as if you are staying here
+       </span>
+      </p>
+     </h2>
+     <div className="link">
+      <a className="anchor mo_crop" href="https://www.yadohouse.jp/about/">
+       <p className="text mo_crop__text f-neue" data-text="About yado">
+        <span className="mo_crop__text__inner">
+         About yado
+        </span>
+       </p>
+       <figure className="arrow">
+        <img alt="&gt;" src="https://www.yadohouse.jp/cms/wp-content/themes/yado/assets/images/arrow-w.svg"/>
+       </figure>
+      </a>
+     </div>
+    </div>
+    <div className="Main__scroll">
+     <a className="anchor mo_crop">
+      <div className="border">
+      </div>
+      <p className="text mo_crop__text f-neue PC" data-text="Scroll for Journey">
+       <span className="mo_crop__text__inner">
+        Scroll for Journey
+       </span>
+      </p>
+     </a>
+    </div>
+   </section>
+   <div className="TopContents">
+    <div className="MagContainer fInview--enter">
+     <section className="Highlight fInview--enter" id="Highlight">
+      <div className="Highlight__container">
+       <ul className="c-magList c-magList--changeView">
+        <li className="c-magList__item layout--2 is-white direct--1">
+         <div className="c-magList__item__visual fInview fInview--enter">
+          <a className="anchor" href="https://www.yadohouse.jp/magazine/2335/">
+           <figure className="image">
+            <div className="image__inner">
+             <picture>
+              <source media="(max-width: 980px)" srcset="https://www.yadohouse.jp/cms/wp-content/uploads/2023/09/top_2.jpg"/>
+              <img alt="" className="lazy fLazy--loaded" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2023/09/top_2.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2023/09/top_2.jpg"/>
+             </picture>
+            </div>
+           </figure>
+          </a>
+         </div>
+         <div className="c-magList__item__info">
+          <div className="heading">
+           <p className="heading__category f-neue">
+            Trip
+           </p>
+           <p className="heading__num f-neue">
+            Issue : 30
+           </p>
+          </div>
+          <a className="anchor" href="https://www.yadohouse.jp/magazine/2335/">
+           <figure className="image magImageInview">
+            <div className="image__inner">
+             <picture>
+              <source media="(max-width: 980px)" srcset="https://www.yadohouse.jp/cms/wp-content/uploads/2023/08/eye-350x467.jpg"/>
+              <img alt="" className="lazy" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2023/08/eye.jpg"/>
+             </picture>
+            </div>
+           </figure>
+           <div className="c-magList__item__info__contents">
+            <h2 className="title f-min">
+             <span className="mo_rows__text">
+              Izu Cliff House｜森で10年眠る廃墟が建物の記憶と共に蘇った、崖の上のホテル
+             </span>
+            </h2>
+            <p className="caption">
+             南伊豆の秘境、太平洋に面した崖の上にある一棟貸し宿、Izu Cliff Houseは、時代や場所を超えて、思い出や空想といった非日常に引き込む装置だ。
+             <br/>
+             人智が及ばない荒々しい大自然と対峙できる宿で、これからの観光という新しい価値を知る。
+            </p>
+           </div>
+          </a>
+          <ul className="c-tags f-neue">
+           <li className="c-tags__item">
+            <a className="c-tags__item__anchor mo_crop" href="https://www.yadohouse.jp/magazine/tag/%e5%ae%bf%e3%81%8b%e3%82%89%e7%b4%90%e8%a7%a3%e3%81%8f%e6%9a%ae%e3%82%89%e3%81%97%e3%81%ae%e3%83%92%e3%83%b3%e3%83%88/">
+             <p className="text mo_crop__text" data-text="#宿から紐解く暮らしのヒント">
+              <span className="mo_crop__text__inner">
+               #宿から紐解く暮らしのヒント
+              </span>
+             </p>
+            </a>
+           </li>
+           <li className="c-tags__item">
+            <a className="c-tags__item__anchor mo_crop" href="https://www.yadohouse.jp/magazine/tag/%e9%9d%99%e5%b2%a1/">
+             <p className="text mo_crop__text" data-text="#静岡">
+              <span className="mo_crop__text__inner">
+               #静岡
+              </span>
+             </p>
+            </a>
+           </li>
+          </ul>
+          <div className="c-view">
+           <div className="c-view__inner">
+            <a className="anchor mo_crop box" href="https://www.yadohouse.jp/magazine/2335/">
+             <p className="text mo_crop__text f-neue" data-text="Read more">
+              <span className="mo_crop__text__inner">
+               Read more
+              </span>
+             </p>
+             <figure className="arrow">
+              <img alt="&gt;" src="https://www.yadohouse.jp/cms/wp-content/themes/yado/assets/images/arrow.svg"/>
+             </figure>
+            </a>
+           </div>
+          </div>
+         </div>
+        </li>
+        <li className="c-magList__item layout--5 direct--2">
+         <div className="c-magList__item__visual fInview fInview--enter">
+          <ul className="images">
+           <li className="images__item">
+            <a className="anchor" href="https://www.yadohouse.jp/magazine/2256/">
+             <figure className="image">
+              <div className="image__inner">
+               <picture>
+                <source media="(max-width: 980px)" srcset="https://www.yadohouse.jp/cms/wp-content/uploads/2023/07/5-1-1-750x493.jpg"/>
+                <img alt="" className="lazy fLazy--loaded" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2023/07/5-1-1.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2023/07/5-1-1.jpg"/>
+               </picture>
+              </div>
+             </figure>
+            </a>
+           </li>
+           <li className="images__item">
+            <a className="anchor" href="https://www.yadohouse.jp/magazine/2256/">
+             <figure className="image">
+              <div className="image__inner">
+               <picture>
+                <source media="(max-width: 980px)" srcset="https://www.yadohouse.jp/cms/wp-content/uploads/2023/07/5-2-1-350x455.png"/>
+                <img alt="" className="lazy fLazy--loaded" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2023/07/5-2-1.png" src="https://www.yadohouse.jp/cms/wp-content/uploads/2023/07/5-2-1.png"/>
+               </picture>
+              </div>
+             </figure>
+            </a>
+           </li>
+          </ul>
+         </div>
+         <div className="c-magList__item__info">
+          <div className="heading">
+           <p className="heading__category f-neue">
+            Product
+           </p>
+           <p className="heading__num f-neue">
+            Issue : 28
+           </p>
+          </div>
+          <a className="anchor" href="https://www.yadohouse.jp/magazine/2256/">
+           <figure className="image magImageInview">
+            <div className="image__inner">
+             <picture>
+              <source media="(max-width: 980px)" srcset="https://www.yadohouse.jp/cms/wp-content/uploads/2023/07/eye-1-350x467.jpg"/>
+              <img alt="" className="lazy" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2023/07/eye-1.jpg"/>
+             </picture>
+            </div>
+           </figure>
+           <div className="c-magList__item__info__contents">
+            <h2 className="title f-min">
+             <span className="mo_rows__text">
+              Roofscape inspired by makina nakijin | 軒でつながり、自然と一体となる家
+             </span>
+            </h2>
+            <p className="caption">
+             旅する過程で出逢った感動や発見。それらを紐解き、住居という形に落とし込んだ“泊まるように暮らす家”「yado house」。そんなyado houseより、沖縄今帰仁村にある予約の取れないプライベートヴィラ「MAKINA NAKIJIN」とコラボした住宅「Roofscape inspired by makina nakijin」が誕生。そこにあるのは、循環し続ける自然とのおおらかな共生を楽しむ“自然と溶け合う暮らし”。Roofscapeが実現する全く新しい住宅の形を、そこでの暮らしと共に紹介する。
+            </p>
+           </div>
+          </a>
+          <ul className="c-tags f-neue">
+           <li className="c-tags__item">
+            <a className="c-tags__item__anchor mo_crop" href="https://www.yadohouse.jp/magazine/tag/yado-house/">
+             <p className="text mo_crop__text" data-text="#yado house">
+              <span className="mo_crop__text__inner">
+               #yado house
+              </span>
+             </p>
+            </a>
+           </li>
+           <li className="c-tags__item">
+            <a className="c-tags__item__anchor mo_crop" href="https://www.yadohouse.jp/magazine/tag/yado-gallery/">
+             <p className="text mo_crop__text" data-text="#yado gallery">
+              <span className="mo_crop__text__inner">
+               #yado gallery
+              </span>
+             </p>
+            </a>
+           </li>
+          </ul>
+          <div className="c-view">
+           <div className="c-view__inner">
+            <a className="anchor mo_crop box" href="https://www.yadohouse.jp/magazine/2256/">
+             <p className="text mo_crop__text f-neue" data-text="Read more">
+              <span className="mo_crop__text__inner">
+               Read more
+              </span>
+             </p>
+             <figure className="arrow">
+              <img alt="&gt;" src="https://www.yadohouse.jp/cms/wp-content/themes/yado/assets/images/arrow.svg"/>
+             </figure>
+            </a>
+           </div>
+          </div>
+         </div>
+        </li>
+        <li className="c-magList__item layout--5 direct--1">
+         <div className="c-magList__item__visual fInview fInview--enter">
+          <ul className="images">
+           <li className="images__item">
+            <a className="anchor" href="https://www.yadohouse.jp/magazine/2294/">
+             <figure className="image">
+              <div className="image__inner">
+               <picture>
+                <source media="(max-width: 980px)" srcset="https://www.yadohouse.jp/cms/wp-content/uploads/2023/07/5-1-1-750x493.png"/>
+                <img alt="" className="lazy fLazy--loaded" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2023/07/5-1-1.png" src="https://www.yadohouse.jp/cms/wp-content/uploads/2023/07/5-1-1.png"/>
+               </picture>
+              </div>
+             </figure>
+            </a>
+           </li>
+           <li className="images__item">
+            <a className="anchor" href="https://www.yadohouse.jp/magazine/2294/">
+             <figure className="image">
+              <div className="image__inner">
+               <picture>
+                <source media="(max-width: 980px)" srcset="https://www.yadohouse.jp/cms/wp-content/uploads/2023/07/5-2-2-350x455.png"/>
+                <img alt="" className="lazy fLazy--loaded" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2023/07/5-2-2.png" src="https://www.yadohouse.jp/cms/wp-content/uploads/2023/07/5-2-2.png"/>
+               </picture>
+              </div>
+             </figure>
+            </a>
+           </li>
+          </ul>
+         </div>
+         <div className="c-magList__item__info">
+          <div className="heading">
+           <p className="heading__category f-neue">
+            Interview
+           </p>
+           <p className="heading__num f-neue">
+            Issue : 29
+           </p>
+          </div>
+          <a className="anchor" href="https://www.yadohouse.jp/magazine/2294/">
+           <figure className="image magImageInview">
+            <div className="image__inner">
+             <picture>
+              <source media="(max-width: 980px)" srcset="https://www.yadohouse.jp/cms/wp-content/uploads/2023/07/eye-2-350x467.jpg"/>
+              <img alt="" className="lazy" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2023/07/eye-2.jpg"/>
+             </picture>
+            </div>
+           </figure>
+           <div className="c-magList__item__info__contents">
+            <h2 className="title f-min">
+             <span className="mo_rows__text">
+              nonnativeデザイナー・藤井隆行｜デザイナー視点の空間づくりで人と自然と空間がゆるやかに繋がる
+             </span>
+            </h2>
+            <p className="caption">
+             “泊まるように暮らす”人に聞く、暮らしの哲学。日本を代表するメンズブランド「nonnative」のデザイナーとして活躍する藤井隆行さんを取材。７年前に東京から葉山に移住したことで得た、自然との蜜月のような付き合い方。彼の考える自然と人との関わり方や、自然と緩やかに溶け合うインテリアのコツを、デザイナーの視点から読み解いていく。
+            </p>
+           </div>
+          </a>
+          <ul className="c-tags f-neue">
+           <li className="c-tags__item">
+            <a className="c-tags__item__anchor mo_crop" href="https://www.yadohouse.jp/magazine/tag/%e6%b3%8a%e3%81%be%e3%82%8b%e3%82%88%e3%81%86%e3%81%ab%e6%9a%ae%e3%82%89%e3%81%99%e4%ba%ba/">
+             <p className="text mo_crop__text" data-text="#泊まるように暮らす人">
+              <span className="mo_crop__text__inner">
+               #泊まるように暮らす人
+              </span>
+             </p>
+            </a>
+           </li>
+          </ul>
+          <div className="c-view">
+           <div className="c-view__inner">
+            <a className="anchor mo_crop box" href="https://www.yadohouse.jp/magazine/2294/">
+             <p className="text mo_crop__text f-neue" data-text="Read more">
+              <span className="mo_crop__text__inner">
+               Read more
+              </span>
+             </p>
+             <figure className="arrow">
+              <img alt="&gt;" src="https://www.yadohouse.jp/cms/wp-content/themes/yado/assets/images/arrow.svg"/>
+             </figure>
+            </a>
+           </div>
+          </div>
+         </div>
+        </li>
+       </ul>
+       <div className="c-changeView c-fixedNav">
+        <a className="anchor mo_crop mScroll" href="#">
+         <p className="text mo_crop__text f-neue" data-text="Change View">
+          <span className="mo_crop__text__inner">
+           Change View
+          </span>
+         </p>
+         <div className="circle">
+         </div>
+        </a>
+       </div>
+      </div>
+     </section>
+     <section className="Latest" id="Latest">
+      <div className="Latest__container">
+       <div className="Latest__heading c-heading fInview fInview--enter">
+        <h4 className="title f-neue">
+         <span className="title__text" data-text="Latest article">
+          <span>
+           Latest article
+          </span>
+         </span>
+        </h4>
+        <div className="view">
+         <a className="anchor mo_crop" href="https://www.yadohouse.jp/magazine/">
+          <p className="text mo_crop__text f-neue" data-text="View all">
+           <span className="mo_crop__text__inner">
+            View all
+           </span>
+          </p>
+          <figure className="arrow">
+           <img alt="&gt;" src="https://www.yadohouse.jp/cms/wp-content/themes/yado/assets/images/arrow.svg"/>
+          </figure>
+         </a>
+        </div>
+       </div>
+       <div className="Latest__list" style="height: auto;">
+        <ul className="c-magList infiniteList view--list">
+         <li className="c-magList__item layout--2 is-white direct--1">
+          <div className="c-magList__item__info fInview--enter">
+           <div className="heading">
+            <p className="heading__category f-neue">
+             Trip
+            </p>
+            <p className="heading__num f-neue">
+             Issue : 30
+            </p>
+           </div>
+           <a className="anchor" href="https://www.yadohouse.jp/magazine/2335/">
+            <figure className="image magImageInview fInview--enter">
+             <div className="image__inner">
+              <picture>
+               <source media="(max-width: 980px)" srcset="https://www.yadohouse.jp/cms/wp-content/uploads/2023/08/eye-350x467.jpg"/>
+               <img alt="" className="lazy fLazy--loaded" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2023/08/eye.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2023/08/eye.jpg"/>
+              </picture>
+             </div>
+            </figure>
+            <div className="c-magList__item__info__contents">
+             <h2 className="title f-min">
+              <span className="mo_rows__text">
+               Izu Cliff House｜森で10年眠る廃墟が建物の記憶と共に蘇った、崖の上のホテル
+              </span>
+             </h2>
+             <p className="caption">
+              南伊豆の秘境、太平洋に面した崖の上にある一棟貸し宿、Izu Cliff Houseは、時代や場所を超えて、思い出や空想といった非日常に引き込む装置だ。
+              <br/>
+              人智が及ばない荒々しい大自然と対峙できる宿で、これからの観光という新しい価値を知る。
+             </p>
+            </div>
+           </a>
+           <ul className="c-tags f-neue">
+            <li className="c-tags__item">
+             <a className="c-tags__item__anchor mo_crop" href="https://www.yadohouse.jp/magazine/tag/%e5%ae%bf%e3%81%8b%e3%82%89%e7%b4%90%e8%a7%a3%e3%81%8f%e6%9a%ae%e3%82%89%e3%81%97%e3%81%ae%e3%83%92%e3%83%b3%e3%83%88/">
+              <p className="text mo_crop__text" data-text="#宿から紐解く暮らしのヒント">
+               <span className="mo_crop__text__inner">
+                #宿から紐解く暮らしのヒント
+               </span>
+              </p>
+             </a>
+            </li>
+            <li className="c-tags__item">
+             <a className="c-tags__item__anchor mo_crop" href="https://www.yadohouse.jp/magazine/tag/%e9%9d%99%e5%b2%a1/">
+              <p className="text mo_crop__text" data-text="#静岡">
+               <span className="mo_crop__text__inner">
+                #静岡
+               </span>
+              </p>
+             </a>
+            </li>
+           </ul>
+           <div className="c-view">
+            <div className="c-view__inner">
+             <a className="anchor mo_crop box" href="https://www.yadohouse.jp/magazine/2335/">
+              <p className="text mo_crop__text f-neue" data-text="Read more">
+               <span className="mo_crop__text__inner">
+                Read more
+               </span>
+              </p>
+              <figure className="arrow">
+               <img alt="&gt;" src="https://www.yadohouse.jp/cms/wp-content/themes/yado/assets/images/arrow.svg"/>
+              </figure>
+             </a>
+            </div>
+           </div>
+          </div>
+         </li>
+         <li className="c-magList__item layout--5 direct--1">
+          <div className="c-magList__item__info fInview--enter">
+           <div className="heading">
+            <p className="heading__category f-neue">
+             Interview
+            </p>
+            <p className="heading__num f-neue">
+             Issue : 29
+            </p>
+           </div>
+           <a className="anchor" href="https://www.yadohouse.jp/magazine/2294/">
+            <figure className="image magImageInview fInview--enter">
+             <div className="image__inner">
+              <picture>
+               <source media="(max-width: 980px)" srcset="https://www.yadohouse.jp/cms/wp-content/uploads/2023/07/eye-2-350x467.jpg"/>
+               <img alt="" className="lazy fLazy--loaded" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2023/07/eye-2.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2023/07/eye-2.jpg"/>
+              </picture>
+             </div>
+            </figure>
+            <div className="c-magList__item__info__contents">
+             <h2 className="title f-min">
+              <span className="mo_rows__text">
+               nonnativeデザイナー・藤井隆行｜デザイナー視点の空間づくりで人と自然と空間がゆるやかに繋がる
+              </span>
+             </h2>
+             <p className="caption">
+              “泊まるように暮らす”人に聞く、暮らしの哲学。日本を代表するメンズブランド「nonnative」のデザイナーとして活躍する藤井隆行さんを取材。７年前に東京から葉山に移住したことで得た、自然との蜜月のような付き合い方。彼の考える自然と人との関わり方や、自然と緩やかに溶け合うインテリアのコツを、デザイナーの視点から読み解いていく。
+             </p>
+            </div>
+           </a>
+           <ul className="c-tags f-neue">
+            <li className="c-tags__item">
+             <a className="c-tags__item__anchor mo_crop" href="https://www.yadohouse.jp/magazine/tag/%e6%b3%8a%e3%81%be%e3%82%8b%e3%82%88%e3%81%86%e3%81%ab%e6%9a%ae%e3%82%89%e3%81%99%e4%ba%ba/">
+              <p className="text mo_crop__text" data-text="#泊まるように暮らす人">
+               <span className="mo_crop__text__inner">
+                #泊まるように暮らす人
+               </span>
+              </p>
+             </a>
+            </li>
+           </ul>
+           <div className="c-view">
+            <div className="c-view__inner">
+             <a className="anchor mo_crop box" href="https://www.yadohouse.jp/magazine/2294/">
+              <p className="text mo_crop__text f-neue" data-text="Read more">
+               <span className="mo_crop__text__inner">
+                Read more
+               </span>
+              </p>
+              <figure className="arrow">
+               <img alt="&gt;" src="https://www.yadohouse.jp/cms/wp-content/themes/yado/assets/images/arrow.svg"/>
+              </figure>
+             </a>
+            </div>
+           </div>
+          </div>
+         </li>
+         <li className="c-magList__item layout--5 direct--2">
+          <div className="c-magList__item__info fInview--enter">
+           <div className="heading">
+            <p className="heading__category f-neue">
+             Product
+            </p>
+            <p className="heading__num f-neue">
+             Issue : 28
+            </p>
+           </div>
+           <a className="anchor" href="https://www.yadohouse.jp/magazine/2256/">
+            <figure className="image magImageInview fInview--enter">
+             <div className="image__inner">
+              <picture>
+               <source media="(max-width: 980px)" srcset="https://www.yadohouse.jp/cms/wp-content/uploads/2023/07/eye-1-350x467.jpg"/>
+               <img alt="" className="lazy fLazy--loaded" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2023/07/eye-1.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2023/07/eye-1.jpg"/>
+              </picture>
+             </div>
+            </figure>
+            <div className="c-magList__item__info__contents">
+             <h2 className="title f-min">
+              <span className="mo_rows__text">
+               Roofscape inspired by makina nakijin | 軒でつながり、自然と一体となる家
+              </span>
+             </h2>
+             <p className="caption">
+              旅する過程で出逢った感動や発見。それらを紐解き、住居という形に落とし込んだ“泊まるように暮らす家”「yado house」。そんなyado houseより、沖縄今帰仁村にある予約の取れないプライベートヴィラ「MAKINA NAKIJIN」とコラボした住宅「Roofscape inspired by makina nakijin」が誕生。そこにあるのは、循環し続ける自然とのおおらかな共生を楽しむ“自然と溶け合う暮らし”。Roofscapeが実現する全く新しい住宅の形を、そこでの暮らしと共に紹介する。
+             </p>
+            </div>
+           </a>
+           <ul className="c-tags f-neue">
+            <li className="c-tags__item">
+             <a className="c-tags__item__anchor mo_crop" href="https://www.yadohouse.jp/magazine/tag/yado-house/">
+              <p className="text mo_crop__text" data-text="#yado house">
+               <span className="mo_crop__text__inner">
+                #yado house
+               </span>
+              </p>
+             </a>
+            </li>
+            <li className="c-tags__item">
+             <a className="c-tags__item__anchor mo_crop" href="https://www.yadohouse.jp/magazine/tag/yado-gallery/">
+              <p className="text mo_crop__text" data-text="#yado gallery">
+               <span className="mo_crop__text__inner">
+                #yado gallery
+               </span>
+              </p>
+             </a>
+            </li>
+           </ul>
+           <div className="c-view">
+            <div className="c-view__inner">
+             <a className="anchor mo_crop box" href="https://www.yadohouse.jp/magazine/2256/">
+              <p className="text mo_crop__text f-neue" data-text="Read more">
+               <span className="mo_crop__text__inner">
+                Read more
+               </span>
+              </p>
+              <figure className="arrow">
+               <img alt="&gt;" src="https://www.yadohouse.jp/cms/wp-content/themes/yado/assets/images/arrow.svg"/>
+              </figure>
+             </a>
+            </div>
+           </div>
+          </div>
+         </li>
+         <li className="c-magList__item layout--5 direct--1">
+          <div className="c-magList__item__info fInview--enter">
+           <div className="heading">
+            <p className="heading__category f-neue">
+             Interview
+            </p>
+            <p className="heading__num f-neue">
+             Issue : 27
+            </p>
+           </div>
+           <a className="anchor" href="https://www.yadohouse.jp/magazine/2202/">
+            <figure className="image magImageInview fInview--enter">
+             <div className="image__inner">
+              <picture>
+               <source media="(max-width: 980px)" srcset="https://www.yadohouse.jp/cms/wp-content/uploads/2023/07/eye-350x467.jpg"/>
+               <img alt="" className="lazy fLazy--loaded" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2023/07/eye.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2023/07/eye.jpg"/>
+              </picture>
+             </div>
+            </figure>
+            <div className="c-magList__item__info__contents">
+             <h2 className="title f-min">
+              <span className="mo_rows__text">
+               デザイナー・酒井景都｜デザイナー夫婦の“外と内が溶け合う”美術館のような家づくり
+              </span>
+             </h2>
+             <p className="caption">
+              鎌倉の自然に囲まれた山の手に新居を構えたデザイナーの酒井景都さん。昔から世界のさまざまな住居やホテルのインテリアを見るのが好きで、今回の家づくりのアイデアはそんな長年の趣味の集大成だ。家で過ごしていても、緑豊かな自然と繋がれる住まいを目指して、構想から着工まで長い時間をかけて作り上げた新居を訪ねた。
+             </p>
+            </div>
+           </a>
+           <ul className="c-tags f-neue">
+            <li className="c-tags__item">
+             <a className="c-tags__item__anchor mo_crop" href="https://www.yadohouse.jp/magazine/tag/%e6%b3%8a%e3%81%be%e3%82%8b%e3%82%88%e3%81%86%e3%81%ab%e6%9a%ae%e3%82%89%e3%81%99%e4%ba%ba/">
+              <p className="text mo_crop__text" data-text="#泊まるように暮らす人">
+               <span className="mo_crop__text__inner">
+                #泊まるように暮らす人
+               </span>
+              </p>
+             </a>
+            </li>
+           </ul>
+           <div className="c-view">
+            <div className="c-view__inner">
+             <a className="anchor mo_crop box" href="https://www.yadohouse.jp/magazine/2202/">
+              <p className="text mo_crop__text f-neue" data-text="Read more">
+               <span className="mo_crop__text__inner">
+                Read more
+               </span>
+              </p>
+              <figure className="arrow">
+               <img alt="&gt;" src="https://www.yadohouse.jp/cms/wp-content/themes/yado/assets/images/arrow.svg"/>
+              </figure>
+             </a>
+            </div>
+           </div>
+          </div>
+         </li>
+         <li className="c-magList__item layout--2 direct--1">
+          <div className="c-magList__item__info fInview--enter">
+           <div className="heading">
+            <p className="heading__category f-neue">
+             Interview
+            </p>
+            <p className="heading__num f-neue">
+             Issue : 26
+            </p>
+           </div>
+           <a className="anchor" href="https://www.yadohouse.jp/magazine/2096/">
+            <figure className="image magImageInview fInview--enter">
+             <div className="image__inner">
+              <picture>
+               <source media="(max-width: 980px)" srcset="https://www.yadohouse.jp/cms/wp-content/uploads/2023/07/ryuzakisyoko_eye-350x467.jpg"/>
+               <img alt="" className="lazy fLazy--loaded" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2023/07/ryuzakisyoko_eye.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2023/07/ryuzakisyoko_eye.jpg"/>
+              </picture>
+             </div>
+            </figure>
+            <div className="c-magList__item__info__contents">
+             <h2 className="title f-min">
+              <span className="mo_rows__text">
+               ホテルプロデューサー・龍崎翔子｜「泊まる」を通じて出合う偶発的な日常から「暮らす」を考える
+              </span>
+             </h2>
+             <p className="caption">
+              “泊まるように暮らす”人に聞く、暮らしの哲学。ホテルプロデューサーとして各地の空気感を盛り込んだホテルや、産後ケアリゾートなどの空間づくりに取り組む龍崎翔子さんを取材。彼女が考えるホテルの価値と日常とのつながり、家とホテルの未来とは。彼女がかつて住んだこともあるという世田谷の街を歩きながら、思考の片鱗を垣間見た。
+             </p>
+            </div>
+           </a>
+           <ul className="c-tags f-neue">
+            <li className="c-tags__item">
+             <a className="c-tags__item__anchor mo_crop" href="https://www.yadohouse.jp/magazine/tag/%e6%b3%8a%e3%81%be%e3%82%8b%e3%82%88%e3%81%86%e3%81%ab%e6%9a%ae%e3%82%89%e3%81%99%e4%ba%ba/">
+              <p className="text mo_crop__text" data-text="#泊まるように暮らす人">
+               <span className="mo_crop__text__inner">
+                #泊まるように暮らす人
+               </span>
+              </p>
+             </a>
+            </li>
+           </ul>
+           <div className="c-view">
+            <div className="c-view__inner">
+             <a className="anchor mo_crop box" href="https://www.yadohouse.jp/magazine/2096/">
+              <p className="text mo_crop__text f-neue" data-text="Read more">
+               <span className="mo_crop__text__inner">
+                Read more
+               </span>
+              </p>
+              <figure className="arrow">
+               <img alt="&gt;" src="https://www.yadohouse.jp/cms/wp-content/themes/yado/assets/images/arrow.svg"/>
+              </figure>
+             </a>
+            </div>
+           </div>
+          </div>
+         </li>
+         <li className="c-magList__item layout--5 direct--1">
+          <div className="c-magList__item__info fInview--enter">
+           <div className="heading">
+            <p className="heading__category f-neue">
+             Trip
+            </p>
+            <p className="heading__num f-neue">
+             Issue : 25
+            </p>
+           </div>
+           <a className="anchor" href="https://www.yadohouse.jp/magazine/2140/">
+            <figure className="image magImageInview fInview--enter">
+             <div className="image__inner">
+              <picture>
+               <source media="(max-width: 980px)" srcset="https://www.yadohouse.jp/cms/wp-content/uploads/2023/06/eye-1-350x467.jpg"/>
+               <img alt="" className="lazy fLazy--loaded" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2023/06/eye-1.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2023/06/eye-1.jpg"/>
+              </picture>
+             </div>
+            </figure>
+            <div className="c-magList__item__info__contents">
+             <h2 className="title f-min">
+              <span className="mo_rows__text">
+               湯の山 素粋居｜12棟の離れが点在する美術館のような宿で、理想の家に出会う
+              </span>
+             </h2>
+             <p className="caption">
+              三重県北西部に広がる鈴鹿山脈の麓。ここには1300年の歴史を持つ「湯の山温泉」があり、古来から多くの人を癒してきた湯治場となっている。
+              <br/>
+              2020年、陶芸家/造形作家の内田鋼一さんがプロデュースする宿「湯の山 素粋居（そすいきょ）」が誕生し、瞬く間に話題となった。
+              <br/>
+              12棟の離れが敷地内に点在し、それぞれが異なる自然素材を用いて一軒家のように構成されている。各部屋では現代アートや工芸、古美術に触れられ、さながら美術館のよう。
+              <br/>
+              今回はこれら各棟をまわりながら、住まいのヒントを探してみたい。
+             </p>
+            </div>
+           </a>
+           <ul className="c-tags f-neue">
+            <li className="c-tags__item">
+             <a className="c-tags__item__anchor mo_crop" href="https://www.yadohouse.jp/magazine/tag/%e5%ae%bf%e3%81%8b%e3%82%89%e7%b4%90%e8%a7%a3%e3%81%8f%e6%9a%ae%e3%82%89%e3%81%97%e3%81%ae%e3%83%92%e3%83%b3%e3%83%88/">
+              <p className="text mo_crop__text" data-text="#宿から紐解く暮らしのヒント">
+               <span className="mo_crop__text__inner">
+                #宿から紐解く暮らしのヒント
+               </span>
+              </p>
+             </a>
+            </li>
+            <li className="c-tags__item">
+             <a className="c-tags__item__anchor mo_crop" href="https://www.yadohouse.jp/magazine/tag/%e4%b8%89%e9%87%8d%e7%9c%8c/">
+              <p className="text mo_crop__text" data-text="#三重県">
+               <span className="mo_crop__text__inner">
+                #三重県
+               </span>
+              </p>
+             </a>
+            </li>
+           </ul>
+           <div className="c-view">
+            <div className="c-view__inner">
+             <a className="anchor mo_crop box" href="https://www.yadohouse.jp/magazine/2140/">
+              <p className="text mo_crop__text f-neue" data-text="Read more">
+               <span className="mo_crop__text__inner">
+                Read more
+               </span>
+              </p>
+              <figure className="arrow">
+               <img alt="&gt;" src="https://www.yadohouse.jp/cms/wp-content/themes/yado/assets/images/arrow.svg"/>
+              </figure>
+             </a>
+            </div>
+           </div>
+          </div>
+         </li>
+        </ul>
+       </div>
+       <div className="Latest__more">
+        <a className="Latest__more__anchor mo_line">
+         <div className="text">
+          <p className="mo_crop__text f-neue" data-text="More Loading">
+           <span className="mo_crop__text__inner">
+            More Loading
+           </span>
+          </p>
+         </div>
+        </a>
+       </div>
+      </div>
+      <div className="Latest__pageNation" data-maxpage="5" style="display: none;">
+       <a className="next" href="https://www.yadohouse.jp/infinite/page/2/">
+       </a>
+      </div>
+     </section>
+    </div>
+    <section className="House" id="House">
+     <div className="About__main">
+      <figure className="About__main__bg">
+       <picture>
+        <source media="(max-width:980px)" srcset="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/sp_m.jpg"/>
+        <img src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/pc_m.jpg"/>
+       </picture>
+      </figure>
+      <div className="About__main__contents fInview fInview--enter">
+       <h4 className="heading c-heading">
+        <p className="title f-neue">
+         <span className="title__text" data-text="About">
+          <span>
+           About
+          </span>
+         </span>
+        </p>
+       </h4>
+       <div className="boxes">
+        <div className="boxes__box">
+         <h5 className="catch f-min">
+          泊まるように暮らす
+         </h5>
+         <p className="title f-neue">
+          Living as if you are staying here.
+         </p>
+        </div>
+        <div className="boxes__box">
+         <p className="lead">
+          旅に出ると、心がおどる。
+          <br/>
+          たとえば、いつもは読まない本を読む。
+          <br/>
+          たとえば、早起きをして散歩する。
+          <br/>
+          <br/>
+          そこにあるのは新鮮な高揚と
+          <br/>
+          圧倒的なくつろぎの同居。
+          <br/>
+          <br/>
+          yadoは、旅先で誰もが感じたことのある
+          <br/>
+          独特な時間と空間の心地よさを分解し
+          <br/>
+          家というフォーマットに落とし込むことで
+          <br/>
+          泊まるように暮らす日々を提案します。
+         </p>
+         <div className="c-view .c-view--white">
+          <div className="c-view__inner">
+           <a className="anchor mo_crop box" href="https://www.yadohouse.jp/about/">
+            <p className="text mo_crop__text f-neue" data-text="View more">
+             <span className="mo_crop__text__inner">
+              View more
+             </span>
+            </p>
+            <figure className="arrow">
+             <img alt="&gt;" src="https://www.yadohouse.jp/cms/wp-content/themes/yado/assets/images/arrow-w.svg"/>
+            </figure>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div className="House__heading">
+      <div className="House__heading__contents fInview fInview--enter">
+       <h4 className="heading c-heading">
+        <p className="title f-neue">
+         <span className="title__text" data-text="House">
+          <span>
+           House
+          </span>
+         </span>
+        </p>
+       </h4>
+       <div className="boxes">
+        <div className="boxes__box">
+         <h5 className="catch f-min">
+          旅の心地よさを分解して生まれた
+          <br/>
+          泊まるように暮らす家
+         </h5>
+         <p className="title f-neue">
+          Houses created by decomposing
+          <br/>
+          the comfort of travel
+         </p>
+        </div>
+        <div className="boxes__box">
+         <p className="lead">
+          yadoが提案するのは、コンセプトの異なる3つの住宅レーベル。 多様化するライフスタイルに合わせた、心地よい暮らし方を提案していきます。
+         </p>
+         <div className="c-view .c-view--white">
+          <div className="c-view__inner">
+           <a className="anchor mo_crop box" href="https://www.yadohouse.jp/house/">
+            <p className="text mo_crop__text f-neue" data-text="View more">
+             <span className="mo_crop__text__inner">
+              View more
+             </span>
+            </p>
+            <figure className="arrow">
+             <img alt="&gt;" src="https://www.yadohouse.jp/cms/wp-content/themes/yado/assets/images/arrow.svg"/>
+            </figure>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div className="House__lineup">
+      <ul className="labelList">
+       <li className="labelList__item fInview fInview--enter">
+        <p className="heading f-neue">
+         Label 01
+        </p>
+        <a className="anchor mo_crop" href="https://www.yadohouse.jp/house/yado-local/">
+         <div className="c-fadeSlideWrapper">
+          <div className="c-fadeSlide f-neue">
+           <div className="c-fadeSlide__container">
+            <ul className="slide fInview--enter">
+             <li className="slide__item is-current">
+              <figure className="image">
+               <picture>
+                <source media="(max-width: 980px)" srcset="https://www.yadohouse.jp/cms/wp-content/uploads/2023/06/70ede4a53ac3b3b1577689d646c03e7d-750x502.png"/>
+                <img alt="" className="lazy fLazy--loaded" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2023/06/70ede4a53ac3b3b1577689d646c03e7d.png" src="https://www.yadohouse.jp/cms/wp-content/uploads/2023/06/70ede4a53ac3b3b1577689d646c03e7d.png"/>
+               </picture>
+              </figure>
+             </li>
+             <li className="slide__item">
+              <figure className="image">
+               <picture>
+                <source media="(max-width: 980px)" srcset="https://www.yadohouse.jp/cms/wp-content/uploads/2023/07/houselabel_eye-2-750x502.jpg"/>
+                <img alt="" className="lazy fLazy--loaded" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2023/07/houselabel_eye-2.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2023/07/houselabel_eye-2.jpg"/>
+               </picture>
+              </figure>
+             </li>
+            </ul>
+           </div>
+           <ul className="dot">
+            <li className="dot__item is-current">
+            </li>
+            <li className="dot__item">
+            </li>
+           </ul>
+          </div>
+         </div>
+         <h3 className="title f-min">
+          yado local
+         </h3>
+         <p className="lead">
+          世界中の宿からインスピレーションを受けた住宅デザインを展開
+         </p>
+         <div className="c-view">
+          <div className="c-view__inner">
+           <div className="box">
+            <p className="text mo_crop__text f-neue" data-text="View more">
+             <span className="mo_crop__text__inner">
+              View more
+             </span>
+            </p>
+            <figure className="arrow">
+             <img alt="&gt;" src="https://www.yadohouse.jp/cms/wp-content/themes/yado/assets/images/arrow.svg"/>
+            </figure>
+           </div>
+          </div>
+         </div>
+        </a>
+       </li>
+       <li className="labelList__item fInview fInview--enter">
+        <p className="heading f-neue">
+         Label 02
+        </p>
+        <a className="anchor mo_crop" href="https://www.yadohouse.jp/house/yado-journey/">
+         <div className="c-fadeSlideWrapper">
+          <div className="c-fadeSlide f-neue is-comingSoon">
+           <div className="c-fadeSlide__container">
+            <ul className="slide">
+             <li className="slide__item is-current">
+              <figure className="image">
+               <picture>
+                <source media="(max-width: 980px)" srcset="https://www.yadohouse.jp/cms/wp-content/uploads/2023/06/c180041de99e3e92d8ffdf111ba1fe0a-750x502.png"/>
+                <img alt="" className="lazy fLazy--loaded" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2023/06/c180041de99e3e92d8ffdf111ba1fe0a.png" src="https://www.yadohouse.jp/cms/wp-content/uploads/2023/06/c180041de99e3e92d8ffdf111ba1fe0a.png"/>
+               </picture>
+              </figure>
+             </li>
+            </ul>
+           </div>
+          </div>
+         </div>
+         <h3 className="title f-min">
+          yado journey
+         </h3>
+         <p className="lead">
+          全国各地の美しいロケーションに“旅するように”建設した住宅デザインを展開
+         </p>
+         <div className="c-view">
+          <div className="c-view__inner">
+           <div className="box">
+            <p className="text mo_crop__text f-neue" data-text="View more">
+             <span className="mo_crop__text__inner">
+              View more
+             </span>
+            </p>
+            <figure className="arrow">
+             <img alt="&gt;" src="https://www.yadohouse.jp/cms/wp-content/themes/yado/assets/images/arrow.svg"/>
+            </figure>
+           </div>
+          </div>
+         </div>
+        </a>
+       </li>
+       <li className="labelList__item fInview fInview--enter">
+        <p className="heading f-neue">
+         Label 03
+        </p>
+        <a className="anchor mo_crop" href="https://www.yadohouse.jp/house/yado-gallery/">
+         <div className="c-fadeSlideWrapper">
+          <div className="c-fadeSlide f-neue">
+           <div className="c-fadeSlide__container">
+            <ul className="slide">
+             <li className="slide__item is-current">
+              <figure className="image">
+               <picture>
+                <source media="(max-width: 980px)" srcset="https://www.yadohouse.jp/cms/wp-content/uploads/2023/06/69fbee2639011fa8d5bd508f30d3ec72-750x502.png"/>
+                <img alt="" className="lazy fLazy--loaded" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2023/06/69fbee2639011fa8d5bd508f30d3ec72.png" src="https://www.yadohouse.jp/cms/wp-content/uploads/2023/06/69fbee2639011fa8d5bd508f30d3ec72.png"/>
+               </picture>
+              </figure>
+             </li>
+            </ul>
+           </div>
+          </div>
+         </div>
+         <h3 className="title f-min">
+          yado gallery
+         </h3>
+         <p className="lead">
+          予約の取れないホテルやライフスタイルブランドとコラボレーションした住宅デザインを展開
+         </p>
+         <div className="c-view">
+          <div className="c-view__inner">
+           <div className="box">
+            <p className="text mo_crop__text f-neue" data-text="View more">
+             <span className="mo_crop__text__inner">
+              View more
+             </span>
+            </p>
+            <figure className="arrow">
+             <img alt="&gt;" src="https://www.yadohouse.jp/cms/wp-content/themes/yado/assets/images/arrow.svg"/>
+            </figure>
+           </div>
+          </div>
+         </div>
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div className="House__intro fInview--0 fInview--enter">
+      <ul className="images">
+       <li className="images__box" data-duration="88000" style="animation-duration: 144461ms;">
+        <ul className="list">
+         <li className="list__item">
+          <figure className="image">
+           <picture>
+            <source media="(max-width:980px)" srcset="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/top_house4_sp-1.jpg"/>
+            <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/top_house4-1.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/top_house4-1.jpg"/>
+           </picture>
+          </figure>
+         </li>
+         <li className="list__item">
+          <figure className="image">
+           <picture>
+            <source media="(max-width:980px)" srcset="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/top_house3_sp.jpg"/>
+            <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/top_house3.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/top_house3.jpg"/>
+           </picture>
+          </figure>
+         </li>
+         <li className="list__item">
+          <figure className="image">
+           <picture>
+            <source media="(max-width:980px)" srcset="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/top_house1_sp.jpg"/>
+            <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/top_house1.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/top_house1.jpg"/>
+           </picture>
+          </figure>
+         </li>
+         <li className="list__item">
+          <figure className="image">
+           <picture>
+            <source media="(max-width:980px)" srcset="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/top_house2_sp.jpg"/>
+            <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/top_house2.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/top_house2.jpg"/>
+           </picture>
+          </figure>
+         </li>
+        </ul>
+       </li>
+       <li className="images__box" data-duration="88000" style="animation-duration: 144461ms;">
+        <ul className="list">
+         <li className="list__item">
+          <figure className="image">
+           <picture>
+            <source media="(max-width:980px)" srcset="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/top_house4_sp-1.jpg"/>
+            <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/top_house4-1.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/top_house4-1.jpg"/>
+           </picture>
+          </figure>
+         </li>
+         <li className="list__item">
+          <figure className="image">
+           <picture>
+            <source media="(max-width:980px)" srcset="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/top_house3_sp.jpg"/>
+            <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/top_house3.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/top_house3.jpg"/>
+           </picture>
+          </figure>
+         </li>
+         <li className="list__item">
+          <figure className="image">
+           <picture>
+            <source media="(max-width:980px)" srcset="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/top_house1_sp.jpg"/>
+            <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/top_house1.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/top_house1.jpg"/>
+           </picture>
+          </figure>
+         </li>
+         <li className="list__item">
+          <figure className="image">
+           <picture>
+            <source media="(max-width:980px)" srcset="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/top_house2_sp.jpg"/>
+            <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/top_house2.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/top_house2.jpg"/>
+           </picture>
+          </figure>
+         </li>
+        </ul>
+       </li>
+      </ul>
+      <figure className="logo">
+       <img alt="yado" className="lazy fLazy--loaded" data-original="https://www.yadohouse.jp/cms/wp-content/themes/yado/assets/images/logo_yado-w.svg" src="https://www.yadohouse.jp/cms/wp-content/themes/yado/assets/images/logo_yado-w.svg"/>
+      </figure>
+      <div className="launch">
+       <p className="launch__text f-neue">
+        <span className="date">
+         January 2023
+        </span>
+        launched.
+       </p>
+      </div>
+     </div>
+    </section>
+   </div>
+   <div className="c-changeView c-fixedNav">
+    <a className="anchor mo_crop mScroll" href="#">
+     <p className="text mo_crop__text f-neue" data-text="Change View">
+      <span className="mo_crop__text__inner">
+       Change View
+      </span>
+     </p>
+     <div className="circle">
+     </div>
+    </a>
+   </div>
+  </div>
+  <!-- End .Contents -->
+  <section className="About" id="About">
+   <div className="About__main">
+    <figure className="About__main__bg">
+     <picture>
+      <source media="(max-width:980px)" srcset="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/sp_m.jpg"/>
+      <img src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/pc_m.jpg"/>
+     </picture>
+    </figure>
+    <div className="About__main__contents fInview">
+     <h4 className="heading c-heading">
+      <p className="title f-neue">
+       <span className="title__text" data-text="About">
+        <span>
+         About
+        </span>
+       </span>
+      </p>
+     </h4>
+     <div className="boxes">
+      <div className="boxes__box">
+       <h5 className="catch f-min">
+        泊まるように暮らす
+       </h5>
+       <p className="title f-neue">
+        Living as if you are staying here.
+       </p>
+      </div>
+      <div className="boxes__box">
+       <p className="lead">
+        食べる、寝る、入浴する。
+        <br/>
+        家と宿、それらがたとえ行為としては同じでも、旅先の宿に豊かさを感じるのはなぜなのか？
+        <br/>
+        そんなひとつの問いから、yadoは生まれました。
+        <br/>
+        <br/>
+        家に居ながらにして、時間の移ろいや風景の心地よさを感じられる空間。
+        <br/>
+        収納の徹底的な工夫による、ノイズのない心地よい余白……。
+        <br/>
+        新鮮な高揚と圧倒的なくつろぎが同居する旅のような時間を日常にも。
+        <br/>
+        <br/>
+        個人住宅を通して、そんな日々をより身近に実現します。
+       </p>
+       <div className="c-view .c-view--white">
+        <div className="c-view__inner">
+         <a className="anchor mo_crop box" href="https://www.yadohouse.jp/about/">
+          <p className="text mo_crop__text f-neue" data-text="View more">
+           <span className="mo_crop__text__inner">
+            View more
+           </span>
+          </p>
+          <figure className="arrow">
+           <img alt="&gt;" src="https://www.yadohouse.jp/cms/wp-content/themes/yado/assets/images/arrow-w.svg"/>
+          </figure>
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div className="About__supporters">
+    <div className="About__supporters__heading c-heading fInview fInview--enter">
+     <h4 className="title f-neue">
+      <span className="title__text" data-text="Supporters’ comments">
+       <span>
+        Supporters’ comments
+       </span>
+      </span>
+      <span className="c-posts">
+       10
+      </span>
+     </h4>
+     <p className="catch">
+      あなたにとって「泊まるように暮らす」とは。
+     </p>
+    </div>
+    <div className="About__supporters__list fInview--0 fInview--enter">
+     <ul className="boxes" data-duration="110000" data-duration_sp="120000" style="animation-duration: 218875ms;">
+      <!-- 3000px以下の場合はループさせる-->
+      <li className="boxes__item">
+       <a className="anchor mo_border" href="https://www.yadohouse.jp/about/?supporter=0">
+        <figure className="image">
+         <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/supporters_3.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/supporters_3.jpg"/>
+        </figure>
+        <p className="text name mo_crop__text f-neue">
+         <span className="mo_crop__text__before">
+          佐藤 可士和
+          <br/>
+          Creative director
+         </span>
+         <span className="mo_crop__text__inner">
+          佐藤 可士和
+          <br/>
+          Creative director
+         </span>
+        </p>
+       </a>
+      </li>
+      <li className="boxes__item">
+       <a className="anchor mo_border" href="https://www.yadohouse.jp/about/?supporter=1">
+        <figure className="image">
+         <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/7c4e866123723e03ef075d660bf377c4.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/7c4e866123723e03ef075d660bf377c4.jpg"/>
+        </figure>
+        <p className="text name mo_crop__text f-neue">
+         <span className="mo_crop__text__before">
+          大日方 久美子
+          <br/>
+          Personal Stylist
+         </span>
+         <span className="mo_crop__text__inner">
+          大日方 久美子
+          <br/>
+          Personal Stylist
+         </span>
+        </p>
+       </a>
+      </li>
+      <li className="boxes__item">
+       <a className="anchor mo_border" href="https://www.yadohouse.jp/about/?supporter=2">
+        <figure className="image">
+         <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/supporters_4.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/supporters_4.jpg"/>
+        </figure>
+        <p className="text name mo_crop__text f-neue">
+         <span className="mo_crop__text__before">
+          横川 正紀
+          <br/>
+          CEO&amp;Creative director
+         </span>
+         <span className="mo_crop__text__inner">
+          横川 正紀
+          <br/>
+          CEO&amp;Creative director
+         </span>
+        </p>
+       </a>
+      </li>
+      <li className="boxes__item">
+       <a className="anchor mo_border" href="https://www.yadohouse.jp/about/?supporter=3">
+        <figure className="image">
+         <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/supporters_2.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/supporters_2.jpg"/>
+        </figure>
+        <p className="text name mo_crop__text f-neue">
+         <span className="mo_crop__text__before">
+          松田 ゆう姫
+          <br/>
+          Artist
+         </span>
+         <span className="mo_crop__text__inner">
+          松田 ゆう姫
+          <br/>
+          Artist
+         </span>
+        </p>
+       </a>
+      </li>
+      <li className="boxes__item">
+       <a className="anchor mo_border" href="https://www.yadohouse.jp/about/?supporter=4">
+        <figure className="image">
+         <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/supporters_6.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/supporters_6.jpg"/>
+        </figure>
+        <p className="text name mo_crop__text f-neue">
+         <span className="mo_crop__text__before">
+          野尻 佳孝
+          <br/>
+          TRUNK CEO
+         </span>
+         <span className="mo_crop__text__inner">
+          野尻 佳孝
+          <br/>
+          TRUNK CEO
+         </span>
+        </p>
+       </a>
+      </li>
+      <li className="boxes__item">
+       <a className="anchor mo_border" href="https://www.yadohouse.jp/about/?supporter=5">
+        <figure className="image">
+         <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/murakamimoe-350x354.png" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/murakamimoe-350x354.png"/>
+        </figure>
+        <p className="text name mo_crop__text f-neue">
+         <span className="mo_crop__text__before">
+          村上 萌
+          <br/>
+          NEXTWEEKEND
+          <br/>
+          Editor in chief
+         </span>
+         <span className="mo_crop__text__inner">
+          村上 萌
+          <br/>
+          NEXTWEEKEND
+          <br/>
+          Editor in chief
+         </span>
+        </p>
+       </a>
+      </li>
+      <li className="boxes__item">
+       <a className="anchor mo_border" href="https://www.yadohouse.jp/about/?supporter=6">
+        <figure className="image">
+         <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/supporters_1.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/supporters_1.jpg"/>
+        </figure>
+        <p className="text name mo_crop__text f-neue">
+         <span className="mo_crop__text__before">
+          市川 渚
+          <br/>
+          Creative consultant
+         </span>
+         <span className="mo_crop__text__inner">
+          市川 渚
+          <br/>
+          Creative consultant
+         </span>
+        </p>
+       </a>
+      </li>
+      <li className="boxes__item">
+       <a className="anchor mo_border" href="https://www.yadohouse.jp/about/?supporter=7">
+        <figure className="image">
+         <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/12/f70e2a0-350x350.jpeg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/12/f70e2a0-350x350.jpeg"/>
+        </figure>
+        <p className="text name mo_crop__text f-neue">
+         <span className="mo_crop__text__before">
+          小橋 賢児
+          <br/>
+          Creative director
+         </span>
+         <span className="mo_crop__text__inner">
+          小橋 賢児
+          <br/>
+          Creative director
+         </span>
+        </p>
+       </a>
+      </li>
+      <li className="boxes__item">
+       <a className="anchor mo_border" href="https://www.yadohouse.jp/about/?supporter=8">
+        <figure className="image">
+         <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/fix_7892-350x350.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/fix_7892-350x350.jpg"/>
+        </figure>
+        <p className="text name mo_crop__text f-neue">
+         <span className="mo_crop__text__before">
+          吉田 怜香
+          <br/>
+          Fashion director
+         </span>
+         <span className="mo_crop__text__inner">
+          吉田 怜香
+          <br/>
+          Fashion director
+         </span>
+        </p>
+       </a>
+      </li>
+      <li className="boxes__item">
+       <a className="anchor mo_border" href="https://www.yadohouse.jp/about/?supporter=9">
+        <figure className="image">
+         <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/12/profile-350x350.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/12/profile-350x350.jpg"/>
+        </figure>
+        <p className="text name mo_crop__text f-neue">
+         <span className="mo_crop__text__before">
+          大橋 トリオ
+          <br/>
+          Musician
+         </span>
+         <span className="mo_crop__text__inner">
+          大橋 トリオ
+          <br/>
+          Musician
+         </span>
+        </p>
+       </a>
+      </li>
+      <li className="boxes__item">
+       <a className="anchor mo_border" href="https://www.yadohouse.jp/about/?supporter=0">
+        <figure className="image">
+         <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/supporters_3.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/supporters_3.jpg"/>
+        </figure>
+        <p className="text name mo_crop__text f-neue">
+         <span className="mo_crop__text__before">
+          佐藤 可士和
+          <br/>
+          Creative director
+         </span>
+         <span className="mo_crop__text__inner">
+          佐藤 可士和
+          <br/>
+          Creative director
+         </span>
+        </p>
+       </a>
+      </li>
+      <li className="boxes__item">
+       <a className="anchor mo_border" href="https://www.yadohouse.jp/about/?supporter=1">
+        <figure className="image">
+         <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/7c4e866123723e03ef075d660bf377c4.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/7c4e866123723e03ef075d660bf377c4.jpg"/>
+        </figure>
+        <p className="text name mo_crop__text f-neue">
+         <span className="mo_crop__text__before">
+          大日方 久美子
+          <br/>
+          Personal Stylist
+         </span>
+         <span className="mo_crop__text__inner">
+          大日方 久美子
+          <br/>
+          Personal Stylist
+         </span>
+        </p>
+       </a>
+      </li>
+      <li className="boxes__item">
+       <a className="anchor mo_border" href="https://www.yadohouse.jp/about/?supporter=2">
+        <figure className="image">
+         <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/supporters_4.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/supporters_4.jpg"/>
+        </figure>
+        <p className="text name mo_crop__text f-neue">
+         <span className="mo_crop__text__before">
+          横川 正紀
+          <br/>
+          CEO&amp;Creative director
+         </span>
+         <span className="mo_crop__text__inner">
+          横川 正紀
+          <br/>
+          CEO&amp;Creative director
+         </span>
+        </p>
+       </a>
+      </li>
+      <li className="boxes__item">
+       <a className="anchor mo_border" href="https://www.yadohouse.jp/about/?supporter=3">
+        <figure className="image">
+         <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/supporters_2.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/supporters_2.jpg"/>
+        </figure>
+        <p className="text name mo_crop__text f-neue">
+         <span className="mo_crop__text__before">
+          松田 ゆう姫
+          <br/>
+          Artist
+         </span>
+         <span className="mo_crop__text__inner">
+          松田 ゆう姫
+          <br/>
+          Artist
+         </span>
+        </p>
+       </a>
+      </li>
+      <li className="boxes__item">
+       <a className="anchor mo_border" href="https://www.yadohouse.jp/about/?supporter=4">
+        <figure className="image">
+         <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/supporters_6.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/supporters_6.jpg"/>
+        </figure>
+        <p className="text name mo_crop__text f-neue">
+         <span className="mo_crop__text__before">
+          野尻 佳孝
+          <br/>
+          TRUNK CEO
+         </span>
+         <span className="mo_crop__text__inner">
+          野尻 佳孝
+          <br/>
+          TRUNK CEO
+         </span>
+        </p>
+       </a>
+      </li>
+      <li className="boxes__item">
+       <a className="anchor mo_border" href="https://www.yadohouse.jp/about/?supporter=5">
+        <figure className="image">
+         <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/murakamimoe-350x354.png" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/murakamimoe-350x354.png"/>
+        </figure>
+        <p className="text name mo_crop__text f-neue">
+         <span className="mo_crop__text__before">
+          村上 萌
+          <br/>
+          NEXTWEEKEND
+          <br/>
+          Editor in chief
+         </span>
+         <span className="mo_crop__text__inner">
+          村上 萌
+          <br/>
+          NEXTWEEKEND
+          <br/>
+          Editor in chief
+         </span>
+        </p>
+       </a>
+      </li>
+      <li className="boxes__item">
+       <a className="anchor mo_border" href="https://www.yadohouse.jp/about/?supporter=6">
+        <figure className="image">
+         <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/supporters_1.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/supporters_1.jpg"/>
+        </figure>
+        <p className="text name mo_crop__text f-neue">
+         <span className="mo_crop__text__before">
+          市川 渚
+          <br/>
+          Creative consultant
+         </span>
+         <span className="mo_crop__text__inner">
+          市川 渚
+          <br/>
+          Creative consultant
+         </span>
+        </p>
+       </a>
+      </li>
+      <li className="boxes__item">
+       <a className="anchor mo_border" href="https://www.yadohouse.jp/about/?supporter=7">
+        <figure className="image">
+         <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/12/f70e2a0-350x350.jpeg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/12/f70e2a0-350x350.jpeg"/>
+        </figure>
+        <p className="text name mo_crop__text f-neue">
+         <span className="mo_crop__text__before">
+          小橋 賢児
+          <br/>
+          Creative director
+         </span>
+         <span className="mo_crop__text__inner">
+          小橋 賢児
+          <br/>
+          Creative director
+         </span>
+        </p>
+       </a>
+      </li>
+      <li className="boxes__item">
+       <a className="anchor mo_border" href="https://www.yadohouse.jp/about/?supporter=8">
+        <figure className="image">
+         <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/fix_7892-350x350.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/fix_7892-350x350.jpg"/>
+        </figure>
+        <p className="text name mo_crop__text f-neue">
+         <span className="mo_crop__text__before">
+          吉田 怜香
+          <br/>
+          Fashion director
+         </span>
+         <span className="mo_crop__text__inner">
+          吉田 怜香
+          <br/>
+          Fashion director
+         </span>
+        </p>
+       </a>
+      </li>
+      <li className="boxes__item">
+       <a className="anchor mo_border" href="https://www.yadohouse.jp/about/?supporter=9">
+        <figure className="image">
+         <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/12/profile-350x350.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/12/profile-350x350.jpg"/>
+        </figure>
+        <p className="text name mo_crop__text f-neue">
+         <span className="mo_crop__text__before">
+          大橋 トリオ
+          <br/>
+          Musician
+         </span>
+         <span className="mo_crop__text__inner">
+          大橋 トリオ
+          <br/>
+          Musician
+         </span>
+        </p>
+       </a>
+      </li>
+     </ul>
+     <ul className="boxes" data-duration="110000" data-duration_sp="120000" style="animation-duration: 218875ms;">
+      <!-- 3000px以下の場合はループさせる-->
+      <li className="boxes__item">
+       <a className="anchor mo_border" href="https://www.yadohouse.jp/about/?supporter=0">
+        <figure className="image">
+         <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/supporters_3.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/supporters_3.jpg"/>
+        </figure>
+        <p className="text name mo_crop__text f-neue">
+         <span className="mo_crop__text__before">
+          佐藤 可士和
+          <br/>
+          Creative director
+         </span>
+         <span className="mo_crop__text__inner">
+          佐藤 可士和
+          <br/>
+          Creative director
+         </span>
+        </p>
+       </a>
+      </li>
+      <li className="boxes__item">
+       <a className="anchor mo_border" href="https://www.yadohouse.jp/about/?supporter=1">
+        <figure className="image">
+         <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/7c4e866123723e03ef075d660bf377c4.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/7c4e866123723e03ef075d660bf377c4.jpg"/>
+        </figure>
+        <p className="text name mo_crop__text f-neue">
+         <span className="mo_crop__text__before">
+          大日方 久美子
+          <br/>
+          Personal Stylist
+         </span>
+         <span className="mo_crop__text__inner">
+          大日方 久美子
+          <br/>
+          Personal Stylist
+         </span>
+        </p>
+       </a>
+      </li>
+      <li className="boxes__item">
+       <a className="anchor mo_border" href="https://www.yadohouse.jp/about/?supporter=2">
+        <figure className="image">
+         <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/supporters_4.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/supporters_4.jpg"/>
+        </figure>
+        <p className="text name mo_crop__text f-neue">
+         <span className="mo_crop__text__before">
+          横川 正紀
+          <br/>
+          CEO&amp;Creative director
+         </span>
+         <span className="mo_crop__text__inner">
+          横川 正紀
+          <br/>
+          CEO&amp;Creative director
+         </span>
+        </p>
+       </a>
+      </li>
+      <li className="boxes__item">
+       <a className="anchor mo_border" href="https://www.yadohouse.jp/about/?supporter=3">
+        <figure className="image">
+         <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/supporters_2.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/supporters_2.jpg"/>
+        </figure>
+        <p className="text name mo_crop__text f-neue">
+         <span className="mo_crop__text__before">
+          松田 ゆう姫
+          <br/>
+          Artist
+         </span>
+         <span className="mo_crop__text__inner">
+          松田 ゆう姫
+          <br/>
+          Artist
+         </span>
+        </p>
+       </a>
+      </li>
+      <li className="boxes__item">
+       <a className="anchor mo_border" href="https://www.yadohouse.jp/about/?supporter=4">
+        <figure className="image">
+         <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/supporters_6.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/supporters_6.jpg"/>
+        </figure>
+        <p className="text name mo_crop__text f-neue">
+         <span className="mo_crop__text__before">
+          野尻 佳孝
+          <br/>
+          TRUNK CEO
+         </span>
+         <span className="mo_crop__text__inner">
+          野尻 佳孝
+          <br/>
+          TRUNK CEO
+         </span>
+        </p>
+       </a>
+      </li>
+      <li className="boxes__item">
+       <a className="anchor mo_border" href="https://www.yadohouse.jp/about/?supporter=5">
+        <figure className="image">
+         <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/murakamimoe-350x354.png" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/murakamimoe-350x354.png"/>
+        </figure>
+        <p className="text name mo_crop__text f-neue">
+         <span className="mo_crop__text__before">
+          村上 萌
+          <br/>
+          NEXTWEEKEND
+          <br/>
+          Editor in chief
+         </span>
+         <span className="mo_crop__text__inner">
+          村上 萌
+          <br/>
+          NEXTWEEKEND
+          <br/>
+          Editor in chief
+         </span>
+        </p>
+       </a>
+      </li>
+      <li className="boxes__item">
+       <a className="anchor mo_border" href="https://www.yadohouse.jp/about/?supporter=6">
+        <figure className="image">
+         <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/supporters_1.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/supporters_1.jpg"/>
+        </figure>
+        <p className="text name mo_crop__text f-neue">
+         <span className="mo_crop__text__before">
+          市川 渚
+          <br/>
+          Creative consultant
+         </span>
+         <span className="mo_crop__text__inner">
+          市川 渚
+          <br/>
+          Creative consultant
+         </span>
+        </p>
+       </a>
+      </li>
+      <li className="boxes__item">
+       <a className="anchor mo_border" href="https://www.yadohouse.jp/about/?supporter=7">
+        <figure className="image">
+         <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/12/f70e2a0-350x350.jpeg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/12/f70e2a0-350x350.jpeg"/>
+        </figure>
+        <p className="text name mo_crop__text f-neue">
+         <span className="mo_crop__text__before">
+          小橋 賢児
+          <br/>
+          Creative director
+         </span>
+         <span className="mo_crop__text__inner">
+          小橋 賢児
+          <br/>
+          Creative director
+         </span>
+        </p>
+       </a>
+      </li>
+      <li className="boxes__item">
+       <a className="anchor mo_border" href="https://www.yadohouse.jp/about/?supporter=8">
+        <figure className="image">
+         <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/fix_7892-350x350.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/fix_7892-350x350.jpg"/>
+        </figure>
+        <p className="text name mo_crop__text f-neue">
+         <span className="mo_crop__text__before">
+          吉田 怜香
+          <br/>
+          Fashion director
+         </span>
+         <span className="mo_crop__text__inner">
+          吉田 怜香
+          <br/>
+          Fashion director
+         </span>
+        </p>
+       </a>
+      </li>
+      <li className="boxes__item">
+       <a className="anchor mo_border" href="https://www.yadohouse.jp/about/?supporter=9">
+        <figure className="image">
+         <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/12/profile-350x350.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/12/profile-350x350.jpg"/>
+        </figure>
+        <p className="text name mo_crop__text f-neue">
+         <span className="mo_crop__text__before">
+          大橋 トリオ
+          <br/>
+          Musician
+         </span>
+         <span className="mo_crop__text__inner">
+          大橋 トリオ
+          <br/>
+          Musician
+         </span>
+        </p>
+       </a>
+      </li>
+      <li className="boxes__item">
+       <a className="anchor mo_border" href="https://www.yadohouse.jp/about/?supporter=0">
+        <figure className="image">
+         <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/supporters_3.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/supporters_3.jpg"/>
+        </figure>
+        <p className="text name mo_crop__text f-neue">
+         <span className="mo_crop__text__before">
+          佐藤 可士和
+          <br/>
+          Creative director
+         </span>
+         <span className="mo_crop__text__inner">
+          佐藤 可士和
+          <br/>
+          Creative director
+         </span>
+        </p>
+       </a>
+      </li>
+      <li className="boxes__item">
+       <a className="anchor mo_border" href="https://www.yadohouse.jp/about/?supporter=1">
+        <figure className="image">
+         <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/7c4e866123723e03ef075d660bf377c4.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/7c4e866123723e03ef075d660bf377c4.jpg"/>
+        </figure>
+        <p className="text name mo_crop__text f-neue">
+         <span className="mo_crop__text__before">
+          大日方 久美子
+          <br/>
+          Personal Stylist
+         </span>
+         <span className="mo_crop__text__inner">
+          大日方 久美子
+          <br/>
+          Personal Stylist
+         </span>
+        </p>
+       </a>
+      </li>
+      <li className="boxes__item">
+       <a className="anchor mo_border" href="https://www.yadohouse.jp/about/?supporter=2">
+        <figure className="image">
+         <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/supporters_4.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/supporters_4.jpg"/>
+        </figure>
+        <p className="text name mo_crop__text f-neue">
+         <span className="mo_crop__text__before">
+          横川 正紀
+          <br/>
+          CEO&amp;Creative director
+         </span>
+         <span className="mo_crop__text__inner">
+          横川 正紀
+          <br/>
+          CEO&amp;Creative director
+         </span>
+        </p>
+       </a>
+      </li>
+      <li className="boxes__item">
+       <a className="anchor mo_border" href="https://www.yadohouse.jp/about/?supporter=3">
+        <figure className="image">
+         <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/supporters_2.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/supporters_2.jpg"/>
+        </figure>
+        <p className="text name mo_crop__text f-neue">
+         <span className="mo_crop__text__before">
+          松田 ゆう姫
+          <br/>
+          Artist
+         </span>
+         <span className="mo_crop__text__inner">
+          松田 ゆう姫
+          <br/>
+          Artist
+         </span>
+        </p>
+       </a>
+      </li>
+      <li className="boxes__item">
+       <a className="anchor mo_border" href="https://www.yadohouse.jp/about/?supporter=4">
+        <figure className="image">
+         <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/supporters_6.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/supporters_6.jpg"/>
+        </figure>
+        <p className="text name mo_crop__text f-neue">
+         <span className="mo_crop__text__before">
+          野尻 佳孝
+          <br/>
+          TRUNK CEO
+         </span>
+         <span className="mo_crop__text__inner">
+          野尻 佳孝
+          <br/>
+          TRUNK CEO
+         </span>
+        </p>
+       </a>
+      </li>
+      <li className="boxes__item">
+       <a className="anchor mo_border" href="https://www.yadohouse.jp/about/?supporter=5">
+        <figure className="image">
+         <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/murakamimoe-350x354.png" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/murakamimoe-350x354.png"/>
+        </figure>
+        <p className="text name mo_crop__text f-neue">
+         <span className="mo_crop__text__before">
+          村上 萌
+          <br/>
+          NEXTWEEKEND
+          <br/>
+          Editor in chief
+         </span>
+         <span className="mo_crop__text__inner">
+          村上 萌
+          <br/>
+          NEXTWEEKEND
+          <br/>
+          Editor in chief
+         </span>
+        </p>
+       </a>
+      </li>
+      <li className="boxes__item">
+       <a className="anchor mo_border" href="https://www.yadohouse.jp/about/?supporter=6">
+        <figure className="image">
+         <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/supporters_1.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/supporters_1.jpg"/>
+        </figure>
+        <p className="text name mo_crop__text f-neue">
+         <span className="mo_crop__text__before">
+          市川 渚
+          <br/>
+          Creative consultant
+         </span>
+         <span className="mo_crop__text__inner">
+          市川 渚
+          <br/>
+          Creative consultant
+         </span>
+        </p>
+       </a>
+      </li>
+      <li className="boxes__item">
+       <a className="anchor mo_border" href="https://www.yadohouse.jp/about/?supporter=7">
+        <figure className="image">
+         <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/12/f70e2a0-350x350.jpeg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/12/f70e2a0-350x350.jpeg"/>
+        </figure>
+        <p className="text name mo_crop__text f-neue">
+         <span className="mo_crop__text__before">
+          小橋 賢児
+          <br/>
+          Creative director
+         </span>
+         <span className="mo_crop__text__inner">
+          小橋 賢児
+          <br/>
+          Creative director
+         </span>
+        </p>
+       </a>
+      </li>
+      <li className="boxes__item">
+       <a className="anchor mo_border" href="https://www.yadohouse.jp/about/?supporter=8">
+        <figure className="image">
+         <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/fix_7892-350x350.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/11/fix_7892-350x350.jpg"/>
+        </figure>
+        <p className="text name mo_crop__text f-neue">
+         <span className="mo_crop__text__before">
+          吉田 怜香
+          <br/>
+          Fashion director
+         </span>
+         <span className="mo_crop__text__inner">
+          吉田 怜香
+          <br/>
+          Fashion director
+         </span>
+        </p>
+       </a>
+      </li>
+      <li className="boxes__item">
+       <a className="anchor mo_border" href="https://www.yadohouse.jp/about/?supporter=9">
+        <figure className="image">
+         <img alt="" className="lazySlide" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2022/12/profile-350x350.jpg" src="https://www.yadohouse.jp/cms/wp-content/uploads/2022/12/profile-350x350.jpg"/>
+        </figure>
+        <p className="text name mo_crop__text f-neue">
+         <span className="mo_crop__text__before">
+          大橋 トリオ
+          <br/>
+          Musician
+         </span>
+         <span className="mo_crop__text__inner">
+          大橋 トリオ
+          <br/>
+          Musician
+         </span>
+        </p>
+       </a>
+      </li>
+     </ul>
+    </div>
+    <div className="About__supporters__view">
+     <div className="c-view">
+      <div className="c-view__inner">
+       <a className="anchor mo_crop box" href="https://www.yadohouse.jp/about/?supporter=list">
+        <p className="text mo_crop__text f-neue" data-text="View all">
+         <span className="mo_crop__text__inner">
+          View all
+         </span>
+        </p>
+        <figure className="arrow">
+         <img alt="&gt;" src="https://www.yadohouse.jp/cms/wp-content/themes/yado/assets/images/arrow.svg"/>
+        </figure>
+       </a>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <footer className="Footer" id="Footer">
+   <ul className="Footer__top">
+    <li className="Footer__top__box">
+     <h5 className="heading">
+      <p className="title f-neue">
+       Our Instagram
+      </p>
+      <p className="lead">
+       公式Instagramはこちら
+      </p>
+     </h5>
+     <div className="c-view">
+      <div className="c-view__inner">
+       <a className="anchor mo_crop box" href="https://www.instagram.com/yado_house/" target="_blank">
+        <p className="text mo_crop__text f-neue" data-text="Official Instagram">
+         <span className="mo_crop__text__inner">
+          Official Instagram
+         </span>
+        </p>
+        <figure className="arrow">
+         <img alt="&gt;" src="https://www.yadohouse.jp/cms/wp-content/themes/yado/assets/images/arrow.svg"/>
+        </figure>
+       </a>
+      </div>
+     </div>
+    </li>
+    <li className="Footer__top__box">
+     <h5 className="heading">
+      <p className="title f-neue">
+       Contact Us
+      </p>
+      <p className="lead">
+       各種お問い合わせはこちら
+      </p>
+     </h5>
+     <div className="c-view">
+      <div className="c-view__inner">
+       <a className="anchor mo_crop box" href="https://www.yadohouse.jp/contact/">
+        <p className="text mo_crop__text f-neue" data-text="Contact Form">
+         <span className="mo_crop__text__inner">
+          Contact Form
+         </span>
+        </p>
+        <figure className="arrow">
+         <img alt="&gt;" src="https://www.yadohouse.jp/cms/wp-content/themes/yado/assets/images/arrow.svg"/>
+        </figure>
+       </a>
+      </div>
+     </div>
+    </li>
+   </ul>
+   <div className="Footer__bottom">
+    <ul className="Footer__bottom__links">
+     <li className="item">
+      <a className="anchor mo_crop" href="https://www.yadohouse.jp/company/">
+       <p className="text mo_crop__text f-neue" data-text="Company">
+        <span className="mo_crop__text__inner">
+         Company
+        </span>
+       </p>
+      </a>
+     </li>
+     <li className="item">
+      <a className="anchor mo_crop" href="https://www.yadohouse.jp/privacy/">
+       <p className="text mo_crop__text f-neue" data-text="Privacy Policy">
+        <span className="mo_crop__text__inner">
+         Privacy Policy
+        </span>
+       </p>
+      </a>
+     </li>
+     <li className="item">
+      <a className="anchor mo_crop" href="https://www.yadohouse.jp/partner/" target="_blank">
+       <p className="text mo_crop__text" data-text="企業の方へ">
+        <span className="mo_crop__text__inner">
+         企業の方へ
+        </span>
+       </p>
+      </a>
+     </li>
+    </ul>
+    <ul className="Footer__bottom__sns">
+     <li className="item">
+      <a className="anchor mo_crop" href="https://www.instagram.com/yado_house/" target="_blank">
+       <figure className="ico">
+        <img alt="Instagram" className="lazy fLazy--loaded" data-original="https://www.yadohouse.jp/cms/wp-content/themes/yado/assets/images/ico_insta.svg" src="https://www.yadohouse.jp/cms/wp-content/themes/yado/assets/images/ico_insta.svg"/>
+       </figure>
+       <p className="text mo_crop__text f-neue" data-text="Instagram">
+        <span className="mo_crop__text__inner">
+         Instagram
+        </span>
+       </p>
+      </a>
+     </li>
+     <li className="item">
+      <p className="text text--copy f-neue">
+       © yado inc.
+      </p>
+     </li>
+    </ul>
+   </div>
+  </footer>
+ </div>
+ <!-- End .Container -->
+ <div className="Gnav" id="Gnav" style="opacity: 0; display: none; overflow: hidden scroll; transition: opacity 330ms ease 0s; background-color: rgb(253, 253, 250);">
+  <div className="Gnav__wrapper">
+   <div className="Gnav__container" style="transition: opacity 0ms ease 0s;">
+    <ul className="Gnav__links f-neue" style="background-color: rgb(253, 253, 250);">
+     <li className="block">
+      <div className="block__main">
+       <a className="anchor mo_crop" href="https://www.yadohouse.jp/magazine/">
+        <p className="text mo_crop__text" data-text="Magazine">
+         <span className="mo_crop__text__inner">
+          Magazine
+         </span>
+        </p>
+       </a>
+      </div>
+      <ul className="block__sub">
+       <li className="block__sub__item">
+        <a className="anchor mo_crop" href="https://www.yadohouse.jp/magazine/">
+         <p className="text mo_crop__text" data-text="All">
+          <span className="mo_crop__text__inner">
+           All
+          </span>
+         </p>
+        </a>
+       </li>
+       <li className="block__sub__item">
+        <a className="anchor mo_crop" href="https://www.yadohouse.jp/magazine/category/interview/">
+         <p className="text mo_crop__text" data-text="Interview">
+          <span className="mo_crop__text__inner">
+           Interview
+          </span>
+         </p>
+        </a>
+       </li>
+       <li className="block__sub__item">
+        <a className="anchor mo_crop" href="https://www.yadohouse.jp/magazine/category/trip/">
+         <p className="text mo_crop__text" data-text="Trip">
+          <span className="mo_crop__text__inner">
+           Trip
+          </span>
+         </p>
+        </a>
+       </li>
+       <li className="block__sub__item">
+        <a className="anchor mo_crop" href="https://www.yadohouse.jp/magazine/category/interior/">
+         <p className="text mo_crop__text" data-text="Interior">
+          <span className="mo_crop__text__inner">
+           Interior
+          </span>
+         </p>
+        </a>
+       </li>
+       <li className="block__sub__item">
+        <a className="anchor mo_crop" href="https://www.yadohouse.jp/magazine/category/product/">
+         <p className="text mo_crop__text" data-text="Product">
+          <span className="mo_crop__text__inner">
+           Product
+          </span>
+         </p>
+        </a>
+       </li>
+       <li className="block__sub__item">
+        <a className="anchor mo_crop" href="https://www.yadohouse.jp/magazine/category/other/">
+         <p className="text mo_crop__text" data-text="Other">
+          <span className="mo_crop__text__inner">
+           Other
+          </span>
+         </p>
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li className="block">
+      <div className="block__main">
+       <a className="anchor mo_crop" href="https://www.yadohouse.jp/about/">
+        <p className="text mo_crop__text" data-text="About">
+         <span className="mo_crop__text__inner">
+          About
+         </span>
+        </p>
+       </a>
+      </div>
+     </li>
+     <li className="block">
+      <div className="block__main">
+       <a className="anchor mo_crop" href="https://www.yadohouse.jp/contact/">
+        <p className="text mo_crop__text" data-text="Contact">
+         <span className="mo_crop__text__inner">
+          Contact
+         </span>
+        </p>
+       </a>
+      </div>
+     </li>
+     <li className="block block--sns SP">
+      <ul className="sns">
+       <li className="sns__item">
+        <a className="anchor" href="https://www.instagram.com/yado_house/" target="_blank">
+         <figure className="ico">
+          <img alt="Instagram" className="lazyModal" data-original="https://www.yadohouse.jp/cms/wp-content/themes/yado/assets/images/ico_insta.svg" src="https://www.yadohouse.jp/cms/wp-content/themes/yado/assets/images/ico_insta.svg"/>
+         </figure>
+         <p className="text f-neue">
+          Instagram
+         </p>
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+    <div className="Gnav__house">
+     <div className="Gnav__house__title f-neue">
+      <a className="anchor mo_crop" href="https://www.yadohouse.jp/house/">
+       <p className="text mo_crop__text" data-text="House">
+        <span className="mo_crop__text__inner">
+         House
+        </span>
+       </p>
+       <span className="c-posts">
+        3
+       </span>
+      </a>
+     </div>
+     <div className="Gnav__house__container fInview">
+      <ul className="labelList">
+       <li className="labelList__item">
+        <a className="anchor mo_crop" href="https://www.yadohouse.jp/house/yado-local/">
+         <div className="c-fadeSlideWrapper">
+          <div className="c-fadeSlide f-neue">
+           <div className="c-fadeSlide__container">
+            <ul className="slide">
+             <li className="slide__item is-current">
+              <figure className="image">
+               <picture>
+                <source media="(max-width: 980px)" srcset="https://www.yadohouse.jp/cms/wp-content/uploads/2023/06/70ede4a53ac3b3b1577689d646c03e7d-750x502.png"/>
+                <img alt="" className="lazy" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2023/06/70ede4a53ac3b3b1577689d646c03e7d.png"/>
+               </picture>
+              </figure>
+             </li>
+             <li className="slide__item">
+              <figure className="image">
+               <picture>
+                <source media="(max-width: 980px)" srcset="https://www.yadohouse.jp/cms/wp-content/uploads/2023/07/houselabel_eye-2-750x502.jpg"/>
+                <img alt="" className="lazy" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2023/07/houselabel_eye-2.jpg"/>
+               </picture>
+              </figure>
+             </li>
+            </ul>
+           </div>
+           <ul className="dot">
+            <li className="dot__item is-current">
+            </li>
+            <li className="dot__item">
+            </li>
+           </ul>
+          </div>
+         </div>
+         <div className="info">
+          <p className="heading f-neue">
+           Label 01
+          </p>
+          <h3 className="title f-min">
+           yado local
+          </h3>
+          <div className="c-view">
+           <div className="c-view__inner">
+            <div className="box">
+             <p className="text mo_crop__text f-neue" data-text="View more">
+              <span className="mo_crop__text__inner">
+               View more
+              </span>
+             </p>
+             <figure className="arrow">
+              <img alt="&gt;" src="https://www.yadohouse.jp/cms/wp-content/themes/yado/assets/images/arrow.svg"/>
+             </figure>
+            </div>
+           </div>
+          </div>
+         </div>
+        </a>
+       </li>
+       <li className="labelList__item">
+        <a className="anchor mo_crop" href="https://www.yadohouse.jp/house/yado-journey/">
+         <div className="c-fadeSlideWrapper">
+          <div className="c-fadeSlide f-neue is-comingSoon">
+           <div className="c-fadeSlide__container">
+            <ul className="slide">
+             <li className="slide__item is-current">
+              <figure className="image">
+               <picture>
+                <source media="(max-width: 980px)" srcset="https://www.yadohouse.jp/cms/wp-content/uploads/2023/06/c180041de99e3e92d8ffdf111ba1fe0a-750x502.png"/>
+                <img alt="" className="lazy" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2023/06/c180041de99e3e92d8ffdf111ba1fe0a.png"/>
+               </picture>
+              </figure>
+             </li>
+            </ul>
+           </div>
+          </div>
+         </div>
+         <div className="info">
+          <p className="heading f-neue">
+           Label 02
+          </p>
+          <h3 className="title f-min">
+           yado journey
+          </h3>
+          <div className="c-view">
+           <div className="c-view__inner">
+            <div className="box">
+             <p className="text mo_crop__text f-neue" data-text="View more">
+              <span className="mo_crop__text__inner">
+               View more
+              </span>
+             </p>
+             <figure className="arrow">
+              <img alt="&gt;" src="https://www.yadohouse.jp/cms/wp-content/themes/yado/assets/images/arrow.svg"/>
+             </figure>
+            </div>
+           </div>
+          </div>
+         </div>
+        </a>
+       </li>
+       <li className="labelList__item">
+        <a className="anchor mo_crop" href="https://www.yadohouse.jp/house/yado-gallery/">
+         <div className="c-fadeSlideWrapper">
+          <div className="c-fadeSlide f-neue">
+           <div className="c-fadeSlide__container">
+            <ul className="slide">
+             <li className="slide__item is-current">
+              <figure className="image">
+               <picture>
+                <source media="(max-width: 980px)" srcset="https://www.yadohouse.jp/cms/wp-content/uploads/2023/06/69fbee2639011fa8d5bd508f30d3ec72-750x502.png"/>
+                <img alt="" className="lazy" data-original="https://www.yadohouse.jp/cms/wp-content/uploads/2023/06/69fbee2639011fa8d5bd508f30d3ec72.png"/>
+               </picture>
+              </figure>
+             </li>
+            </ul>
+           </div>
+          </div>
+         </div>
+         <div className="info">
+          <p className="heading f-neue">
+           Label 03
+          </p>
+          <h3 className="title f-min">
+           yado gallery
+          </h3>
+          <div className="c-view">
+           <div className="c-view__inner">
+            <div className="box">
+             <p className="text mo_crop__text f-neue" data-text="View more">
+              <span className="mo_crop__text__inner">
+               View more
+              </span>
+             </p>
+             <figure className="arrow">
+              <img alt="&gt;" src="https://www.yadohouse.jp/cms/wp-content/themes/yado/assets/images/arrow.svg"/>
+             </figure>
+            </div>
+           </div>
+          </div>
+         </div>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div className="Footer__bottom">
+    <ul className="Footer__bottom__links">
+     <li className="item">
+      <a className="anchor mo_crop" href="https://www.yadohouse.jp/company/">
+       <p className="text mo_crop__text f-neue" data-text="Company">
+        <span className="mo_crop__text__inner">
+         Company
+        </span>
+       </p>
+      </a>
+     </li>
+     <li className="item">
+      <a className="anchor mo_crop" href="https://www.yadohouse.jp/privacy/">
+       <p className="text mo_crop__text f-neue" data-text="Privacy Policy">
+        <span className="mo_crop__text__inner">
+         Privacy Policy
+        </span>
+       </p>
+      </a>
+     </li>
+     <li className="item">
+      <a className="anchor mo_crop" href="https://www.yadohouse.jp/partner/" target="_blank">
+       <p className="text mo_crop__text f-neue" data-text="企業の方へ">
+        <span className="mo_crop__text__inner">
+         企業の方へ
+        </span>
+       </p>
+      </a>
+     </li>
+    </ul>
+    <ul className="Footer__bottom__sns">
+     <li className="item PC">
+      <a className="anchor mo_crop" href="https://www.instagram.com/yado_house/" target="_blank">
+       <figure className="ico">
+        <img alt="Instagram" className="lazyModal" data-original="https://www.yadohouse.jp/cms/wp-content/themes/yado/assets/images/ico_insta.svg" src="https://www.yadohouse.jp/cms/wp-content/themes/yado/assets/images/ico_insta.svg"/>
+       </figure>
+       <p className="text mo_crop__text f-neue" data-text="Instagram">
+        <span className="mo_crop__text__inner">
+         Instagram
+        </span>
+       </p>
+      </a>
+     </li>
+     <li className="item">
+      <p className="text text--copy f-neue">
+       © yado inc.
+      </p>
+     </li>
+    </ul>
+   </div>
+  </div>
+ </div>
+ <div id="mouseStalker" style="transform: translate3d(683px, 120px, 0px);">
+  <div className="mouseStalkerInner">
+   <p className="text f-neue">
+   </p>
+  </div>
+ </div>
+</div>
+<!-- End .Wrapper -->
+<script charset="UTF-8" src="https://www.yadohouse.jp/cms/wp-content/themes/yado/assets/js/project.js" type="text/javascript">
+</script>
+<!-- webfont -->
+<script id="" type="text/javascript">
+ !function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","479254829999804");fbq("track","PageView");
+</script>
+<noscript>
+ <img height="1" src="https://www.facebook.com/tr?id=479254829999804&amp;ev=PageView&amp;noscript=1" style="display:none" width="1"/>
+</noscript>
+<div className="trend_notification_app_outer" id="trend_notification_app">
+ <div id="trend_notification">
+  <div className="clearfix" id="trend_notification_con">
+  </div>
+ </div>
+</div>
+<div id="UMS_TOOLTIP" style="position: absolute; cursor: pointer; z-index: 2147483647; background: transparent; top: -100000px; left: -100000px;">
+</div>
+<umsdataelement id="UMSDataElement" style="display: none;">
+</umsdataelement>
+<div id="tmtoolbar_manual_rating_injected" style="display: none;">
+ init
+</div>
+<div data="https://www.yadohouse.jp/magazine/2335/" docguid="null" id="UMSSendDataEventElement" style="display: none;">
+ init
+</div>
+<head>
+ <!-- Google Tag Manager -->
+ <script async="" src="https://connect.facebook.net/signals/config/479254829999804?v=2.9.125&amp;r=stable&amp;domain=www.yadohouse.jp">
+ </script>
+ <script async="" src="https://connect.facebook.net/en_US/fbevents.js">
+ </script>
+ <script async="" src="https://use.typekit.net/yid6zno.js">
+ </script>
+ <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MXLNXR73">
+ </script>
+ <script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MXLNXR73');
+ </script>
+ <!-- End Google Tag Manager -->
+ <meta content="ja" http-equiv="content-language"/>
+ <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+ <meta content="text/css; charset=UTF-8" http-equiv="content-style-type"/>
+ <meta content="text/javascript; charset=UTF-8" http-equiv="content-script-type"/>
+ <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+ <meta content="index,follow,noodp" name="robots"/>
+ <meta content="width=device-width, user-scalable=no" name="viewport"/>
+ <meta content="yado | 泊まるように暮らす" property="og:site_name"/>
+ <meta content="website" property="og:type"/>
+ <meta content="yadoは “泊まるように暮らす” 心地よいライフスタイルを提案。yado magazineでは、旅や暮らしを楽しむ人や、予約の取れないホテルに学ぶ、暮らしのヒントを掲げていきます。" property="og:description"/>
+ <meta content="yado | 泊まるように暮らす" property="og:title"/>
+ <meta content="https://www.yadohouse.jp/cms/wp-content/themes/yado/assets/images/common/ogp.jpg" property="og:image"/>
+ <meta content="https://www.yadohouse.jp/" property="og:url"/>
+ <meta content="yadoは “泊まるように暮らす” 心地よいライフスタイルを提案。yado magazineでは、旅や暮らしを楽しむ人や、予約の取れないホテルに学ぶ、暮らしのヒントを掲げていきます。" name="description"/>
+ <title>
+  yado | 泊まるように暮らす
+ </title>
+ <link href="https://www.yadohouse.jp/" rel="canonical"/>
+ <meta content="summary_large_image" name="twitter:card"/>
+ <meta content="yado | 泊まるように暮らす" name="twitter:title"/>
+ <meta content="yadoは “泊まるように暮らす” 心地よいライフスタイルを提案。yado magazineでは、旅や暮らしを楽しむ人や、予約の取れないホテルに学ぶ、暮らしのヒントを掲げていきます。" name="twitter:description"/>
+ <meta content="https://www.yadohouse.jp/cms/wp-content/themes/yado/assets/images/common/ogp.jpg" name="twitter:image:src"/>
+ <meta content="vixj20h3v888m203vbyv8rphdy7yf0" name="facebook-domain-verification"/>
+ <link href="https://www.yadohouse.jp/cms/wp-content/themes/yado/assets/images/common/favicon.ico" rel="shortcut icon"/>
+ <link href="https://www.yadohouse.jp/cms/wp-content/themes/yado/assets/images/common/apple-touch-icon.png" rel="apple-touch-icon"/>
+ <!-- Web Fonts -->
+ <script>
+  (function(d) {
+      var config = {
+        kitId: 'yid6zno',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+ </script>
+ <!-- End Web Fonts -->
+ <link href="https://www.yadohouse.jp/cms/wp-content/themes/yado/assets/css/project.css" rel="stylesheet" type="text/css"/>
+ <!-- <script src="https://www.youtube.com/iframe_api"></script> -->
+ <meta content="max-image-preview:large" name="robots"/>
+ <link href="//s.w.org" rel="dns-prefetch"/>
+ <script type="text/javascript">
+  window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.yadohouse.jp\/cms\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.0.2"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode,e=(p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0),i.toDataURL());return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([129777,127995,8205,129778,127999],[129777,127995,8203,129778,127999])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+ </script>
+ <script defer="" src="https://www.yadohouse.jp/cms/wp-includes/js/wp-emoji-release.min.js?ver=6.0.2" type="text/javascript">
+ </script>
+ <style type="text/css">
+  img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+ </style>
+ <style id="global-styles-inline-css" type="text/css">
+  body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+ </style>
+ <link href="https://www.yadohouse.jp/wp-json/" rel="https://api.w.org/"/>
+ <link href="https://www.yadohouse.jp/cms/xmlrpc.php?rsd" rel="EditURI" title="RSD" type="application/rsd+xml"/>
+ <link href="https://www.yadohouse.jp/cms/wp-includes/wlwmanifest.xml" rel="wlwmanifest" type="application/wlwmanifest+xml"/>
+ <meta content="WordPress 6.0.2" name="generator"/>
+ <!-- Google tag (gtag.js) -->
+ <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-3QHXS5NZ96">
+ </script>
+ <script>
+  window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-3QHXS5NZ96');
+ </script>
+ <style>
+  .tk-ryo-text-plusn{font-family:"ryo-text-plusn",serif;}.tk-ryo-gothic-plusn{font-family:"ryo-gothic-plusn",sans-serif;}.tk-neue-haas-grotesk-text{font-family:"neue-haas-grotesk-text",sans-serif;}.tk-toppan-bunkyu-gothic-pr6n{font-family:"toppan-bunkyu-gothic-pr6n",serif;}
+ </style>
+</head>
